@@ -14,7 +14,7 @@ If a Library copy disagrees with this repository, this repository wins.
 
 ## Current version
 
-**v1.2.0**
+**v1.3.0**
 
 ## Activate in a new chat
 
@@ -41,3 +41,14 @@ For a new product:
 Project Brain OS contains **how to think and work**, not the state of a specific product.
 
 A product-specific fact belongs in that product's repository. A generalized lesson that improves future projects belongs here.
+
+
+## v1.3 closure rule
+
+Before a module/phase can be marked **COMPLETED**, run **Scope Closure Reconciliation**:
+
+- compare approved product scope, architecture and Definition of Done against what was actually delivered;
+- separate implementation evidence from visual/product evidence;
+- treat agreed experiments, assets and UX deliverables as real scope, not optional future work;
+- leave the phase open if any approved item is implemented but unvalidated, or missing entirely;
+- inspect active branches/open PRs when recovering context in a new chat, not only `main`.

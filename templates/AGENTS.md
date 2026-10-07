@@ -17,6 +17,9 @@ Project Brain OS version: <VERSION>
 - Require the project's configured approval before sensitive production mutation.
 - Build/test before merge.
 - Update roadmap/handoff after important decisions and phase closure.
+- Before declaring a phase COMPLETED, reconcile approved scope/DoD against what was actually implemented and validated.
+- Product/visual approval applies only to what the Product Owner actually saw or tested.
+- On takeover, inspect open PRs/active branches when current work may not yet be in `main`.
 
 ## Project-specific rules
 <ADD ONLY RULES SPECIFIC TO THIS PRODUCT>

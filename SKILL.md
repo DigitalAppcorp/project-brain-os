@@ -1,7 +1,7 @@
 ---
 name: project-brain-operating-system
 description: Reusable product + engineering operating system for planning, validating, architecting, implementing, testing, and shipping software projects with minimal rework and token waste.
-version: 1.2.0
+version: 1.3.0
 ---
 
 # Project Brain Operating System
@@ -265,7 +265,16 @@ Definir:
 - rollback/pruebas.
 
 ### Gate 8 — Implementación
-Usar rama + backend versionado + build + tests + review + merge.
+Usar rama + backend versionado + build + tests + review + validación de producto/visual cuando aplique.
+
+Antes de marcar COMPLETADA, ejecutar **Scope Closure Reconciliation**:
+- leer el scope aprobado, arquitectura y Definition of Done;
+- enumerar cada entregable aprobado;
+- comprobar implementación, backend aplicado, pruebas técnicas, runtime/visual y merge;
+- no reinterpretar como “futuro” una pieza que ya estaba aprobada;
+- no inferir aprobación visual de algo que el Product Owner nunca vio.
+
+Si falta una sola pieza aprobada, Gate 8 sigue abierto.
 
 ### Gate 9 — Validación post-lanzamiento
 Medir adopción, uso recurrente, abandono, errores, retención y coste operativo.
@@ -444,6 +453,41 @@ Cuando el proyecto requiere aprobación:
 
 No marcar fase COMPLETADA solo porque existe código en una rama.
 
+## 14.5. Scope Closure Reconciliation
+
+Antes de declarar una fase o módulo COMPLETADO:
+
+1. releer especificación de producto, arquitectura y DoD;
+2. construir una matriz breve de cada entregable aprobado;
+3. separar evidencia de:
+   - código presente;
+   - backend aplicado;
+   - pruebas técnicas;
+   - runtime real;
+   - aceptación visual/producto;
+   - merge/main;
+4. incluir como entregables reales fake doors, instrumentation, assets 3D, animaciones, estados UX u otros elementos si fueron aprobados;
+5. mantener la fase abierta ante cualquier item faltante o no validado;
+6. verificar `main` después del merge;
+7. actualizar roadmap y handoff.
+
+Reglas:
+- build PASS no implica visual PASS;
+- backend PASS no implica UX PASS;
+- código presente no implica runtime PASS;
+- aprobación del Product Owner solo cubre lo que realmente vio/probó;
+- un núcleo funcional no autoriza cerrar scope adicional ya aprobado.
+
+Si una fase se cerró prematuramente:
+- reabrirla explícitamente;
+- corregir forward en rama/PR;
+- preservar historial y migraciones;
+- registrar causa + faltante;
+- volver a cerrar solo tras la validación pendiente.
+
+Patrón canónico:
+`patterns/SCOPE_CLOSURE_RECONCILIATION.md`.
+
 ## 15. Manejo de errores
 
 Cuando el usuario reporte errores de build/runtime:
@@ -524,10 +568,14 @@ El proyecto no debe depender de una conversación.
 Cuando un chat sea demasiado largo:
 1. actualizar AGENTS.md;
 2. actualizar MASTER_ROADMAP.md;
-3. actualizar sub-rutas activas;
-4. asegurar que Git/main refleja lo cerrado;
-5. iniciar nuevo chat;
-6. pedir al nuevo chat que lea los archivos canónicos antes de actuar.
+3. actualizar ACTIVE_HANDOFF.md con rama, PR, HEAD, defecto actual y siguiente verificación;
+4. actualizar sub-rutas activas;
+5. asegurar que Git/main refleja lo cerrado;
+6. si hay trabajo no mergeado, dejar explícitos branch/PR y hacer que el nuevo chat inspeccione open PRs;
+7. iniciar nuevo chat;
+8. pedir al nuevo chat que lea los archivos canónicos antes de actuar.
+
+Un nuevo chat no debe asumir que `main` contiene el trabajo más reciente si existe un PR abierto.
 
 ## 21. Bootstrap de proyecto nuevo
 
@@ -584,7 +632,7 @@ Cuando se invoque esta habilidad:
 1. cargar la versión canónica desde `DigitalAppcorp/project-brain-os` cuando GitHub esté disponible; usar Library como fallback/mirror;
 2. confirmar activación brevemente;
 3. determinar si el proyecto es nuevo o existente;
-4. si existe, auditar antes de planear;
+4. si existe, auditar antes de planear, incluyendo open PRs/active branches y leyendo el handoff del branch activo cuando corresponda;
 5. si es nuevo, crear estructura canónica;
 6. no escribir código inmediatamente salvo que ya esté en Gate 8;
 7. definir el gate/acción exacta siguiente;

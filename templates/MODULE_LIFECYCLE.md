@@ -29,7 +29,17 @@ Exact scope, flows, roles, permissions, states, privacy, metrics and DoD.
 Data, ownership, authorization/RLS, APIs, storage, indexes, concurrency, migrations and tests.
 
 ## Gate 8 — Implementation
-Branch, versioned backend, build, tests, review, approval where required, merge.
+Branch, versioned backend, build, tests, review and required Product Owner validation.
+
+Before closure, run **Scope Closure Reconciliation**:
+- approved scope vs delivered;
+- backend applied;
+- technical tests;
+- runtime/visual acceptance;
+- experiments/assets explicitly included in scope;
+- merge + main verification.
+
+Do not mark COMPLETED while any approved item is missing or merely unvalidated.
 
 ## Gate 9 — Post-launch validation
 Adoption, recurrence, retention, errors, operations and next investment.

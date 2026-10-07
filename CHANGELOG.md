@@ -1,5 +1,21 @@
 # Changelog
 
+## 1.3.0 — 2026-10-07
+
+### Added
+- **Scope Closure Reconciliation** before marking a module/phase completed.
+- Explicit distinction between implementation/build evidence and visual/product acceptance evidence.
+- Closure checklist that reconciles approved scope, architecture, DoD, migrations, runtime behavior, experiments and visual assets.
+- Recovery rule to inspect active branches and open PRs when `main` may lag current in-progress work.
+- Stronger active-handoff requirements: current defect, exact next verification, active PR/head, backend state and Product Owner approvals.
+
+### Clarified
+- A working core does not imply the whole approved phase is complete.
+- Agreed fake doors, visual assets, models, instrumentation and UX elements are deliverables when they were part of approved scope.
+- Product Owner approval applies only to what was actually shown/tested; unseen scope cannot be inferred as approved.
+- Premature closure must be reopened and corrected forward rather than rewriting history.
+
+
 ## 1.2.0 — 2026-10-06
 
 ### Added
