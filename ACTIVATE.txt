@@ -1,0 +1,7 @@
+FULL
+
+Activa Project Brain OS desde DigitalAppcorp/project-brain-os y úsalo como regla de trabajo para este proyecto. Yo soy el Product Owner. Antes de hacer código, lee la versión canónica, audita el estado real del proyecto y dime en qué gate estamos.
+
+SHORT
+
+Activa Project Brain OS desde DigitalAppcorp/project-brain-os para este proyecto.
