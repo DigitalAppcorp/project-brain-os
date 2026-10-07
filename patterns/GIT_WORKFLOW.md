@@ -7,8 +7,10 @@
 5. inspect diff;
 6. build/test;
 7. create/update PR;
-8. merge only after required product/backend checks;
-9. verify main;
-10. update roadmap and handoff.
+8. run Scope Closure Reconciliation against approved scope/DoD;
+9. merge only after required product/backend/visual checks;
+10. verify main;
+11. update roadmap and handoff.
 
 Code in a branch is not “completed”.
+A merged core is also not “completed” if another approved deliverable is still missing or unvalidated.
