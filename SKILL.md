@@ -638,3 +638,84 @@ Cuando se invoque esta habilidad:
 7. definir el gate/acción exacta siguiente;
 8. mantener este sistema operativo durante todo el proyecto;
 9. si se aprende una regla generalizable importante, proponer/realizar una actualización versionada del OS sin mezclar contexto específico del proyecto.
+
+
+## 24. Local-First Efficiency Mode
+
+Usar este modo cuando el Product Owner prioriza ahorrar tokens, tiempo e infraestructura durante desarrollo.
+
+Objetivo:
+- desarrollar y validar localmente;
+- reducir llamadas remotas, deployments y ciclos de conversación;
+- reservar producción para gates donde realmente aporta evidencia.
+
+Reglas:
+
+1. **Local por defecto**
+   - implementar, compilar, probar y validar producto localmente siempre que sea técnicamente suficiente;
+   - usar servicios locales/emulados cuando existan;
+   - no desplegar por cada microcambio.
+
+2. **Producción por excepción**
+   - tocar producción solo cuando la evidencia no pueda obtenerse localmente o durante un release gate;
+   - mantener autorización explícita para mutaciones sensibles;
+   - no usar producción como entorno cotidiano de pruebas.
+
+3. **Deployments agrupados**
+   - evitar Preview/Production por cada commit;
+   - publicar por checkpoints grandes o release candidates;
+   - no subir de plan ni comprar capacidad solo para acelerar desarrollo.
+
+4. **Git local frecuente, remoto por checkpoint**
+   - commits locales pequeños/coherentes como puntos de recuperación;
+   - push/PR en checkpoints significativos;
+   - distinguir siempre: local HEAD, remote branch, main y producción;
+   - nunca inferir que un estado local existe en GitHub.
+
+5. **Verificación agrupada**
+   - preferir un único comando de verificación que ejecute los checks bloqueantes;
+   - separar deuda histórica no bloqueante (por ejemplo lint legacy) del gate diario;
+   - pedir al usuario solo PASS o el primer error útil, no logs completos.
+
+6. **Ahorro de tokens**
+   - no repetir auditorías remotas si evidencia local reciente es suficiente;
+   - no releer archivos completos cuando basta un handoff actualizado;
+   - agrupar tool calls y verificaciones;
+   - no narrar cada microacción;
+   - registrar decisiones una vez en el handoff canónico.
+
+7. **Entornos y seguridad**
+   - usar variables locales para evitar conexiones accidentales a producción;
+   - si el cliente tiene fallbacks de producción, crear guardrails para impedirlos en desarrollo;
+   - usar flags explícitos como `--local` en comandos destructivos cuando exista una contraparte remota;
+   - nunca ejecutar reset/push/repair sobre remoto por costumbre.
+
+8. **Backend local reproducible**
+   - una base local debe poder reconstruirse de cero;
+   - si un proyecto histórico carece de baseline, crear/reconciliar un baseline explícito antes de seguir parcheando migraciones rotas una por una;
+   - preservar historia legacy separada cuando sea necesario;
+   - no confundir un baseline local con una migración lista para producción.
+
+9. **Release gate**
+   - antes de publicar: reconciliar local vs remote/main vs producción;
+   - revisar migraciones pendientes, secrets, providers, observabilidad, backups y smoke tests;
+   - hacer deployments finales en lote.
+
+10. **Handoff obligatorio**
+    - registrar:
+      - rama remota activa;
+      - estado local no empujado;
+      - último verify;
+      - estado de backend local;
+      - qué producción ya fue mutada;
+      - qué NO debe ejecutarse;
+      - siguiente comando exacto.
+
+Principio:
+**Local Development → Local Verification → Local Git Checkpoint → siguiente bloque.**
+
+Publicación:
+**Release Candidate → reconciliación → backend producción → deployment → smoke test → cierre.**
+
+Patrón canónico:
+`patterns/LOCAL_FIRST_EFFICIENCY.md`.
