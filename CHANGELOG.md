@@ -1,5 +1,22 @@
 # Changelog
 
+## 1.4.0 — 2026-10-08
+
+### Added
+- **Local-First Efficiency Mode** for projects optimizing token usage, development time and infrastructure cost.
+- Explicit environment truth model: local working tree, local HEAD, remote branch, main and production are distinct states.
+- Grouped local verification pattern: one blocking verify command, with legacy/non-blocking debt tracked separately.
+- Production-by-exception rule during development.
+- Local Git checkpoints with remote push/PR only at meaningful milestones.
+- Release reconciliation gate before backend production/deployment.
+- Canonical pattern: `patterns/LOCAL_FIRST_EFFICIENCY.md`.
+
+### Clarified
+- Local development alone does not inherently reduce model tokens; token savings come from grouped verification, concise error reporting, canonical handoffs and fewer redundant remote audits.
+- Production should not be used as the routine development/test environment.
+- Historical migration chains that cannot rebuild a blank local database require a reviewed baseline/reconciliation strategy rather than repeated ad-hoc patches.
+- Handoffs must record local-only state explicitly so a new chat does not assume GitHub contains the newest work.
+
 ## 1.3.0 — 2026-10-07
 
 ### Added
