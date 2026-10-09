@@ -20,6 +20,16 @@ Product facts stay **only in the product repository**. Generalizable workflow ru
 - Differentiate: **designed** / **committed** / **build PASS** / **backend applied** / **signed runtime tested** / **Product Owner visually approved** / **merged** / **released**.
 - Never call a test PASS from code existing, CI queued, or a synthetic-only test; record method, scope and limitations.
 
+## Precedence and contradiction control
+
+- Keep the live handoff **short and authoritative**. When it becomes a chronological log, archive the full original verbatim, then replace the live file with a current snapshot rather than appending again.
+- Put a clear **"verified as of / source / scope"** at the top. Older evidence is history, not a current claim. A new chat should not have to scan dozens of superseded checkpoints to identify the gate.
+- When a past heading says **"completed"** but a later acceptance matrix remains open, distinguish *product decision closed*, *implementation/verification incomplete*, and *phase formally closed*. Do not silently overwrite historic product decisions.
+- Record the most recent **positive and failed** CI evidence accurately. Verification of a parent commit does not prove the next documentation commit passed; recheck the new branch HEAD.
+- State **unknown** explicitly for local unpushed changes, external credentials/writers and runtime behavior not accessible to the agent. Never infer absence from a repository search.
+- Include a copyable activation instruction pointing to the canonical project files, not a transcript. A future agent must fetch the latest remote state before implementing.
+- Never include real user IDs, JWTs, storage paths of users, medical/payment details or secrets in cross-chat handoffs.
+
 ## Required live snapshot
 
 - Project, product owner role, active operating mode (local-first or hosted-first), canonical Brain OS version.
