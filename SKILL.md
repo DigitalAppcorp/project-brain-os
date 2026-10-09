@@ -567,6 +567,8 @@ Antes de traspasar un proyecto a otro chat, aplicar `patterns/VERIFIABLE_HANDOFF
 
 La memoria/chat nunca demuestra que un archivo se guardó o que una migración se aplicó: confirmar Git y proveedor. No extrapolar éxito de build a runtime ni permiso amplio a operaciones irreversibles.
 
+Para traspasos de conversaciones extensas: priorizar **un único snapshot operativo vigente** con fecha/evidencia y el siguiente gate exacto; archivar la cronología previa. Cuando una decisión de producto está cerrada pero su implementación/DoD no, reflejar ambos estados sin contradicción. No tratar una prueba sintética o un CI anterior como autorización de producción. Consultar el patrón de handoff para la jerarquía de evidencias y desconocidos explícitos.
+
 ## 20. Recuperación de chats largos
 
 El proyecto no debe depender de una conversación.
