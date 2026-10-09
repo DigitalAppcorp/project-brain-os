@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.4.1 — 2026-10-08
+
+### Added
+- `patterns/VERIFIABLE_HANDOFF.md`: compact, auditable cross-chat recovery without reconstructing product state from a long conversation.
+- An explicit distinction among code present, CI build, live backend, user-driven visual QA, and an unexecuted test.
+- Mandatory recording of the **latest** branch/PR HEAD, local-only uncertainty, external migration/deploy state, exact user action pending, and authorization boundaries.
+- Archive-over-append strategy when ACTIVE_HANDOFF grows too large; preserve history separately, keep current snapshot short.
+
+### Fixed
+- Aligned SKILL frontmatter and README version markers with the canonical VERSION.
+- Clarified that an approved technical workflow does not automatically authorize production release, paid resources, irreversible deletion, or bypass of visual acceptance gates.
+
 ## 1.4.0 — 2026-10-08
 
 ### Added

@@ -1,7 +1,7 @@
 ---
 name: project-brain-operating-system
 description: Reusable product + engineering operating system for planning, validating, architecting, implementing, testing, and shipping software projects with minimal rework and token waste.
-version: 1.3.0
+version: 1.4.1
 ---
 
 # Project Brain Operating System
@@ -560,6 +560,12 @@ Fase visual:
 - mejorar jerarquía, spacing, tokens, componentes, animación y responsive.
 
 Si un cambio visual exige cambiar comportamiento: convertirlo en decisión de producto.
+
+## 19.9. Handoff compacto y verificable
+
+Antes de traspasar un proyecto a otro chat, aplicar `patterns/VERIFIABLE_HANDOFF.md`: snapshot actual, evidencia por tipo, rama/PR/HEAD real, backend/deploy contrastados, autorizaciones con límites, acción exacta y prohibiciones. Mantener el ACTIVE_HANDOFF corto; archivar el historial sin borrar la evidencia.
+
+La memoria/chat nunca demuestra que un archivo se guardó o que una migración se aplicó: confirmar Git y proveedor. No extrapolar éxito de build a runtime ni permiso amplio a operaciones irreversibles.
 
 ## 20. Recuperación de chats largos
 

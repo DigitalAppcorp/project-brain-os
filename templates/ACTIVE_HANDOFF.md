@@ -7,6 +7,13 @@
 **Active module:** <MODULE>
 **Gate:** <GATE>
 
+## Snapshot freshness and precedence
+- Latest checkpoint verified at: <DATE/TIME>
+- Last verified remote branch HEAD vs main HEAD: <TWO SHAS>
+- Local work not observable remotely: <UNKNOWN OR VERIFIED>
+- Historical archive file (if present): <PATH>
+- This live snapshot supersedes dated historical appendices.
+
 ## Current truth
 - <WHAT IS REAL>
 - <WHAT IS NOT REAL>
@@ -38,6 +45,10 @@
 - experiments/assets promised in scope: <PASS/PENDING/N/A>
 - merged to main: <YES/NO>
 - main verified: <YES/NO>
+
+## Next Product Owner-only action / approvals
+- <VISUAL VALIDATION OR IRREVERSIBLE ACTION, IF ANY>
+- <AUTHORIZED TECHNICAL ACTIONS AND EXPLICITLY EXCLUDED ACTIONS>
 
 ## Exact next action
 1. <ONE CONCRETE ACTION>

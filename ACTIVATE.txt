@@ -5,3 +5,7 @@ Activa Project Brain OS desde DigitalAppcorp/project-brain-os y úsalo como regl
 SHORT
 
 Activa Project Brain OS desde DigitalAppcorp/project-brain-os para este proyecto.
+
+HANDOFF (REUSABLE)
+
+Activa Project Brain OS desde DigitalAppcorp/project-brain-os. Abre el repositorio de mi producto y lee primero AGENTS.md, el ACTIVE_HANDOFF vigente y el roadmap; compara su rama activa con main y producción, verifica el último checkpoint y continúa desde el próximo gate pendiente. No reinicies el proyecto ni me pidas decisiones ya registradas.

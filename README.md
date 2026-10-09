@@ -14,7 +14,7 @@ If a Library copy disagrees with this repository, this repository wins.
 
 ## Current version
 
-**v1.3.0**
+**v1.4.1**
 
 ## Activate in a new chat
 
@@ -52,3 +52,8 @@ Before a module/phase can be marked **COMPLETED**, run **Scope Closure Reconcili
 - treat agreed experiments, assets and UX deliverables as real scope, not optional future work;
 - leave the phase open if any approved item is implemented but unvalidated, or missing entirely;
 - inspect active branches/open PRs when recovering context in a new chat, not only `main`.
+
+
+## Cross-chat continuity (v1.4.1)
+
+Apply `patterns/VERIFIABLE_HANDOFF.md` before a new chat takes over: short current handoff plus archived history, verified branch HEAD vs main/production, backend state, QA evidence, precise next action and authorization limits. Never copy a particular product's implementation details into this reusable OS.
