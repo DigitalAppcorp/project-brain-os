@@ -634,6 +634,10 @@ Antes de cambiar Project Brain OS, preguntar:
 
 Si es específica, permanece en los documentos de ese proyecto.
 
+## 22.6. Calidad visual y usabilidad de interfaces
+
+Para toda interfaz de usuario nueva o modificada, aplicar el patrón `patterns/INTERFACE_QUALITY_GATE.md` de manera proporcional al cambio. Conservar el sistema visual ya aprobado; no confundir build PASS con aceptación visual y no instalar paquetes/skills de terceros por defecto. El Product Owner conserva la aprobación de rediseños y de la UX que efectivamente pudo probar.
+
 ## 23. Activación
 
 Cuando se invoque esta habilidad:
