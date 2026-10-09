@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased — 2026-10-09
+
+### Clarified
+- Cross-chat recovery must prioritize **one concise, verified live snapshot** over a chronological accumulation of superseded checkpoints.
+- When a decision is closed but its implementation/Definition of Done is pending, label both states explicitly rather than reporting a false completed phase.
+- Distinguish last verified CI from subsequent commits, and mark local changes or privileged external actors **unknown** when not independently inspected.
+- Preserve historical evidence by archiving; keep product-specific details in the product's own repository. No change to version 1.4.1 semantics or deployment authority.
+
 ## 1.4.1 — 2026-10-08
 
 ### Added
