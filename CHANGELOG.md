@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased — 2026-10-10
+
+### Clarified
+- A paused external/local executor keeps ownership of its explicitly delegated task; quota interruption is neither PASS nor failure. Keep the exact resumable checkpoint, prevent duplicate test identities and continue only independent work.
+- A new chat must not assume external execution resumes automatically or interpret prepared scripts/green CI as end-to-end deletion evidence.
+- Git history can preserve a superseded handoff while the live file becomes a short authoritative snapshot; branch pushes may trigger automatic preview integrations even without manual deployment.
+
 ## Unreleased — 2026-10-09
 
 ### Clarified
