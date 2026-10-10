@@ -3,6 +3,7 @@
 ## Unreleased — 2026-10-09
 
 ### Clarified
+- After approved test-data resets, preserve an explicit identity/schema whitelist, prove current database and Storage emptiness with read-only counts, label deletion provenance unknown unless observed, avoid rerunning destructive cleanup after a chat interruption, and validate login/onboarding/empty-state bootstrap without reopening all previously passed tests.
 - Explicit chat-limit interruption protocol: finish durable cross-chat handoff before more feature code; archive and replace oversized live snapshots; verify the **current active PR HEAD**, write success and CI for the new commit; keep product state out of the reusable OS; preserve all sensitive-action gates.
 - Cross-chat recovery must prioritize **one concise, verified live snapshot** over a chronological accumulation of superseded checkpoints.
 - When a decision is closed but its implementation/Definition of Done is pending, label both states explicitly rather than reporting a false completed phase.

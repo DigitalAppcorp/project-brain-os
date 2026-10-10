@@ -78,3 +78,16 @@ When the Product Owner says the conversation is saturated, broken or they must m
 6. End with a short activation phrase pointing to the canonical repository, the **active branch/PR rather than only `main`**, and the authoritative live handoff. A new chat must audit again before coding.
 
 This protocol is a *continuity operation*, not authorization to perform destructive backend work, merge unrelated PRs, or change costs. A user's generic "continue" preserves existing gate restrictions.
+
+## Handing off after a one-time test-data reset
+
+A Product Owner may explicitly authorize removing prelaunch fixtures while **keeping selected long-lived identities, schema and infrastructure**. In cross-chat handoff, do not confuse this one-time data operation with a production account-deletion feature.
+
+1. **Preservation list comes first:** capture the exact identities and infrastructure that must remain, and the exact product/Storage data included in the reset. Never assume that “all data” includes auth accounts, credentials, buckets, schema, migrations or logs. Honor the actual authorization.
+2. **Read-only reconciliation after reset:** compare identity/credentials and sessions separately from public/private product tables, object inventory and provider migrations/functions. Use exact scoped counts where possible; don't use stale historical counts or approximate statistics as proof. Distinguish Storage metadata from physical origin and CDN caches.
+3. **Provenance matters:** a verified empty provider is not proof that the current agent performed the deletion, which API performed it, or when it occurred. Report unknown provenance explicitly. Never repeat a destructive reset just because the previous chat was interrupted.
+4. **Refresh the active handoff:** mark previously blocking fixture-related conflicts as historical, but keep *code* and *schema* gates intact. “No rows left” does not validate account-deletion workers, hard-delete ordering, retention policy or auth onboarding.
+5. **Post-reset bootstrap gate:** review user login, profile recreation, first-run onboarding and empty states. Restored test administration roles or catalog fixtures require legitimate authorization/seed policy; do not silently reinsert deleted rows.
+6. **Minimal QA:** focus on behaviors affected by the reset rather than rerunning every passing legacy module. Record the next exact action, the single required Product Owner-only visual check if unavoidable, and remaining deployment/merge restrictions.
+
+This pattern is generalizable. Product-specific counts, credentials, URLs and user identities belong **only** in that product's secured handoff, not in the reusable OS.
