@@ -65,3 +65,16 @@ A new AI must be able to answer within minutes:
 - Which decisions are closed, and what truly needs Product Owner input?
 
 If not, the handoff is incomplete.
+
+## Chat-limit interruption protocol
+
+When the Product Owner says the conversation is saturated, broken or they must move to a new chat, **stop feature implementation first** and make continuity the active deliverable:
+
+1. Fetch the remote product repo's *active PR HEAD*, `main`, latest CI outcome, and backend/environment facts available with safe read-only calls. An old handoff is not evidence that the active branch has stopped moving.
+2. Read the product's current `ACTIVE_HANDOFF`. If chronological additions make it long or contradictory, save its full previous text under `docs/archive/` and replace it with a compact, authoritative live snapshot. Do not erase the historical trail. In the product roadmap, put a short pointer to that snapshot near the top.
+3. Record exact prior authorizations and forbidden gates, backend applied vs DRAFT, unresolved technical/UX requirements, and a **single first action** to take after restart. Mark unknown local worktree or credentials as unknown. Avoid user identifiers, secrets and unnecessary logs.
+4. Update reusable OS patterns separately from product state: *product-specific findings belong only in the product repo*. If OS needs improvement, create its own change branch/PR; do not alter its stable version or deploy without the appropriate gate.
+5. **Verify remote persistence and CI of both updates**. Do not say "updated" when a tool failed, a commit was not pushed, a pull request is only draft, or only a predecessor's CI passed. If one repository cannot be updated, describe the precise exception and offer the last verified recovery path.
+6. End with a short activation phrase pointing to the canonical repository, the **active branch/PR rather than only `main`**, and the authoritative live handoff. A new chat must audit again before coding.
+
+This protocol is a *continuity operation*, not authorization to perform destructive backend work, merge unrelated PRs, or change costs. A user's generic "continue" preserves existing gate restrictions.

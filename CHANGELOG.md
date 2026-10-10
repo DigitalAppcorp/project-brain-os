@@ -3,6 +3,7 @@
 ## Unreleased — 2026-10-09
 
 ### Clarified
+- Explicit chat-limit interruption protocol: finish durable cross-chat handoff before more feature code; archive and replace oversized live snapshots; verify the **current active PR HEAD**, write success and CI for the new commit; keep product state out of the reusable OS; preserve all sensitive-action gates.
 - Cross-chat recovery must prioritize **one concise, verified live snapshot** over a chronological accumulation of superseded checkpoints.
 - When a decision is closed but its implementation/Definition of Done is pending, label both states explicitly rather than reporting a false completed phase.
 - Distinguish last verified CI from subsequent commits, and mark local changes or privileged external actors **unknown** when not independently inspected.
