@@ -9,3 +9,8 @@ Activa Project Brain OS desde DigitalAppcorp/project-brain-os para este proyecto
 HANDOFF (REUSABLE)
 
 Activa Project Brain OS desde DigitalAppcorp/project-brain-os. Abre el repositorio de mi producto y lee primero AGENTS.md, el ACTIVE_HANDOFF vigente y el roadmap; compara su rama activa con main y producción, verifica el último checkpoint y continúa desde el próximo gate pendiente. No reinicies el proyecto ni me pidas decisiones ya registradas.
+
+
+CHAT-LIMIT HANDOFF
+
+Activa Project Brain OS desde DigitalAppcorp/project-brain-os. Mi conversación anterior llegó a su límite. Abre el repositorio del proyecto, recupera la rama/PR de trabajo más reciente (no asumas que main tiene lo último), lee AGENTS.md, el ACTIVE_HANDOFF canónico y el roadmap, verifica HEAD/CI/backend y continúa desde el único gate pendiente. Conserva todas las autorizaciones y restricciones registradas. No reinicies la arquitectura ni me pidas repetir decisiones ya documentadas.
