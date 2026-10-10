@@ -51,6 +51,17 @@ Product facts stay **only in the product repository**. Generalizable workflow ru
 5. In the new chat: activate OS, read AGENTS + live snapshot + roadmap + active spec, check remote HEAD/PR/CI, then do exactly the pending action. Do not reboot planning.
 6. If the snapshot conflicts with live providers, flag and reconcile **read-only first**.
 
+## Paused delegated work, quotas and parallel tracks
+
+When the Product Owner explicitly delegates a **specific bounded operation** to a local agent, browser/computer executor or another permitted tool, do not convert that task into a permanent blocking dependency for all project work:
+
+- Record the task's exact **owner, permitted environment, file/command to resume, checkpoint, authorization limits, existing disposable resources, and PASS/FAIL/BLOCKED state** in the product repository. Do not create a second copy of a test identity or run the same destructive operation from another chat.
+- If the executor is paused by a rate limit, unavailable computer or expired session, mark **PAUSED — not failed and not completed**. Do **not** claim that it will resume automatically. Record what the user must do to re-open it and when (if known, with timezone) without inventing quota information.
+- The project brain may advance **independent non-interfering tasks**, but cannot mutate records, environment baselines, configurations or prerequisites reserved for the paused task. Before release or irreversible steps, reconcile the delegated task's actual evidence.
+- In a new chat, read the latest product-specific checkpoint and provider state rather than resending the original instruction or re-requesting existing Product Owner approvals. Do not treat an unexecuted script or CI PASS as proof of the external runtime outcome.
+- If a handoff file grows into contradictory historical banners, replace it with one short authoritative snapshot. Previous revisions in Git are a valid recoverable history even when no separate archive file is used; explicitly link or identify the last historical commit.
+- Remember that pushing to a repository may trigger **third-party CI, preview deploys or billing consequences**. Distinguish a manual deployment action from an automatic integration side effect; minimize unnecessary pushes and do not claim remote environments remained entirely inactive without checking.
+
 ## Autonomy and approval
 
 A broad instruction to proceed with technical work saves micro-approvals for reversible in-scope steps but is NOT unconditional authority for release, billing, sensitive/real user data deletion, or bypassing product acceptance. Follow the product's stricter policy when present. Visual validation belongs to Product Owner; backend verification to AI. Don't ask Product Owner to run terminal commands if connected tools can do it.
