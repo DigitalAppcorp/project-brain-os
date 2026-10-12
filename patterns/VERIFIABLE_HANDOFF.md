@@ -62,6 +62,14 @@ When the Product Owner explicitly delegates a **specific bounded operation** to 
 - If a handoff file grows into contradictory historical banners, replace it with one short authoritative snapshot. Previous revisions in Git are a valid recoverable history even when no separate archive file is used; explicitly link or identify the last historical commit.
 - Remember that pushing to a repository may trigger **third-party CI, preview deploys or billing consequences**. Distinguish a manual deployment action from an automatic integration side effect; minimize unnecessary pushes and do not claim remote environments remained entirely inactive without checking.
 
+## Operational readiness for irreversible hosted actions
+
+- **Deployment access is not execution capability.** Before a sensitive or destructive hosted trial, prove that the *same bounded execution workflow* can authenticate as the real authorized operator, call the supported runtime endpoint, manage required server-side flags, and perform a verifiable immediate rollback. Merely being able to push code, list secrets or inspect a provider does not prove these powers.
+- Keep the release-wide gate disabled. A narrowly authorized test may use an additional allowlist-bound, disabled-by-default route; never make the release route broadly executable as a shortcut.
+- Verify immutable resource identity, reference safety and expected live state just before any irreversible operation. For object storage, metadata/database presence, SDK info, HTTP accessibility and CDN propagation are distinct evidence; don't equate them.
+- If invocation, permissions, flag management, or rollback are not demonstrably operable, **fail closed before activating**. Record the operator dependency and precise next step in the product handoff, preserve previous approvals in scope, and do not ask the Product Owner to repeat already accepted QA.
+- Distinguish **safe code deployed**, **operator gate ready**, **destructive action executed**, **origin absence verified**, and **public access/CDN verified** as separate states. An unsuccessful or partial cleanup is not a full PASS. No user tokens, user-owned storage paths, or credentials belong in generic operating-system patterns.
+
 ## Autonomy and approval
 
 A broad instruction to proceed with technical work saves micro-approvals for reversible in-scope steps but is NOT unconditional authority for release, billing, sensitive/real user data deletion, or bypassing product acceptance. Follow the product's stricter policy when present. Visual validation belongs to Product Owner; backend verification to AI. Don't ask Product Owner to run terminal commands if connected tools can do it.
