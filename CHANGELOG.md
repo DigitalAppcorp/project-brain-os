@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased — 2026-10-12
+
+### Clarified
+- For cross-chat handoffs involving source-to-Figma (or other design editor) replication, require **real runtime evidence + visual fidelity + editable semantic layers**; generic editable sketches are not valid replicas.
+- Reject and explicitly segregate inaccurate design drafts, inspect the precise live runtime/revision, and validate one real screen with the Product Owner before mass production. Keep product-specific Preview URLs and Figma files only in their own repos.
+
 ## Unreleased — 2026-10-11
 
 ### Clarified
