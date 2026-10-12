@@ -70,6 +70,13 @@ When the Product Owner explicitly delegates a **specific bounded operation** to 
 - If invocation, permissions, flag management, or rollback are not demonstrably operable, **fail closed before activating**. Record the operator dependency and precise next step in the product handoff, preserve previous approvals in scope, and do not ask the Product Owner to repeat already accepted QA.
 - Distinguish **safe code deployed**, **operator gate ready**, **destructive action executed**, **origin absence verified**, and **public access/CDN verified** as separate states. An unsuccessful or partial cleanup is not a full PASS. No user tokens, user-owned storage paths, or credentials belong in generic operating-system patterns.
 
+## Handoff when other executors have continued
+
+- When a user requests a new chat after several agents have worked in parallel, **fetch the newest remote branch, runtime state and compact handoff before writing**. A newer verified checkpoint supersedes an older chat summary; do not overwrite it or reintroduce superseded blockers.
+- **Prefer a minimal correction or a verified no-op** if the current snapshot already covers the truth. Unnecessary documentation pushes trigger CI and sometimes preview integrations, and create false-looking new milestones.
+- For an irreversible operation already authorized but still blocked, preserve its **exact resource scope, remaining operator capability, fail-closed controls, rollback prerequisite and authorization validity**. Do not infer execution merely from deployment access or a visible browser UI; do not ask for the same approval again without changed scope.
+- Distinguish observations made by connected read-only provider tools from statements relayed by other agents. Do not silently upgrade either into a live authenticated execution PASS.
+
 ## Autonomy and approval
 
 A broad instruction to proceed with technical work saves micro-approvals for reversible in-scope steps but is NOT unconditional authority for release, billing, sensitive/real user data deletion, or bypassing product acceptance. Follow the product's stricter policy when present. Visual validation belongs to Product Owner; backend verification to AI. Don't ask Product Owner to run terminal commands if connected tools can do it.

@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased — 2026-10-11
+
+### Clarified
+- Cross-chat transfers after parallel agent activity must rebase their knowledge on the latest remote branch and live provider snapshot, preserve newer checkpoints and avoid duplicate commits/tests when a handoff is already accurate.
+- An authorized irreversible step may remain operationally BLOCKED; carry forward exact authorization scope, operator access, rollback and evidence without suggesting it executed.
+
 ## Unreleased — 2026-10-10
 
 ### Clarified
