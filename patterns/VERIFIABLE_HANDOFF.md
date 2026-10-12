@@ -91,3 +91,17 @@ A new AI must be able to answer within minutes:
 - Which decisions are closed, and what truly needs Product Owner input?
 
 If not, the handoff is incomplete.
+
+## Faithful source-to-design handoff — avoid manufactured replicas
+
+When the user requests **replication** of an existing product screen in an editable design tool (Figma or equivalent):
+
+- **An editable artifact is not automatically a faithful artifact.** Distinguish three evidences: source app actually inspected, visual match tested against that source, and editable semantic layers (text, controls, vectors, component hierarchy). Each must have independent proof before reporting success.
+- A React file's component names or text snippets alone are not enough to recreate a real screen's spacing, imagery, interaction states, responsiveness or overlays. Never fabricate placeholders, generic cards, logos or maps and call them reproductions.
+- Before bulk conversion, verify which live runtime/revision the user actually uses; compare against the code HEAD, confirm accessible routes and whether authenticated states are observable. Never assert Preview equals the latest branch without SHA evidence.
+- For web apps, a screenshot/capture is a **reference**; deliver design-editor native text, auto-layout, icons, real independent images and components. A single flattened screenshot inserted into a design file fails the editable deliverable gate even if pixel-identical.
+- Begin with **one real screen and one relevant state**, validate its visual match with the Product Owner, then scale into further routes/steps. If the provider's session/authentication prevents direct inspection, state the limitation precisely and ask for the smallest legitimate evidence (e.g., screenshots or user-controlled computer session), not passwords.
+- If the Product Owner rejects a purported reproduction, **mark the existing asset as REJECTED**, leave it out of the completion count and next gate, preserve it only as a noncanonical draft, and document the corrective source-first action explicitly. Never use the rejected draft as a new design source of truth.
+- When transferring across chats, include the verified runtime URL and design file link as **references**, not proof of fidelity. Note what was directly observed versus assumed, and do not repeat a failed synthetic reconstruction.
+
+This rule is provider-agnostic and applies to all software products; put project URLs, file keys and exact design decisions only in the product repository.
