@@ -3,6 +3,7 @@
 ## Unreleased — 2026-10-13
 
 ### Clarified
+- After an interrupted tool batch or chat, verify remote HEAD/CI/files before replaying operations. An exception in a multi-action run does not prove that prior steps were rolled back, and another executor may have finished the work; a cross-chat handoff should resume only truly pending gates.
 - Visual implementation handoffs distinguish a Product Owner's selected design concept from coded behavior, passing CI and actual browser/product acceptance. Record exact layout and preserved action contracts, current HEAD (not earlier failed CI), safe local preview steps and the sole remaining acceptance gate; do not ask the user to select the option again.
 
 ## Unreleased — 2026-10-12
