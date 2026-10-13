@@ -105,3 +105,17 @@ When the user requests **replication** of an existing product screen in an edita
 - When transferring across chats, include the verified runtime URL and design file link as **references**, not proof of fidelity. Note what was directly observed versus assumed, and do not repeat a failed synthetic reconstruction.
 
 This rule is provider-agnostic and applies to all software products; put project URLs, file keys and exact design decisions only in the product repository.
+
+## Handoff for an approved visual implementation awaiting Product Owner QA
+
+A Product Owner may select a specific numbered visual concept and authorize coding in an active feature branch. After code/build is ready, a handoff must **preserve the choice without turning it into acceptance**:
+
+- Record the **exact selected option and layout contract**, including which surfaces fill the viewport, where controls and scrolling live, and which pre-existing actions must remain usable; label references as *approved design concept*, not a screenshot of implemented runtime.
+- Separate **source changes**, **green CI on a specific SHA**, **provider/backend changes**, **browser appearance observed**, **user product acceptance**, **PR merge**, and **production deployment**. Their statuses never imply each other.
+- Do not ask the Product Owner to choose the same design again or redelegate implementation to another AI after code was authorized. The next step is to show the actual feature-branch implementation in the user's preview, then fix *specific observed visual/regression issues*.
+- Do not infer a local working tree is clean. Before prescribing pull/checkout, ask for or inspect `git status --short`; never advise destructive reset on an unobserved workspace.
+- If earlier commits failed but a **later HEAD passed**, record both with precedence. The handoff should identify the newest verified passing commit and the exact still-unverified runtime behavior, not a stale CI blocker.
+- Keep new code/refactoring and history in the product repo; the live snapshot should prioritize the **single next acceptance gate**. Pushing only documentation may start CI; verify the newer commit separately rather than inheriting its parent's green status.
+
+This is reusable workflow guidance only. Individual product options, local paths, provider IDs and screenshot descriptions belong in the product handoff, not here.
+

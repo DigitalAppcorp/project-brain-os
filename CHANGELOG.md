@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased — 2026-10-13
+
+### Clarified
+- Visual implementation handoffs distinguish a Product Owner's selected design concept from coded behavior, passing CI and actual browser/product acceptance. Record exact layout and preserved action contracts, current HEAD (not earlier failed CI), safe local preview steps and the sole remaining acceptance gate; do not ask the user to select the option again.
+
 ## Unreleased — 2026-10-12
 
 ### Clarified
