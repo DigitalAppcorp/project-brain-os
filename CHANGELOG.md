@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased — 2026-10-14
+
+### Clarified
+- During cross-chat transfers, a failed CI job must be diagnosed at its actual first actionable step, including strict shell optional-variable checks. Fix the narrow cause, rerun on the corrected HEAD and report failed-vs-passing run IDs distinctly; never imply generic CI PASS supersedes a separate failing database job.
+
+
 ## Unreleased — 2026-10-13
 
 ### Clarified
