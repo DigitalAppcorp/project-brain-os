@@ -121,3 +121,16 @@ A Product Owner may select a specific numbered visual concept and authorize codi
 
 This is reusable workflow guidance only. Individual product options, local paths, provider IDs and screenshot descriptions belong in the product handoff, not here.
 
+
+## Hosted-only diagnostics and concurrent deployment drift
+
+When a handoff follows a time-critical third-party integration (payments, webhooks, identity, or similar), verify **both** repository HEAD and the **actually hosted** runtime immediately before declaring the next action. Asynchronous local agents, deployment automation and other conversations may change a function after the last source-code audit.
+
+- An endpoint appearing in hosted inventory **does not establish who deployed it, whether it was invoked, or that it passed**. Inspect its current version/source and, when authorized, sanitized execution evidence. Distinguish **hosted**, **enabled**, **authenticated execution observed**, **external-source verification**, and **business effect recorded**.
+- If hosted source is absent from the audited Git branch, note a **runtime/source drift** in the project-specific handoff and preserve the exact deployed source through an approved version-control process before changing it. Never overwrite an unfamiliar deployed endpoint merely to make HEAD match.
+- A new read-only diagnostic permission does **not** imply authority to activate an existing disabled writer, queue consumer, subscription fulfillment, irreversible operation, or production payment flow. Read-only results may remain inconclusive; a webhook or provider status by itself is not settlement, ownership, accounting or entitlement evidence.
+- Distinguish provider credentials held privately by a trusted hosted runtime from credentials available to a local agent: failure to find **local** credentials is not proof that the provider is disconnected, and must not cause secrets to be copied into local files or chat.
+- Before pausing for cross-chat handoff, record the **single authorized next step**, irreversible exclusions, last independently checked data/runtimes, and any short-lived diagnostic expiration. Never claim a code deployment, successful execution, or reconciliation only from the presence of a function or a user-visible screen.
+- Where source control commits can trigger automatic resource-consuming deploys, minimize documentation-only commits and report the side-effect risk. Preserve historical handoff material through verifiable commit permalinks when compacting a live snapshot.
+
+This is a reusable operating rule. Provider project IDs, event IDs, customer details, secrets, and the runtime details of any specific app belong solely to that app's private/project-specific records.
