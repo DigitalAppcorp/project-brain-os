@@ -134,3 +134,17 @@ When a handoff follows a time-critical third-party integration (payments, webhoo
 - Where source control commits can trigger automatic resource-consuming deploys, minimize documentation-only commits and report the side-effect risk. Preserve historical handoff material through verifiable commit permalinks when compacting a live snapshot.
 
 This is a reusable operating rule. Provider project IDs, event IDs, customer details, secrets, and the runtime details of any specific app belong solely to that app's private/project-specific records.
+
+
+## Visual reference rejected, followed by a newer coded iteration
+
+When a Product Owner posts a **reference screenshot beside a rejected runtime screenshot**, both may remain discoverable as conversation files or in the user's Library. For a cross-chat handoff:
+
+1. **Ground the comparison in the exact two images.** Record their durable filename, location (project repo or Library), role (*approved reference* vs. *rejected earlier runtime*), and the observed visual gaps. Prefer reconnecting to an existing file over asking the Product Owner to re-upload it.
+2. **Verify whether the remote branch moved AFTER the rejected screenshot.** The latest UI may already include a corrective implementation that has not been photographed or tested. Never call the rejected screenshot the latest branch behavior without a matching build SHA/runtime capture.
+3. Mark each distinct stage: `REFERENCE_SELECTED`, `FIRST_RUNTIME_REJECTED`, `SECOND_ITERATION_COMMITTED`, `SECOND_ITERATION_CI_PASS`, `SECOND_ITERATION_VISUAL_UNREVIEWED`. A passing technical test cannot override an explicit visual rejection, but a rejected older screenshot also does not prove the newer code is visually wrong.
+4. The next step is **compare the newer actual runtime against the fixed reference** on the relevant breakpoints, before another wholesale implementation. If the user then rejects it, capture *specific remaining gaps* and iterate. Never offer the same option-selection menu again.
+5. **Visual fidelity vs truthful measurement:** an approved analytics design may contain illustrative KPIs, charts, maps, revenue, device status, or other mock data. Preserve layout hierarchy and visual language without fabricating business metrics, histories, uptime, geolocations, billing evidence, or permission claims. A visibly labeled, honestly sourced alternate chart is better than a counterfeit exact visual.
+6. **Preserve screens and context for next chat** in durable project docs. If the live handoff has become huge, archive the prior full text or link a verifiable historical commit, then replace the active file with a compact snapshot linking to the comparison images and precise next gate. Never discard old decisions or approvals.
+
+General principle: **a new chat continues from the newest verified branch and the last actual Product Owner acceptance gate**, not from an older screenshot or a prior assistant's promise to fix it. Store only general methodology here; product-specific filenames, environments, branch names and identities remain in the product repository.
