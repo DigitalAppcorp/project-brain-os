@@ -569,6 +569,8 @@ La memoria/chat nunca demuestra que un archivo se guardó o que una migración s
 
 Para traspasos de conversaciones extensas: priorizar **un único snapshot operativo vigente** con fecha/evidencia y el siguiente gate exacto; archivar la cronología previa. Cuando una decisión de producto está cerrada pero su implementación/DoD no, reflejar ambos estados sin contradicción. No tratar una prueba sintética o un CI anterior como autorización de producción. Consultar el patrón de handoff para la jerarquía de evidencias y desconocidos explícitos.
 
+Si el usuario compara una **referencia visual aprobada** con una **captura rechazada**, recuperar ambas imágenes de la fuente duradera disponible y verificar si la rama remota ya contiene una implementación posterior. Registrar por separado rechazo de la versión antigua, código/CI de la versión nueva y aceptación visual aún pendiente. No reiniciar la elección de diseño ni inventar datos de un mockup de analítica para conseguir fidelidad aparente; usar el gate de comparación en `patterns/VERIFIABLE_HANDOFF.md`.
+
 ## 20. Recuperación de chats largos
 
 El proyecto no debe depender de una conversación.
