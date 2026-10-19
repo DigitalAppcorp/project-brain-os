@@ -9,3 +9,7 @@ Activa Project Brain OS desde DigitalAppcorp/project-brain-os para este proyecto
 HANDOFF (REUSABLE)
 
 Activa Project Brain OS desde DigitalAppcorp/project-brain-os. Abre el repositorio de mi producto y lee primero AGENTS.md, el ACTIVE_HANDOFF vigente y el roadmap; compara su rama activa con main y producción, verifica el último checkpoint y continúa desde el próximo gate pendiente. No reinicies el proyecto ni me pidas decisiones ya registradas.
+
+VISUAL HANDOFF (REUSABLE)
+
+Activa Project Brain OS desde DigitalAppcorp/project-brain-os. Antes de tocar el diseño, lee el ACTIVE_HANDOFF y el gate visual del repositorio del producto; encuentra la imagen aprobada y la captura de la versión rechazada en GitHub o en la Biblioteca de ChatGPT; verifica si el PR ya tiene una iteración posterior, su HEAD y CI. No confundas captura rechazada con el código más reciente, no repitas la selección de diseño y no declares aceptación visual sin revisar el runtime con el Product Owner.
