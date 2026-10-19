@@ -148,3 +148,16 @@ When a Product Owner posts a **reference screenshot beside a rejected runtime sc
 6. **Preserve screens and context for next chat** in durable project docs. If the live handoff has become huge, archive the prior full text or link a verifiable historical commit, then replace the active file with a compact snapshot linking to the comparison images and precise next gate. Never discard old decisions or approvals.
 
 General principle: **a new chat continues from the newest verified branch and the last actual Product Owner acceptance gate**, not from an older screenshot or a prior assistant's promise to fix it. Store only general methodology here; product-specific filenames, environments, branch names and identities remain in the product repository.
+
+
+## Moving a payment integration from QA screens to a member-facing experience
+
+Integration QA often accumulates useful buttons for inspecting provider events, copying evidence, probing billing, and manually refreshing status. They are **operator tools**, not permanent customer actions. The handoff must preserve the difference:
+
+- Once the supported financial operations pass their independent technical gates, move detailed probes to an explicit, access-controlled developer/admin diagnostic surface. Do **not** expose them in the ordinary membership flow merely because their endpoints still exist. Do not remove server-side billing verification or cancellation functionality when simplifying the UI.
+- In the normal experience, show only business-relevant, server-verified state and actions (coverage, renewal, refresh on demand, cancel with confirmation). Keep incomplete or unverified financial data fail-closed, not silently interpreted as paid.
+- Prevent visible flashes between provisional *unpaid*, *checking* and *paid* cards. Prefer a visually stable entry point while the authenticated state resolves; load the minimal server-derived account status instead of N per-item API requests. A cached UI flag or provider redirect is not entitlement proof.
+- Separate **source/test PASS** from **actual browser flicker-free presentation** and Product Owner acceptance. A CI assertion that a loading message was removed does not prove a seamless runtime. The next chat must test at normal network speed and inspect both account states.
+- Before release, reconcile payment-provider events, account ownership, paid-through coverage, renewals/cancellations and ledger separately. A successful provider login redirect or webhook receipt is not automatically a reconciled payment, nor does a configuration form imply the production gateway uses those values.
+
+Document exact project routes, UI labels and provider details only in the product repository, not in this reusable pattern.
