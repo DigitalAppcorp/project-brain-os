@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased — 2026-10-18
+
+### Improved cross-chat continuity
+- A Product Owner's rejected screenshot must be kept separate from a newer, already-committed UI iteration; require latest branch/CI verification and an actual screenshot of the new iteration before treating the rejection as current.
+- Preserve discoverable approved-reference and rejected-runtime image paths from an accessible file library or project repo; resume from the comparison gate without asking users to repeat design choices.
+- A design mock's business charts and numbers are not production data: preserve visual hierarchy with verified sources, label unavailable histories and metrics honestly.
+- When an active handoff becomes huge, archive it before writing one concise, authoritative current snapshot. Project facts stay in the product repo; generalized recovery rules live in `patterns/VERIFIABLE_HANDOFF.md`.
+
 ## Unreleased — 2026-10-14
 
 ### Clarified
