@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased — 2026-10-19
+
+### Preview budget and payment-gateway continuity
+- Preserve remaining deployment attempts by treating connected Git pushes as potential preview deployments; require a provider/PO-verified Preview OFF control and distinguish provider readback from a CI PASS.
+- For financial gates, distinguish code-only provisioning, hosted metadata, existing role grants, scoped secret access and actual Live settlement. Record migration versions from the provider and never silently bypass a blocked credential-revealing RPC.
+- Keep reusable rules in Project Brain OS; sensitive resources, product decisions, exact pending gates and fixture counts in the product repository.
+
+
 ## Unreleased — 2026-10-18
 
 ### Improved cross-chat continuity

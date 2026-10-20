@@ -161,3 +161,26 @@ Integration QA often accumulates useful buttons for inspecting provider events, 
 - Before release, reconcile payment-provider events, account ownership, paid-through coverage, renewals/cancellations and ledger separately. A successful provider login redirect or webhook receipt is not automatically a reconciled payment, nor does a configuration form imply the production gateway uses those values.
 
 Document exact project routes, UI labels and provider details only in the product repository, not in this reusable pattern.
+
+
+## Preview quota and automatic CI-to-deploy containment
+
+A protected release budget can be exhausted by **automatic deployments triggered by Git pushes**, even when nobody explicitly presses a deploy button. The fact that the assistant did not manually call a deployment tool is not evidence that no deployment occurred. For products using a connected hosting provider:
+
+1. **Before each write to a connected branch**, identify whether the push triggers preview/production deployment, which provider charges/counts attempts, and which scope the Product Owner reserved for final release. A code-only task can still have a billable side effect through a Git integration.
+2. When the Product Owner explicitly says **reserve preview quota until final beta**, stop unnecessary pushes, check the provider's actual preview-disable setting, and prefer a **project-scoped Preview OFF control** that preserves the connected repository and production branch. Turning off PR comments, ignored build steps or general CI status does not necessarily prevent preview attempts or quota use.
+3. Require **an authenticated readback or reliable provider state** for any configuration change. If a provider tool is read-only, fails with insufficient permissions, or the current setting is unknown, report the blocker; do not claim the change occurred. The Product Owner can use an official dashboard or scoped CLI flow if needed, without pasting access tokens.
+4. After resuming safe branch pushes, verify the resulting external deployment state **separately** from successful GitHub Actions. If an unexpected preview is created, suspend additional pushes and fix the trigger first. Do not equate "build skipped", "deployment cancelled" and "no deployment created" without provider-specific evidence.
+5. A new-chat handoff must preserve whether Preview OFF was **provider-verified, Product Owner-verified, or unverified**, the exact scope and exception for production, plus whether the most recent push was audited for side effects. Protect quotas without silently disabling tests or changing `main`.
+
+## Financial credentials and production-readiness claims
+
+When a configuration module will eventually switch a payment provider from a test environment to live processing:
+
+- Differentiate **metadata schema installed**, **pure adapter built/tested with mocks**, **server credential provisioned**, **management endpoint deployed**, **authenticated readback and provider verification**, **real payment reconciled**, and **operator release**. None implies a later step.
+- A service role's **pre-existing permissions** can exceed a newly proposed RPC's ACL. Audit effective schema/table privilege and current grants before claiming a new security boundary; do not revoke shared provider grants or weaken an unrelated guard merely to pass a test.
+- Avoid turning sensitive credentials into user-visible or broadly callable RPC output. Keep provider secrets server-side, use a scoped operator with least privilege and fail closed on mismatched identity, environment, generation or ambiguous write outcomes. A successful OAuth token request does not, by itself, verify merchant ownership, webhook delivery or charge settlement.
+- An installed migration's **actual provider-recorded version** may differ from its original file prefix. Reconcile names carefully after a successful authorized install so future schema synchronization does not reapply it. Record all applied/blocked migrations separately; never silently retry a blocked hosted change by another execution path.
+- Automatic transition to Live at an arbitrary date/domain appearance is not a safe substitute for explicit operator readiness, reversible control, checkout/renewal/cancellation tests and business approval.
+
+These rules are reusable; provider identifiers, project resources, environment variables and specific business decisions belong only in each product repository.
