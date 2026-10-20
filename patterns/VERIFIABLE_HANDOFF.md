@@ -20,6 +20,20 @@ Product facts stay **only in the product repository**. Generalizable workflow ru
 - Differentiate: **designed** / **committed** / **build PASS** / **backend applied** / **signed runtime tested** / **Product Owner visually approved** / **merged** / **released**.
 - Never call a test PASS from code existing, CI queued, or a synthetic-only test; record method, scope and limitations.
 
+## Interrupted-chat recovery and no-rework rule
+
+If the Product Owner reports a broken/interrupted chat, treat it as a **continuity handoff**, not an implicit restart or permission to repeat actions. Before writing the next response:
+
+1. **Inspect the latest remote Git branch HEAD, active PR, CI, backend migrations/flags, provider resources and tracked approved assets.** A screenshot of a paused operation or the last chat message may predate a successful commit/migration in the provider. Confirm by querying the current remote state.
+2. Classify interrupted operations as `confirmed complete`, `confirmed not executed`, `pending verification` or `uncertain`. If a hosted migration/table/function exists, inspect its identity, ACL and recorded version first; **never reinstall** just because the interrupted chat last said “about to apply”.
+3. Distinguish four layers of evidence: **repo CODE → CI/Lab → HOSTED → PROVIDER/E2E**. Don't call a simulated PayPal payment a verified real merchant transaction, and don't call a deployed fail-closed Edge Function an enabled commercial feature.
+4. **Resolve contradictions from the newest provider evidence.** Retire or archive chronological appendices rather than accumulate competing “current” banners. A compact canonical snapshot should show the exact next gate and a copy-ready new-chat activation phrase.
+5. For user-approved assets extracted from a file/library, check exact hashes against repository files and existing integrity tests; **never reextract, regenerate or ask for originals** after proving their byte identity and presence.
+6. Explicitly distinguish ongoing code-development consent from approval to deploy, rotate secrets, write paid provider resources, merge/release or activate money. Do not ask a user for secrets in chat. Avoid duplicating previously approved QA/sandbox runs unless there is a specific regression.
+7. If the next gate cannot execute due to a connector/policy/authentication block, record the precise blocker and authorized handoff path. Do not claim to have “continued in the background”; hand off the smallest actionable next step.
+
+The interrupted handoff itself is a **documentation operation**: don't silently alter production or run migrations while writing continuity, and verify any Git write and resulting CI separately. Product-specific facts, IDs and decisions belong ONLY in the product repository, never in this reusable pattern.
+
 ## Precedence and contradiction control
 
 - Keep the live handoff **short and authoritative**. When it becomes a chronological log, archive the full original verbatim, then replace the live file with a current snapshot rather than appending again.
