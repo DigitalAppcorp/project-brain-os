@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased — 2026-10-23
+
+### Marketing Intelligence & Growth knowledge module
+- Add an independent, reusable `knowledge/marketing/` domain with strategy, paid ads, creative/CRO, SEO/AI search, analytics, retention and compliance guidance, verified primary sources and experiment templates.
+- Introduce a monthly/event-triggered maintenance protocol with dated evidence and PR review; no automatic ad spend or changes to product-specific repositories.
+- Keep core Brain OS at v1.4.1; marketing module starts at v0.1.0 and complements existing gates and authorization rules.
+
 ## Unreleased — 2026-10-19
 
 ### Preview budget and payment-gateway continuity

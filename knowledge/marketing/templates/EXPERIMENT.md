@@ -1,0 +1,22 @@
+# Experimento de crecimiento (plantilla)
+
+- ID / nombre / proyecto:
+- Estado: propuesta | autorizado | en ejecución | pausado | terminado:
+- Hipótesis causal y mecanismo:
+- Población/cohorte elegible y exclusiones:
+- Línea de base, fuente y fecha:
+- Cambio a probar y variable controlada:
+- Presupuesto máximo **aprobado**; ventana y límites:
+- Eventos instrumentados y QA:
+- Métrica primaria (numerador/denominador):
+- Guardrails (coste, privacidad, quejas, margen, rendimiento):
+- Criterio previo de éxito:
+- Criterio previo de pausa/fracaso:
+- Tamaño de muestra/volumen esperado (supuestos):
+- Sesgos conocidos y método de comparación:
+- Autorización exacta del Product Owner:
+- Enlace a assets/versiones/PR:
+- Resultado con denominador y fecha:
+- Confianza y límites estadísticos:
+- Decisión: escalar | iterar | pausar | descartar:
+- Aprendizaje reutilizable (si existe, enlazar propuesta Brain OS):
