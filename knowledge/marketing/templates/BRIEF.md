@@ -1,0 +1,25 @@
+# Brief estratégico de marketing (plantilla)
+
+- Negocio / producto:
+- Fecha y responsable:
+- Versión de Brain OS / módulo:
+- Fuente de verdad de datos (URL/rango/fecha):
+- Objetivo comercial con horizonte:
+- Segmento/ubicación/idioma:
+- Problema/Job to be Done:
+- Oferta concreta, diferencial y prueba:
+- Situación y restricción: margen, caja, equipo, capacidad, tiempo:
+- Competidores/alternativas investigados (fuentes):
+- Datos confirmados vs supuestos:
+- Journey y principales fricciones:
+- Métrica Norte; métricas secundarias; guardrails:
+- Canales candidatos y razonamiento:
+- Recomendación prioritaria:
+- Dos opciones descartadas y por qué:
+- Presupuesto máximo autorizado: NO APROBADO hasta confirmación:
+- Dependencias de CRM/tracking/consentimiento:
+- Riesgos y condiciones de pausa:
+- Hipótesis/experimento mínimo:
+- Fecha de evaluación:
+- Decisión exacta que requiere autorización:
+- Resultado (posterior, nunca rellenar anticipadamente):

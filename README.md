@@ -35,6 +35,7 @@ For a new product:
 - `PROJECT_STARTER.md` — bootstrap workflow for new products.
 - `templates/` — reusable project documentation templates.
 - `patterns/` — reusable decision/engineering patterns.
+- `knowledge/marketing/` — reusable Marketing Intelligence & Growth module (strategy, acquisition, paid media, SEO, CRO, analytics, retention, compliance, monthly source-review protocol). Start at [Marketing Brain](knowledge/marketing/README.md); its own version is 0.1.0 and it does not change core Brain OS v1.4.1.
 
 ## Principle
 
