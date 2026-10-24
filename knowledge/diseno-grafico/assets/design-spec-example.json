@@ -1,0 +1,18 @@
+{
+  "project": "Ejemplo de pantalla móvil (datos ficticios)",
+  "medium": "ui-web",
+  "colors": {
+    "text_primary": "#1A1A1A",
+    "surface": "#FFFFFF",
+    "accent": "#126C52"
+  },
+  "contrast_checks": [
+    {"name": "Texto de párrafo", "foreground": "#1A1A1A", "background": "#FFFFFF", "type": "normal-text"},
+    {"name": "CTA blanco sobre acento", "foreground": "#FFFFFF", "background": "#126C52", "type": "normal-text"},
+    {"name": "Icono esencial", "foreground": "#126C52", "background": "#FFFFFF", "type": "non-text"}
+  ],
+  "pointer_targets": [
+    {"name": "Acción principal", "width_css_px": 44, "height_css_px": 44}
+  ],
+  "notes": "El analizador solo revisa los campos escritos, no inspecciona píxeles del diseño real ni las excepciones de WCAG."
+}
