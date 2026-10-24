@@ -1,5 +1,9 @@
 # Pattern — Backend Safety
 
+For private backups and isolated restores, also apply
+[Private recovery execution boundary](PRIVATE_RECOVERY_EXECUTION.md): verify
+the actual executor and destination before exporting any private data.
+
 Before mutation:
 1. inspect current schema;
 2. inspect grants/RLS/functions/storage;

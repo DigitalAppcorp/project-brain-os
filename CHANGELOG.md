@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased — 2026-10-24
+
+### Private recovery execution and evidence
+- Distinguish the authorized private operator machine from a connected cloud executor before exporting backups or handling operator-bound credentials and encryption keys.
+- Continue synthetic verification and safe fixes while recording blocked real export/restore gates; request one concrete missing access action without renewing existing authorization.
+- Cover producer encodings across platforms while preserving original bytes for integrity hashes. Keep core version 1.4.1 until release; product facts remain outside the OS.
+
 ## Unreleased — 2026-10-23
 
 ### Marketing Intelligence & Growth knowledge module
