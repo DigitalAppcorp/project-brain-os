@@ -6,10 +6,12 @@
 **Fuentes de evidencia disponibles:** captura / código / runtime / test / usuario / telemetría  
 **No observado / límites:**
 
+**Recordatorio**: NEEDS_REPRO no implica S0; separar severidad, estado de incidente, confianza y PASS/FAIL/NOT_TESTED/INCONCLUSIVE. Registrar SHA, entorno y evidencia.
+
 ## Hallazgos
-| ID | Tarea y escenario | Esperado vs observado | Evidencia | Norma/guía/hipótesis | Severidad S0–S4 | Confianza | Solución | Test aceptación | Estado |
+| ID | Tarea y escenario | Esperado vs observado | Evidencia | Norma/guía/hipótesis | Severidad S0–S4/SIN_DETERMINAR | Estado incidente | Confianza | Solución | Test aceptación | Estado prueba |
 |---|---|---|---|---|---|---|---|---|---|
-| UX-01 | | | | | | | | | |
+| UX-01 | | | | | | | | | | |
 
 ## Verificación por capas
 - [ ] Valor y flujo principal
