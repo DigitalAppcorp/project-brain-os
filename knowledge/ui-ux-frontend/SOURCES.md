@@ -45,3 +45,14 @@
 
 ## Límites
 Ninguna fuente certifica por sí sola la conformidad o calidad de un proyecto concreto; se requieren inspección, pruebas y revisión de usuarios. No atribuir directamente a un sitio web resultados de pruebas que no ejecutamos.
+
+## Fuentes integradas para la arquitectura v0.3.0
+26. **NIST — Human Centered Design**. Describe cuatro actividades: contexto, requisitos, soluciones y evaluación; aplicable a ciclo iterativo. https://www.nist.gov/itl/iad/human-centered-technologies/human-factors-human-centered-design
+27. **GOV.UK — Understand content design**. El contenido se fundamenta en lo que una persona necesita saber o hacer y en su ubicación/formato apropiados; no respalda ocultar información obligatoria. https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/plan-manage-content/understand-content-design/
+28. **GOV.UK — Government Design Principles**. Empezar por necesidades, hacer menos, trabajar con datos e iterar. https://www.gov.uk/guidance/government-design-principles
+29. **Anthropic — Frontend Design SKILL.md (fuente pública)**. Documenta patrones visuales genéricos y propone planificación, evaluación del brief, composición deliberada y copy desde perspectiva del usuario. **Es guía del fabricante, no prueba causal de por qué todos los modelos fallan.** https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md
+
+### Hipótesis no confirmadas (evitar afirmaciones causales)
+- `Implementation-to-UI leakage` es etiqueta **operativa propuesta**, no nombre académico confirmado por estas referencias.
+- Que el modelo maximice el reconocimiento del prompt del PO sobre necesidades finales es una **hipótesis**; no afirmar optimización deliberada sin estudio controlado.
+- La homogeneización puede correlacionar con plantillas y datos de entrenamiento, pero ninguna de estas fuentes atribuye el patrón a una causa neural única de GPT o Claude.
