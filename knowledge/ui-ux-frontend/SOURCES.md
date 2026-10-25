@@ -3,7 +3,7 @@
 **Fecha de investigación**: 2026-10-25. La fecha refleja consulta de la documentación, no revisión futura garantizada. En caso de discrepancia, leer la edición vigente de la fuente oficial. Distinguir requisitos WCAG de recomendaciones de diseño.
 
 ## Normas y patrones de accesibilidad (prioridad alta)
-1. **W3C — WCAG 2.2, Recommendation, 12 dic 2024**. Objetivo de conformidad y criterios testables: contraste de texto 1.4.3, contraste no textual 1.4.11, zoom 1.4.4, reflow 1.4.10, foco 2.4.7/2.4.11, dragging 2.5.7, target 2.5.8, accessible authentication 3.3.8. https://www.w3.org/TR/WCAG22/
+1. **W3C — WCAG 2.2, Recommendation original 5 oct 2023, actualización 12 dic 2024**. Objetivo de conformidad y criterios testables: contraste de texto 1.4.3, contraste no textual 1.4.11, zoom 1.4.4, reflow 1.4.10, foco 2.4.7/2.4.11, dragging 2.5.7, target 2.5.8, accessible authentication 3.3.8. https://www.w3.org/TR/WCAG22/
 2. **W3C WAI — ARIA Authoring Practices, Dialog Modal**. Semántica, contención de foco, cierre con Escape, devolución de foco. https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/
 3. **W3C WAI — Developing a Keyboard Interface**. Tab/Shift+Tab y manejo correcto de foco. https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/
 4. **W3C WAI — Labeling Controls**. Asociar etiquetas y reconocer controles. https://www.w3.org/WAI/tutorials/forms/labels/
@@ -31,6 +31,11 @@
 20. **Google web.dev — Web Vitals**. LCP ≤2.5s, INP ≤200ms, CLS ≤0.1, p75; medición en visitas reales. https://web.dev/articles/vitals
 21. **Google web.dev — Getting Started Measuring Web Vitals**. Diferenciar RUM y laboratorio; interpretación de p75. https://web.dev/articles/vitals-measurement-getting-started
 22. **Playwright — Accessibility Testing**. Automatización con axe-core y advertencia explícita: hay barreras que requieren pruebas manuales. https://playwright.dev/docs/accessibility-testing
+
+## Metodología formal y pruebas críticas añadidas en v0.2.0
+23. **W3C — WCAG Evaluation Methodology (WCAG-EM) 2.0**, Group Note de 23 jul 2026. Cinco fases: alcance, exploración, muestreo representativo, evaluación e informe; aplicable a aplicaciones digitales; no reemplaza WCAG 2.2 ni añade requisitos. https://www.w3.org/TR/wcag-em-2/
+24. **W3C WAI — WCAG-EM overview**. Explica alcance y diferencias de WCAG-EM 1 vs 2 y procedimiento. https://www.w3.org/WAI/test-evaluate/conformance/wcag-em/
+25. **W3C — WCAG 2.2 publication history**. Diferencia publicación original y republicación de erratas. https://www.w3.org/standards/history/WCAG22/
 
 ## Evaluación de evidencia
 - **NORMATIVA**: especificación de conformidad (WCAG). Citar criterio exacto, nivel y excepciones.
