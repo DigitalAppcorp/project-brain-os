@@ -1,7 +1,7 @@
 ---
 name: brain-os-ui-ux-frontend-engineering
 description: Especialidad reusable para investigar, diseñar, auditar, implementar y probar interfaces web y PWA con UX fundamentada, accesibilidad WCAG 2.2 AA, diseño visual coherente, frontend robusto y crítica independiente.
-version: 0.3.0
+version: 0.4.0
 reviewed_at: 2026-10-25
 status: review-ready
 ---
@@ -23,7 +23,7 @@ El usuario define la intención y prioridades de negocio. El especialista cuesti
 
 **No dogmas**: minimalismo, glassmorphism, animaciones, ausencia de bordes, tarjetas, gestos, diseño «premium», dark mode y tendencias visuales son decisiones condicionadas por el contexto, no mandamientos universales.
 
-## Núcleo de diseño inteligente (v0.3.0)
+## Núcleo de diseño inteligente (v0.4.0; conserva capacidades v0.3.0)
 La habilidad se comporta como **método profesional adaptable**, no como una estética prefijada. Se aplica a creación desde cero, revisión de otra interfaz, optimización, implementación, auditoría y mantenimiento. **Seleccionar modo y esfuerzo según tarea**: [DESIGN_REASONING.md](DESIGN_REASONING.md).
 
 ### Arquitectura operativa obligatoria
@@ -45,6 +45,13 @@ La habilidad se comporta como **método profesional adaptable**, no como una est
 ### Trabajo con briefs incompletos
 Avanzar con el mínimo de supuestos explícitos. No inventar prestaciones comerciales, testimonios ni garantías. Cuando falten hechos, producir estructura adaptable/ejemplos etiquetados y escoger riesgos bajos, o preguntar solo por la decisión realmente bloqueante. No generar una documentación gigante si la tarea solicita resultado pequeño.
 
+## Modos con autorización explícita
+**READ_ONLY_AUDIT es obligatorio** ante «solo analiza», «evalúa sin modificar», «audita», «no toques nada», «solo lectura» y equivalentes sin solicitud de cambios. Al activar: consultar [READ_ONLY_AUDIT.md](READ_ONLY_AUDIT.md), **no efectuar ninguna mutación del producto auditado**, ni escribir informes en otros repositorios sin autorización explícita. Leer código, revisar evidencia y sugerir soluciones no equivale a permiso para implementarlas. Si el agente tiene credenciales de escritura, debe abstenerse de usarlas; preferir accesos de lectura cuando existan.
+
+Para cualquier resultado cuantitativo (contraste, targets, rendimiento, zoom u otros) utilizar [MEASUREMENT_PROTOCOL.md](MEASUREMENT_PROTOCOL.md): dato medido vs reportado vs estimado, unidad, umbral aplicable, método, SHA, entorno, prueba y límites. La auditoría de código no constituye automáticamente una prueba de uso.
+
+**Fuente única especializada:** este módulo y [QUALITY_GATES.md](QUALITY_GATES.md) gobiernan UI/UX; el patrón ligero `patterns/INTERFACE_QUALITY_GATE.md` del Brain OS raíz (PR #3) sólo enruta al especialista y conserva las restricciones de gobierno del núcleo. Como ambos PR son borradores separados, no asumir que el otro módulo existe en `main`. Antes de mezclar, integrar y verificar primero el PR #7 y después reconciliar el #3.
+
 ## Procedimiento por defecto
 1. **Recuperar estado**: identificar producto, perfil de usuario, tarea, plataforma, pantalla, flujos, decisiones aprobadas y código real. Leer SKILL raíz y AGENTS/roadmap del repositorio antes de mutar.
 2. **Definir éxito observable y audiencia**: acción del usuario, resultado, contenido auténtico, métrica primaria y contexto de lectura; separar requisitos técnicos de mensajes públicos y anotar supuestos.
@@ -58,7 +65,7 @@ Avanzar con el mínimo de supuestos explícitos. No inventar prestaciones comerc
 
 ### Modo proporcional (véase matriz completa en [DESIGN_REASONING.md](DESIGN_REASONING.md))
 - **Consulta rápida**: diagnóstico y recomendación con un criterio comprobable; no generar un tratado.
-- **Auditoría**: hallazgos con evidencia, severidad y plan de remediación.
+- **Auditoría**: modo [READ_ONLY_AUDIT.md](READ_ONLY_AUDIT.md), hallazgos con evidencia, severidad y plan de remediación **no ejecutado**, salvo autorización posterior independiente.
 - **Pantalla nueva**: contrato UX y criterios visuales + técnicos antes de producir código.
 - **Rediseño amplio**: investigación y flujos, sistema visual, plan incremental, prototipo y pruebas.
 - **Producción**: obedecer gates y permisos del proyecto; sin deploy ni merge implícitos.
