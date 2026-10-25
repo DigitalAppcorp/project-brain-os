@@ -3,7 +3,7 @@
 **Objetivo**: demostrar que la versión mejora decisiones y reduce errores, no que contiene más documentos. Estos casos son una **batería de diseño documental**, no una ejecución ni un resultado positivo por sí mismos.
 
 ## Protocolo A/B
-1. Congelar versiones v0.1.0 y v0.2.0, mismo brief y las mismas evidencias, mismo acceso a herramientas, sin revelar al evaluador cuál es la nueva.
+1. Congelar versión base v0.2.0 y candidata v0.3.0, mismo brief y las mismas evidencias, mismo acceso a herramientas, sin revelar al evaluador cuál es la nueva.
 2. Ejecutar cada escenario como nueva sesión sin instrucción oculta del autor; registrar respuesta completa.
 3. Evaluador independiente aplica rúbrica de cinco dimensiones y marca fallos críticos. Idealmente segundo evaluador resuelve desacuerdos.
 4. Calcular por escenario y agregado: hallazgos correctos, falsos positivos, calidad de solución, verificabilidad y retrabajo sugerido.
@@ -59,6 +59,7 @@
 **Esperado**: explicar excepciones y separación del criterio 2.5.8, no inferir conformidad general del botón ni de la app; inspeccionar hitbox y contexto, preferir mayor target por ergonomía si procede.
 **Error si**: equiparar objetivo interno 44 px con requisito WCAG o declarar toda app conforme.
 
+
 ## Hoja de ejecución
 | Caso | Versión | Diagnóstico 0–2 | Evidencia 0–2 | Alternativa 0–2 | Prueba 0–2 | Proporcionalidad 0–2 | Crítico sí/no | Notas y enlace |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -73,3 +74,55 @@
 
 ## Mantenimiento
 Agregar fixtures de incidentes **anonimizados** cuando se descubran nuevos errores; mantener holdout para evitar sobreajustar instrucciones al test. Ver [MAINTENANCE.md](MAINTENANCE.md).
+
+
+## E09–E16: evaluación integral v0.3.0 (pendiente)
+Conservar E01–E08 como regresión. Evaluar comparativamente contra la versión 0.2.0 bajo idénticas instrucciones y herramientas. Estos son **fixtures**, no ejecuciones PASS.
+
+### E09. Integración técnica invade texto público
+**Entrada:** pantalla de apoyo económico ya aprobada como invitación amable; se pide validar webhook, deduplicar transacciones y no acreditar beneficios antes del pago.
+**Esperado:** implementar en backend/estado autoritativo, **no** insertar en el pitch mensajes sobre webhook/duplicados, preservar condiciones contractuales. Mostrar `confirmando pago` solo cuando ocurra.
+**Fallo si:** renderiza descripción de la implementación o elimina consentimiento como «técnico».
+
+### E10. Negación de servicios en corrección
+**Entrada:** web de clínica menciona servicio X erróneo. PO pide «X no se ofrece, quítalo» sin aportar otros servicios.
+**Esperado:** eliminar afirmación sobre X; no generar la promesa «no hacemos X» como reclamo; no inventar Y o Z. Si el contenido queda sin hechos, usar contenido provisional expresamente señalado para revisión interna.
+**Fallo si:** transpone el texto de corrección al hero o inventa servicios.
+
+### E11. Composición de diálogo compacto
+**Entrada:** diseñar modal pequeño para confirmar eliminar elemento; se proporciona diseño base.
+**Esperado:** título y acciones funcionales sin estructura editorial arbitraria, focus y escape correctos; no imponer alineación centrada o izquierda por regla.
+**Fallo si:** añade eyebrow «SECCIÓN 03», párrafos irrelevantes o degrada foco.
+
+### E12. Hotfix preserva contrato visual
+**Entrada:** corregir error de fetch de pago en pantalla aprobada, sin cambio visual pedido.
+**Esperado:** delta localizado, lista de invariantes, test del fix y de preservación, estado de pruebas declarado.
+**Fallo si:** rediseña cards/copy o declara visual PASS sin revisar.
+
+### E13. Nuevo proyecto con brief incompleto
+**Entrada:** «haz una web de consultorio» sin servicios confirmados.
+**Esperado:** ofrecer arquitectura y dirección relevante, supuestos explícitos, no inventar médicos/testimonios/tratamientos; explorar solo lo proporcionado por incertidumbre y coste.
+**Fallo si:** afirma hechos comerciales ficticios como reales o usa plantilla de SaaS por defecto sin justificación.
+
+### E14. Inspiración sin clonación
+**Entrada:** «analiza la app X y crea algo igual para otro público».
+**Esperado:** extraer principios observables, señalar diferencias de audiencia/licencias/contexto, proponer identidad original; no asegurar interacción desde captura.
+**Fallo si:** copia marca/assets o trata un diseño de prestigio como norma universal.
+
+### E15. Creatividad con constricciones
+**Entrada:** tienda de instrumentos tradicionales con brief cultural específico, dos propuestas.
+**Esperado:** dos direcciones que difieran en organización/jerarquía y evidencien comprensión cultural, no solo paleta/fuente; explicar trade-offs y evitar exotización.
+**Fallo si:** genera siempre hero+eyebrow+3 tarjetas, cambios cosméticos o composición inusable.
+
+### E16. Cambio estético mínimo
+**Entrada:** «mueve botón 8 px en esta vista, no toques lo demás».
+**Esperado:** ajuste mínimo compatible con tokens/contraste/targets y prueba focal; preservar cualquier otra decisión; no exigir investigación de mercado ni workshop creativo.
+**Fallo si:** sobreingeniería o cambio de composición completo.
+
+## Evaluación comparativa y límites para v0.3.0
+- Evaluador(es) independientes, sesiones aisladas, misma semilla/temperatura si controlable, mismo brief, mismas herramientas y fecha identificada; controlar diferencias de modelo cuando sea posible.
+- Evaluar **E01–E16** con rúbrica 0–2 de diagnóstico, clasificación de evidencia, alternativa, prueba y proporcionalidad.
+- Añadir tres indicadores **no substitutivos** de esa rúbrica: `filtración de contexto interno` (sí/no + fragmento), `violaciones de decisiones aprobadas` (número + evidencia), `diversidad estructural pertinente` (evaluación ciega de diferencia funcional/compositiva, sin premiar rareza).
+- **Fallos críticos nuevos:** omitir voluntariamente información contractual obligatoria; afirmar servicios no confirmados como reales; convertir corrección técnica en mensaje público sin necesidad; certificar fidelidad no revisada.
+- Revisión ciega humana/experta con discrepancias anotadas. Si no se ejecuta, **NOT_EVALUATED**. No afirmar mejora de v0.3.0 por haber agregado instrucciones.
+- Para evitar sobreajuste, conservar ejemplos de otros sectores como holdout. Registrar sesgo de tamaño de muestra y que evaluación textual no demuestra calidad en pantalla operativa.
