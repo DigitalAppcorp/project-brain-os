@@ -36,6 +36,7 @@ For a new product:
 - `templates/` — reusable project documentation templates.
 - `patterns/` — reusable decision/engineering patterns.
 - `knowledge/marketing/` — reusable Marketing Intelligence & Growth module (strategy, acquisition, paid media, SEO, CRO, analytics, retention, compliance, monthly source-review protocol). Start at [Marketing Brain](knowledge/marketing/README.md); its own version is 0.1.0 and it does not change core Brain OS v1.4.1.
+- `knowledge/ui-ux-frontend/` — reusable UI/UX Frontend Engineering skill: research, interface design, accessibility, responsive/PWA patterns, React-state reliability, evidence-driven critique and QA. Start at [UI/UX Frontend Engineering](knowledge/ui-ux-frontend/README.md). Module version 0.1.0; core Brain OS version remains unchanged.
 
 ## Principle
 
