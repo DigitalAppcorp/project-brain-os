@@ -83,3 +83,13 @@ Para evidencia sensible, guardar solo identificadores inocuos y no adjuntar toke
 - No reproducido ≠ arreglado.
 - Cero errores reportados ≠ conformidad accesible.
 - «Pendiente de medición» no se registra como cero.
+
+## 9. Pruebas de frontera y preservación de diseño (v0.3.0)
+**Ejemplo de guion adaptable, no ejecución:**
+- Dado copy original aprobado, cambiar únicamente integración de pago. Esperado: los textos públicos previos permanecen, excepto mensajes de estado justificados y aprobados.
+- Buscar cambios en DOM/textos que incluyan jerga de sistema (`webhook`, `RPC`, `rollback`). Una coincidencia es una **señal a revisar**, no FAIL automático; el contexto puede ser de soporte/admin.
+- Comparar contrato de mensajes de UX con nodos realmente renderizados; verificar que precio/renovación/consentimiento permanezcan visibles.
+- Probar dos variantes de solicitud «quitar servicio X», una negación y otra catálogo positivo: evaluar si agrega texto de exclusión no solicitado o inventa servicios.
+- Verificar invariantes visuales con capturas comparables y observación manual; no comparar screenshots como única evidencia funcional.
+- Registrar `PASS / FAIL / NOT_TESTED / INCONCLUSIVE` por caso y en qué rama, viewport, configuración de datos y fecha.
+**La habilidad no puede afirmar que estos tests pasaron por estar aquí redactados.**
