@@ -1,41 +1,53 @@
 # Brain OS — UI/UX Frontend Engineering
 
-> Módulo transversal **v0.2.0** · revisión de fuentes: **2026-10-25** · estado: **documentación actualizada, pendiente de evaluaciones de rendimiento de la habilidad**.
+> **v0.3.0 · 2026-10-25 · documentación implementada en rama de revisión · batería comparativa pendiente de ejecución.**
 
 ## Propósito
-Diseñar, auditar e implementar interfaces web/PWA de alta calidad, combinando **investigación de usuarios, diseño de interacción, sistema visual, accesibilidad, ingeniería frontend, rendimiento y QA**. No confundir interfaces llamativas con experiencias eficaces.
+Sistema de decisiones reutilizable para diseñar, construir, criticar y mantener productos digitales **desde cero o existentes**: apps, webs, PWAs, dashboards, componentes, modales, rediseños, UX writing, análisis de referentes y auditorías. No define una apariencia estándar ni se limita a React; selecciona proceso proporcional al contexto.
 
-## Activación
-«Activa Project Brain OS y la habilidad de UI/UX frontend en knowledge/ui-ux-frontend/SKILL.md. Audita antes de diseñar o programar. Cuestiona mis propuestas si contradicen la evidencia, explica el problema y propón una mejor solución».
+### Activación
+> Activa Project Brain OS y el módulo `knowledge/ui-ux-frontend/SKILL.md`. Selecciona modo según el trabajo, diferencia la audiencia del Product Owner de los usuarios finales, preserva decisiones aprobadas y audita tus propias propuestas con evidencia.
 
-## Orden de lectura
-1. [SKILL.md](SKILL.md): contrato de ejecución y precedencias.
-2. [DECISION_PROTOCOL.md](DECISION_PROTOCOL.md): cómo cuestionar, comparar y decidir.
-3. [UX_RESEARCH.md](UX_RESEARCH.md): investigación, flujos y medición.
-4. [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md): diseño visual, responsive y componentes.
-5. [VISUAL_QUALITY.md](VISUAL_QUALITY.md): dirección de arte, crítica y fidelidad visual.
-6. [ACCESSIBILITY.md](ACCESSIBILITY.md): WCAG 2.2, WCAG-EM 2.0, navegación y experiencias inclusivas.
-7. [FRONTEND_ENGINEERING.md](FRONTEND_ENGINEERING.md): React, estado, rendimiento y fallos.
-8. [AUDIT_QA.md](AUDIT_QA.md): auditoría, severidad independiente de estado y pruebas.
-9. [QUALITY_GATES.md](QUALITY_GATES.md): criterios de aprobación y evidencia.
-10. [UX_METRICS.md](UX_METRICS.md): línea base, denominadores y experimentos.
-11. [PATTERN_LIBRARY.md](PATTERN_LIBRARY.md): patrones condicionados por contexto.
-12. [TEST_RECIPES.md](TEST_RECIPES.md): recetas reproducibles y límites de automatización.
-13. [EVALUATIONS.md](EVALUATIONS.md): fixtures y rúbrica de evaluación del propio agente.
-14. [SOURCES.md](SOURCES.md): bibliografía primaria contrastada.
-15. [MAINTENANCE.md](MAINTENANCE.md): versionado y revisión.
-16. [templates/](templates/): ficha de auditoría y contrato de implementación.
+## Orden de lectura (carga progresiva)
+**Siempre**
+1. [SKILL.md](SKILL.md) — núcleo, autoridad, límites y selección de modo.
+2. [DESIGN_REASONING.md](DESIGN_REASONING.md) — razonamiento y entrega proporcionados.
 
-## Relación con Project Brain OS
-- El SKILL raíz manda sobre autorización de cambios, seguridad, gobernanza, Git y producción.
-- Este módulo especializa el **cómo** de UI/UX/frontend y se aplica proporcionalmente al alcance.
-- Aquí se guardan principios reutilizables, **nunca** diseños, credenciales, incidentes o decisiones de un producto específico.
-- Los requisitos visuales de cada proyecto viven en su propio repositorio. No heredarlos a otros productos.
-- La aprobación estética del Product Owner no sustituye las validaciones funcionales o de accesibilidad.
+**Diseño y contenido**
+3. [AUDIENCE_BOUNDARY.md](AUDIENCE_BOUNDARY.md) — clasificación de instrucciones vs UI pública.
+4. [UX_CONTENT.md](UX_CONTENT.md) — jerarquía de títulos, copy, estados y tono.
+5. [CREATIVE_EXPLORATION.md](CREATIVE_EXPLORATION.md) — alternativas pertinentes y anti-fijación.
+6. [REFERENCE_ANALYSIS.md](REFERENCE_ANALYSIS.md) — análisis de otros productos sin copia.
+7. [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md) + [VISUAL_QUALITY.md](VISUAL_QUALITY.md) — sistemas, composición y fidelidad.
+8. [UX_RESEARCH.md](UX_RESEARCH.md) + [UX_METRICS.md](UX_METRICS.md) — investigación y medidas.
 
-## Qué entrega
-Para cada trabajo relevante: **objetivo y contexto → diagnóstico → evidencia/nivel de certeza → fallos priorizados → alternativas → recomendación justificada → implementación mínima → pruebas → resultado/gate**.
+**Mantenimiento, ingeniería y auditoría**
+9. [DESIGN_MEMORY.md](DESIGN_MEMORY.md) + [CHANGE_INTEGRITY.md](CHANGE_INTEGRITY.md) — contratos de experiencia y no-regresión.
+10. [FRONTEND_ENGINEERING.md](FRONTEND_ENGINEERING.md) + [PATTERN_LIBRARY.md](PATTERN_LIBRARY.md) — implementación y escenarios de producto.
+11. [ACCESSIBILITY.md](ACCESSIBILITY.md) + [AUDIT_QA.md](AUDIT_QA.md) + [QUALITY_GATES.md](QUALITY_GATES.md) + [TEST_RECIPES.md](TEST_RECIPES.md) — pruebas, WCAG y evidencias.
+12. [DECISION_PROTOCOL.md](DECISION_PROTOCOL.md) — criterios de desacuerdo y decisiones.
+13. [EVALUATIONS.md](EVALUATIONS.md) — batería de evaluación de la habilidad.
+14. [SOURCES.md](SOURCES.md) + [MAINTENANCE.md](MAINTENANCE.md) — fuentes y revisión.
+15. [templates/](templates/) — fichas de auditoría, contrato y registro de intención.
 
-No prometer verificación con capturas, navegadores, dispositivos, usuarios o telemetría que no se hayan ejecutado/observado.
-## Estado verificable de v0.2.0
-El contenido y las rutas están escritos para usar en la rama del PR; **la batería E01–E08 no se declara ejecutada por existir en EVALUATIONS.md**. El propio módulo permanece pendiente de aprobación y sus gates no significan cumplimiento WCAG ni despliegue de un producto.
+## Doctrina de diseño (v0.3)
+- **No ejecutar el prompt como maqueta del brief:** el usuario final no debe leer explicaciones internas destinadas al creador.
+- **No exportar requisitos de seguridad al copy automáticamente:** implementar lógica real, informar consecuencias cuando el usuario realmente las necesite.
+- **No crear marcadores decorativos de estructura** (p. ej., «Sección 02») a menos que ayuden a navegar, clasificar o seguir un proceso.
+- **No homogeneizar por obedecer otra regla:** un patrón recurrente puede ser el mejor si el contexto lo justifica.
+- **No confundir gusto con norma:** separar preferencias legítimas del PO, usabilidad medible y accesibilidad.
+- **No perder intención al modificar:** verificar el cambio solicitado y conservar el resto del contrato de experiencia.
+- **No prometer resultados no probados:** design spec, código, QA automatizado, prueba manual y producción son estados distintos.
+
+## Modos sin duplicar habilidades
+- **Crear:** comprender negocio/audiencia, definir estructura, explorar opciones cuando convenga, implementar si autorizado.
+- **Ajustar:** identificar delta + invariantes, corregir con el cambio mínimo, verificar regresiones.
+- **Rediseñar:** auditar sistema existente y desarrollar nueva intención visual con migración segura.
+- **Evaluar:** separar observado/hipótesis, severidad/estado del incidente y pruebas.
+- **Analizar inspiración:** reconocer decisión, contexto, límites de transferencia y alternativa propia.
+- **Implementar:** traducir contratos UX a semántica, estados, rendimiento y evidencia técnica.
+
+El módulo **complementa Project Brain OS raíz**: las autorizaciones, control de producción, Git y Scope Closure Reconciliation siguen vigentes. Aquí solo vive metodología general; decisiones específicas de PAZO u otros productos deben permanecer en sus propios repositorios.
+
+## Estado de calidad
+**Documentación publicada en rama de revisión**, sin merge y sin asumir instalación permanente en otros agentes. **Los fixtures de EVALUATIONS.md están especificados pero no equivalen a pruebas ejecutadas**. Comprobar el PR antes de afirmar cobertura o aprobación.
