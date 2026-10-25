@@ -636,7 +636,13 @@ Si es específica, permanece en los documentos de ese proyecto.
 
 ## 22.6. Calidad visual y usabilidad de interfaces
 
-Para toda interfaz de usuario nueva o modificada, aplicar el patrón `patterns/INTERFACE_QUALITY_GATE.md` de manera proporcional al cambio. Conservar el sistema visual ya aprobado; no confundir build PASS con aceptación visual y no instalar paquetes/skills de terceros por defecto. El Product Owner conserva la aprobación de rediseños y de la UX que efectivamente pudo probar.
+Para crear, ajustar, investigar o auditar una interfaz, usar `patterns/INTERFACE_QUALITY_GATE.md` **únicamente como router** hacia la especialidad Design Intelligence OS del PR #7 (`knowledge/ui-ux-frontend/SKILL.md`). Las normas, umbrales, severidad, evidencia y pruebas se definen allí, **no** en este gate ligero.
+
+**Si la petición es auditar o analizar sin modificaciones:** activar `READ_ONLY_AUDIT` antes de usar herramientas capaces de escribir; no realizar mutaciones, pruebas con efectos secundarios ni implementación implícita. Cada medición cuantitativa sigue `MEASUREMENT_PROTOCOL.md` de la especialidad y debe diferenciar datos observados, reportados, inferidos y no probados.
+
+**Dependencia de PRs:** #3 y #7 son borradores en ramas diferentes. La ruta especializada NO existe aún en `main` mientras #7 no esté integrado; consultar su rama explícitamente cuando sea posible y declarar el límite si no se puede. Orden autorizado futuro: PR #7 aprobado e integrado primero, luego PR #3; ambos conservan sus gates de revisión y aprobación del Product Owner.
+
+Conservar decisiones de diseño aprobadas, no confundir build PASS con aceptación visual, no instalar skills externos por defecto.
 
 ## 23. Activación
 
