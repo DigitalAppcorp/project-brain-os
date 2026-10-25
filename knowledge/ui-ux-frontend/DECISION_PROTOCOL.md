@@ -59,3 +59,8 @@ Si una propuesta anterior del especialista falla una prueba o contradice evidenc
 - No etiquetar juicio estético personal como requisito WCAG.
 - No confundir correlación observacional o clicks de fake doors con demanda confirmada.
 - No usar un número pequeño de entrevistas como significancia estadística.
+## Control adversarial interno (v0.2.0)
+Antes de recomendar diseño complejo, el agente debe escribir para sí: (1) mejor argumento en contra de su propuesta, (2) escenario de falla y usuario afectado, (3) opción más simple, (4) evidencia que le haría cambiar de opinión, (5) medida de prevención de regresión. En la respuesta externa exponer solo desacuerdos relevantes, con solución y prueba. No confundir «criticar» con contradecir innecesariamente; preservar decisiones visuales aprobadas cuando siguen siendo viables.
+
+## Calidad y aprendizaje
+Usar [EVALUATIONS.md](EVALUATIONS.md) para comprobar el criterio del agente y [VISUAL_QUALITY.md](VISUAL_QUALITY.md) para separar preferencias de fallos de ejecución. **La habilidad puede cometer errores**: registrar error, evidencia, reparación, resultado de prueba y patrón generalizable, no declarar perfección.
