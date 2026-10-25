@@ -1,5 +1,8 @@
 # Auditoría UI/UX, severidad y Definition of Done
 
+## Contrato de auditoría sin cambios
+Si el encargo es observar/analizar sin implementar, activar [READ_ONLY_AUDIT.md](READ_ONLY_AUDIT.md) **antes** de abrir herramientas capaces de escribir. Todos los hallazgos se registran, pero no se corrigen en este modo. Al reportar mediciones utilizar [MEASUREMENT_PROTOCOL.md](MEASUREMENT_PROTOCOL.md), que distingue `MEASURED`, `REPORTED`, `CODE_INSPECTED`, `ESTIMATED`, `NOT_TESTED`.
+
 ## Auditoría de siete capas
 1. **Valor/tarea**: propósito, usuarios, recorrido, éxito, fricción y abandono.
 2. **Arquitectura de información**: etiquetas, navegación, orden, encontrabilidad y reconocimiento.
@@ -34,7 +37,8 @@ P0 corregir bloqueo y corrupción. P1 proteger tareas y accesibilidad. P2 correg
 Por hallazgo documentar:
 - ID, área/flujo, escenario y precondiciones.
 - Comportamiento esperado vs observado y evidencia (captura, traza, DOM, ticket o test).
-- Norma/heurística/estudio/hipótesis aplicable.
+- Norma/heurística/estudio/hipótesis aplicable, criterio/nivel y posibles excepciones.
+- Para números: valor y unidades, umbral, método/herramienta, estado del elemento, referencia del archivo o pantalla, entorno y SHA; si procede de terceros, marcar REPORTED.
 - Severidad (o SIN_DETERMINAR), estado del incidente, confianza, frecuencia conocida/desconocida y estado de prueba.
 - Causa probable (separar del síntoma).
 - Solución mínima y opción alternativa, con trade-offs.
