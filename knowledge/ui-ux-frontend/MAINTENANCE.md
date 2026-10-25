@@ -1,7 +1,7 @@
 # Mantenimiento y control de cambios
 
 ## Versión
-**0.2.0 — 2026-10-25**. Ampliación operativa con evaluación adversarial, casos de prueba, protocolos de calidad, WCAG-EM 2.0, métricas con denominadores, biblioteca contextual y criterios de fidelidad visual. Sigue en PR draft y **no implica ejecución real de tests, auditoría de un producto ni instalación automática en agentes externos**.
+**0.3.0 — 2026-10-25**. Ampliación operativa con evaluación adversarial, casos de prueba, protocolos de calidad, WCAG-EM 2.0, métricas con denominadores, biblioteca contextual y criterios de fidelidad visual. Sigue en PR draft y **no implica ejecución real de tests, auditoría de un producto ni instalación automática en agentes externos**.
 
 ## Actualización periódica
 Revisar la documentación en cada modificación sustantiva y, como práctica interna, cada **90 días**:
@@ -32,8 +32,21 @@ Antes de merge:
 Cada versión nueva debe documentar: batería de escenarios con entrada y respuesta esperada, rúbrica, baseline anterior, observaciones, regresiones y decisión. Revisar [EVALUATIONS.md](EVALUATIONS.md). Si solo se redactó la batería, registrar estado **NOT_EVALUATED**; no declarar mejoría cuantificada. Los ejemplos de código son plantillas y no pruebas ejecutadas.
 
 ## Historial
+- **2026-10-25 v0.3.0**: introduce la capa de razonamiento, fronteras de audiencia, memoria de diseño, creatividad contextual, referencias, control de cambios y UX content. Evaluación E01–E16 pendiente.
 - **2026-10-25 v0.2.0**: corrección S0 ≠ no reproducido; separación severidad/estado/confianza/prueba; incorporación de WCAG-EM 2.0; seis nuevos módulos para calidad visual, gates, métricas, patrones, recetas y evaluación de habilidad. Pendiente de ejecución independiente de la batería E01–E08.
 - **2026-10-25 v0.1.0**: creación de habilidad UI/UX Frontend Engineering; referencias a fuentes verificadas, protocolo de criterio independiente, definición de tests y templates.
 
 ## Próxima revisión sugerida
 **2027-01-25**, o antes si cambia un criterio normativo, una API utilizada, un fallo crítico o una exigencia legal. Esta fecha no configura un recordatorio automático.
+
+## Versión 0.3.0 — 2026-10-25
+- Arquitectura basada en decisiones, no en un estilo visual prefijado.
+- Siete módulos nuevos: `DESIGN_REASONING`, `AUDIENCE_BOUNDARY`, `DESIGN_MEMORY`, `CREATIVE_EXPLORATION`, `REFERENCE_ANALYSIS`, `CHANGE_INTEGRITY`, `UX_CONTENT`.
+- Ruteo por tarea: proyecto nuevo, ajuste, rediseño, auditoría, referencias, implementación y optimización.
+- Control de filtración de instrucciones técnicas a texto público, además de separación de negocio, UX, legal e implementación.
+- Contratos de intención de diseño en repositorio de producto y doble prueba de delta + invariantes.
+- Evaluaciones E09–E16 y criterios para detectar homogeneización y regresiones.
+- **Estado:** documentación lista en rama, sin haber demostrado experimentalmente mejora vs v0.2.0; no instalar globalmente ni declarar pruebas ejecutadas por redactar fixtures.
+
+## Revisión de independencia
+La habilidad puede citar referentes de diseño, pero no debe copiar literalmente sus guías como si fueran reglas propias ni crear un estilo forzoso para todos los productos. Comprobar que cada decisión se fundamenta en el encargo y que el PO conserva autoridad estética dentro de accesibilidad/integridad. Las lecciones de productos concretos viven en sus repositorios, no en Project Brain OS.
