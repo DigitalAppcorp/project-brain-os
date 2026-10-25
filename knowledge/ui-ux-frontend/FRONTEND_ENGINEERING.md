@@ -79,3 +79,5 @@ Un PR no está listo solo con CI verde. Debe demostrar:
 6. Limitaciones o pruebas pendientes explícitas.
 
 Documentar «no validado» cuando no se tiene entorno de prueba.
+## Recetas operativas y restricciones
+Ver [TEST_RECIPES.md](TEST_RECIPES.md) para ejemplos adaptables de e2e, axe, condiciones de carrera, pruebas manuales y registros de evidencia. Ver [PATTERN_LIBRARY.md](PATTERN_LIBRARY.md) para escenarios de mapas, pagos, paneles, feeds y PWA. No considerar la existencia de recetas como prueba ejecutada. Su alcance y riesgo determinan el gate en [QUALITY_GATES.md](QUALITY_GATES.md).
