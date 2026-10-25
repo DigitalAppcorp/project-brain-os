@@ -15,9 +15,17 @@ Escala adaptada de NN/g; **no** es una norma ni promedio matemático automático
 - **S3 — Alto**: fallo recurrente, tarea principal gravemente confusa o inaccesible, error sin recuperación. Corregir antes del release afectado salvo excepción documentada sin riesgo.
 - **S2 — Medio**: fricción medible, inconsistencias y fallos de tareas secundarias con alternativa viable. Priorizar según impacto.
 - **S1 — Bajo**: problemas de pulido/estética sin bloqueo. Corregir según beneficio y alcance.
-- **S0 — No reproducido/no defecto**: documentar evidencia o desacuerdo.
+- **S0 — No es un defecto de usabilidad**: conclusión sustentada de evaluación/desacuerdo con que exista el problema, según inspiración de NN/g. **NO** significa «no reproducido». S0 no invalida reporte de anomalía técnica aún pendiente.
 
-Evaluar **frecuencia + impacto + persistencia**, riesgo de accesibilidad/integridad, alcance y coste; no degradar automáticamente un problema de cumplimiento por ocurrir en pocos usuarios. Anotar **confianza** (alta/mediana/baja) separada de severidad.
+Evaluar **frecuencia + impacto + persistencia**, riesgo de accesibilidad/integridad, alcance y coste; no degradar automáticamente un problema de cumplimiento por ocurrir en pocos usuarios.
+
+**Cuatro dimensiones separadas y obligatorias:**
+1. **Severidad**: S0–S4 o **SIN_DETERMINAR** (si no hay evidencia suficiente).
+2. **Estado del incidente**: REPORTED, NEEDS_REPRO, REPRODUCED, INVESTIGATING, FIXED_PENDING_VERIFICATION, VERIFIED_FIXED, REJECTED_WITH_EVIDENCE. «No reproducido» = NEEDS_REPRO/INVESTIGATING, nunca S0 automático.
+3. **Confianza**: alta / media / baja + fuente de evidencia.
+4. **Estado de prueba**: PASS / FAIL / NOT_TESTED / INCONCLUSIVE, ligado a commit, dispositivo y caso de prueba.
+
+Cuando el riesgo es alto y falla la reproducción, conservar incidente abierto, capturar logs y determinar bloqueo según riesgo, no cerrar por ausencia de reproducción.
 
 ## Orden de prioridad
 P0 corregir bloqueo y corrupción. P1 proteger tareas y accesibilidad. P2 corregir fricción frecuente. P3 pulido. No empezar una nueva capa visual cuando el flujo anterior tiene un defecto S3–S4 activo.
@@ -27,7 +35,7 @@ Por hallazgo documentar:
 - ID, área/flujo, escenario y precondiciones.
 - Comportamiento esperado vs observado y evidencia (captura, traza, DOM, ticket o test).
 - Norma/heurística/estudio/hipótesis aplicable.
-- Severidad, confianza y frecuencia conocida/desconocida.
+- Severidad (o SIN_DETERMINAR), estado del incidente, confianza, frecuencia conocida/desconocida y estado de prueba.
 - Causa probable (separar del síntoma).
 - Solución mínima y opción alternativa, con trade-offs.
 - Prueba de aceptación objetiva.
@@ -49,10 +57,13 @@ No afirmar «el contraste cumple» si no se midió; «no pude reproducir» no eq
 - [ ] Revisión visual del Product Owner cuando aplica.
 - [ ] Estado de implementación, staging, producción y aprobaciones separados.
 
+## Quality gates ejecutables
+La autoridad técnica sobre criterios de aceptación, pruebas de riesgo, seguimiento de escenarios y evaluación WCAG-EM 2.0 se encuentra en [QUALITY_GATES.md](QUALITY_GATES.md). Para pruebas modelo, utilizar [TEST_RECIPES.md](TEST_RECIPES.md). Ningún gate autoriza modificar main o producción automáticamente.
+
 ## Tres Gates de esta especialidad
 **UX-Spec**: intención, escenarios, diseño de estados, criterios de a11y y métricas; puede avanzar con hipótesis explícitas para MVP.
 
-**Implementation Ready**: cambios en rama, código integrado, build/tests, bugs bloqueantes resueltos, verificación accesible técnica; «pendiente visual» sigue pendiente, no es completado.
+**Implementation Ready**: cambios en rama, pruebas ejecutadas y vinculadas a commit según el riesgo, fallos bloqueantes resueltos, accesibilidad técnica verificada; si no existen pruebas, marcar NOT_TESTED en vez de inferir PASS. «Pendiente visual» sigue pendiente.
 
 **UX Accepted**: revisión visual/interactiva con evidencias o aceptación de PO para superficies aprobadas; la aceptación visual no sustituye pruebas de backend/permisos.
 
