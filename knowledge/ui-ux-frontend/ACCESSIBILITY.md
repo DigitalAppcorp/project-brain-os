@@ -1,6 +1,6 @@
 # Accesibilidad — criterios comprobables
 
-**Base**: W3C WCAG 2.2 nivel AA como objetivo del módulo, sujeto a regulación/requisitos del proyecto. WCAG es una norma de resultados; Apple, Material, WAI APG y USWDS incluyen recomendaciones y patrones, no todos requisitos normativos. No confundir «pasó axe» con «conforme a WCAG».
+**Base**: W3C WCAG 2.2 nivel AA como objetivo del módulo, sujeto a regulación/requisitos del proyecto. WCAG 2.2 se publicó originalmente el 5 de octubre de 2023 y tuvo actualización el 12 de diciembre de 2024. WCAG es una norma de resultados; Apple, Material, WAI APG y USWDS incluyen recomendaciones y patrones, no todos requisitos normativos. No confundir «pasó axe» con «conforme a WCAG».
 
 ## 1. Matriz esencial
 | Aspecto | Criterio / enfoque | Prueba |
@@ -53,8 +53,11 @@
 6. Verificar tamaños reales de targets y contrastes, no mediante aproximación visual.
 7. Validar con personas con distintas necesidades de acceso cuando sea viable.
 
-## 7. Herramientas y límites
+## 7. Protocolo de evaluación formal WCAG-EM 2.0
+Para una declaración de conformidad o auditoría estructurada, aplicar la **W3C Group Note publicada el 23 de julio de 2026**: definir alcance; explorar producto; seleccionar muestra representativa de tipos de pantallas, estados y procesos completos; evaluar contra criterios WCAG pertinentes; reportar hallazgos y límites de la muestra. WCAG-EM 2.0 incluye apps y productos digitales, **no añade criterios WCAG ni sustituye WCAG 2.2**. [Documento oficial](https://www.w3.org/TR/wcag-em-2/) y guía de ejecución en [QUALITY_GATES.md](QUALITY_GATES.md).
+
+## 8. Herramientas y límites
 Automatizar Playwright + axe-core para violaciones detectables. Complementar con Lighthouse, inspección de árbol de accesibilidad y pruebas manuales de teclado/lector. La automatización **no detecta** todos los problemas WCAG ni prueba comprensión humana. Registrar escenarios ejecutados, dispositivo/navegador, fecha, resultado y limitaciones.
 
 ## Fuentes
-[WCAG 2.2](https://www.w3.org/TR/WCAG22/), [APG modal](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/), [WAI labels](https://www.w3.org/WAI/tutorials/forms/labels/), [Apple targets](https://developer.apple.com/design/tips/), [Playwright](https://playwright.dev/docs/accessibility-testing).
+[WCAG 2.2](https://www.w3.org/TR/WCAG22/), [WCAG-EM 2.0](https://www.w3.org/TR/wcag-em-2/), [APG modal](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/), [WAI labels](https://www.w3.org/WAI/tutorials/forms/labels/), [Apple targets](https://developer.apple.com/design/tips/), [Playwright](https://playwright.dev/docs/accessibility-testing).
