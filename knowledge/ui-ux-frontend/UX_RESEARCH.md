@@ -52,3 +52,5 @@ Excluir cuentas QA o instrumentación interna cuando se mida adopción real; doc
 
 ## Entregable de investigación
 Problema, método, muestra/segmento, observaciones, evidencia cruda localizada, limitaciones, hallazgos por severidad, oportunidades, hipótesis y siguiente prueba. Una recomendación sin evidencia debe aparecer como **hipótesis**, no como hecho.
+## Contrato de medición y muestreo (v0.2.0)
+La instrumentación específica, exclusiones, denominadores, límites de inferencia y línea base se definen en [UX_METRICS.md](UX_METRICS.md). Para evaluación formal de accesibilidad, usar la metodología de alcance y muestreo representativo WCAG-EM 2.0 de [QUALITY_GATES.md](QUALITY_GATES.md), sin extrapolar automáticamente una muestra a todo el producto. No confundir la batería documental de [EVALUATIONS.md](EVALUATIONS.md) con estudios de usuarios reales.
