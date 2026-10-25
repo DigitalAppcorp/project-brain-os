@@ -74,3 +74,13 @@ Una captura permite observar layout, jerarquía, saturación, tipografía aparen
 
 ## Guía ante retroalimentación crítica
 Si usuario dice «no se ve como pedí», comparar explícitamente **referencia ↔ intención aprobada ↔ pantalla entregada**, localizar divergencias, corregir sistema/composición antes de retoques cosméticos y registrar nuevas pruebas. No defender un diseño por ser moderno ni inventar preferencias nuevas.
+## Auditoría de contexto y deriva v0.3.0
+En páginas generadas desde briefs y en cambios sobre productos existentes, aplicar revisión de cinco fallos:
+1. **PROMPT-LEAK**: contenidos que describen instrucciones, tickets, mejoras de ingeniería o decisiones al PO sin razón para usuario.
+2. **STRUCTURE-LEAK**: numeraciones, «capítulos» o indicadores de sección sin navegación, clasificación o secuencia real.
+3. **TONE-DRIFT**: nuevos mensajes rompen voz/objetivo original, aun siendo verdaderos.
+4. **SCOPE-DRIFT**: modificación funcional altera layout, copy, iconos o comportamiento no solicitados.
+5. **TEMPLATE-FIXATION**: patrón formal impuesto a sector, audiencia y tamaño de módulo sin justificación.
+Etiquetas de observación interna, **no diagnósticos clínicos ni categorías académicas confirmadas**. Documentar evidencia, severidad y alternativa; no prohibir patrones por el mero hecho de parecer comunes.
+
+Complementos: [AUDIENCE_BOUNDARY.md](AUDIENCE_BOUNDARY.md), [CHANGE_INTEGRITY.md](CHANGE_INTEGRITY.md), [CREATIVE_EXPLORATION.md](CREATIVE_EXPLORATION.md) y [REFERENCE_ANALYSIS.md](REFERENCE_ANALYSIS.md).
