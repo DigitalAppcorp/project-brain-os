@@ -60,3 +60,15 @@ Fuente: https://www.w3.org/TR/wcag-em-2/
 - **NOT_EVALUATED**: sin evidencia. Nunca convertir ausencia de defectos reportados en PASS.
 
 Nunca declarar «accesible» porque axe arroja cero violaciones. Véase [TEST_RECIPES.md](TEST_RECIPES.md).
+
+## Gates transversales v0.3.0
+**AUDIENCE-PASS:** para copy nuevo o modificado, registrar destinatario, propósito, verdad del negocio, estado de tarea y revisión de filtración según [AUDIENCE_BOUNDARY.md](AUDIENCE_BOUNDARY.md) y [UX_CONTENT.md](UX_CONTENT.md). No marcar PASS si solo contiene «textos técnicos eliminados»: el contenido contractual necesario debe permanecer.
+
+**INTENT-PASS:** cuando hay cambios sobre UI existente, identificar invariantes desde [DESIGN_MEMORY.md](DESIGN_MEMORY.md); ejecutar delta y prueba de preservación según [CHANGE_INTEGRITY.md](CHANGE_INTEGRITY.md). Una pantalla puede tener build PASS y fallar fidelidad/tono.
+
+**CONTEXTUAL-DESIGN:** para diseño nuevo amplio o rediseño, justificar por qué jerarquía/composición/patrón corresponden al público y al producto; explorar alternativas **solo si aporta valor**. Una propuesta de «3 estilos» que cambia únicamente colores no demuestra exploración, ni una pantalla diferente demuestra por sí sola originalidad.
+
+**REFERENCE-VALIDITY:** al analizar un producto externo, separar observación de hipótesis; no inferir interacción/velocidad desde capturas. Transferir principios, no identidad visual.
+
+### Informe final de habilidades
+Añadir a la ficha de QA: `audiencia del copy | decisiones DIR | delta aprobado | invariantes probados | referencias y fecha | razón de composición | pruebas NO ejecutadas`. El nivel de detalle escala con el riesgo, no con el número de archivos de la habilidad.
