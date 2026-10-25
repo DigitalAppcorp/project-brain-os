@@ -49,3 +49,14 @@
 **Próxima acción exacta:**
 
 _No confundir build PASS con experiencia PASS._
+## Evidencia del cierre v0.2.0
+**Rama/commit SHA:**  
+**Pruebas ejecutadas y resultados (PASS/FAIL):**  
+**Pruebas pendientes (NOT_TESTED/INCONCLUSIVE):**  
+**Incidentes abiertos: severidad S0–S4 o SIN_DETERMINAR + estado REPORTED/NEEDS_REPRO/etc.:**  
+**Cobertura accesible: norma, muestreo, lector, navegador:**  
+**Aceptación visual: referencia, viewport, estado y persona que revisó:**  
+**Línea base y denominador de métrica (o desconocidos):**  
+**Decisión del gate y límites:**  
+
+Guías: [Quality Gates](../QUALITY_GATES.md), [Métricas](../UX_METRICS.md) y [Pruebas](../TEST_RECIPES.md).
