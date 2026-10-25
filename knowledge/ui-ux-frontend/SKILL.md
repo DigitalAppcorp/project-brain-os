@@ -1,9 +1,9 @@
 ---
 name: brain-os-ui-ux-frontend-engineering
 description: Especialidad reusable para investigar, diseñar, auditar, implementar y probar interfaces web y PWA con UX fundamentada, accesibilidad WCAG 2.2 AA, diseño visual coherente, frontend robusto y crítica independiente.
-version: 0.1.0
+version: 0.2.0
 reviewed_at: 2026-10-25
-status: foundational
+status: review-ready
 ---
 
 # UI/UX Frontend Engineering — contrato operativo
@@ -26,13 +26,13 @@ El usuario define la intención y prioridades de negocio. El especialista cuesti
 ## Procedimiento por defecto
 1. **Recuperar estado**: identificar producto, perfil de usuario, tarea, plataforma, pantalla, flujos, decisiones aprobadas y código real. Leer SKILL raíz y AGENTS/roadmap del repositorio antes de mutar.
 2. **Definir éxito observable**: acción del usuario, resultado y métrica primaria; anotar supuestos no verificados.
-3. **Diagnosticar**: aplicar heurísticas de Nielsen, WCAG y las listas de auditoría de este módulo. Verificar estados reales, rutas y fallos, no solo screenshot.
-4. **Generar opciones**: solución mínima, alternativa razonable y riesgos. Aplicar [DECISION_PROTOCOL.md](DECISION_PROTOCOL.md) al discrepar.
+3. **Diagnosticar**: aplicar heurísticas de Nielsen, WCAG y las listas de auditoría de este módulo. Separar **severidad**, **estado de reproducción**, **confianza** y **estado de pruebas**. Verificar estados reales, rutas y fallos, no solo screenshot.
+4. **Generar opciones y autocrítica**: solución mínima, alternativa razonable y riesgos. Aplicar [DECISION_PROTOCOL.md](DECISION_PROTOCOL.md) al discrepar, y ejecutar revisión adversarial: «¿qué evidencia refutaría mi solución?», «¿qué podría romper?». No reevaluar una decisión aprobada sin riesgo o evidencia nueva.
 5. **Especificar interacción**: flujo feliz, sin datos, loading, lento, error, cancelación, permiso denegado, desconexión y recuperación; navegación y foco.
-6. **Diseñar**: jerarquía, contenidos, tokens, componentes, layout responsive, áreas táctiles, feedback y motion.
+6. **Diseñar**: jerarquía, contenidos, tokens, componentes, layout responsive, áreas táctiles, feedback y motion; auditar dirección de arte y fidelidad con [VISUAL_QUALITY.md](VISUAL_QUALITY.md).
 7. **Implementar**: HTML semántico, componentes reutilizables, estado consistente, contratos API, accesibilidad, resiliencia, rendimiento y mínimo diff seguro.
-8. **Verificar**: pruebas de comportamiento, teclado/lector, viewport/zoom, automatizadas y manuales. Repetir con dispositivo real cuando sea necesario.
-9. **Reportar**: evidencias y límites, qué cambió, qué se preservó, riesgos residuales, gate y necesidad de aprobación.
+8. **Verificar**: escoger recetas de [TEST_RECIPES.md](TEST_RECIPES.md), documentar PASS/FAIL/NOT_TESTED/INCONCLUSIVE y referencias reproducibles; usar [QUALITY_GATES.md](QUALITY_GATES.md). Para evaluación formal WCAG aplicar WCAG-EM 2.0; la auditoría rápida no es certificación.
+9. **Reportar**: evidencias y límites, qué cambió, qué se preservó, riesgos residuales, gate y necesidad de aprobación; definir métricas con denominador, origen, línea base y exclusiones según [UX_METRICS.md](UX_METRICS.md).
 
 ### Modo proporcional
 - **Consulta rápida**: diagnóstico y recomendación con un criterio comprobable; no generar un tratado.
@@ -43,6 +43,9 @@ El usuario define la intención y prioridades de negocio. El especialista cuesti
 
 ## Reglas innegociables
 - No declarar «bien diseñado» solo porque se ve moderno o porque el build está verde.
+- No confundir **S0/no defecto** con **no reproducido**, ni **NOT_TESTED** con **PASS**; registrar incidente y cobertura por separado.
+- No certificar WCAG solo con axe/screenshot: la cobertura formal sigue metodología, muestra y pruebas manuales.
+- No introducir problemas ajenos al alcance ni expandir una modificación pequeña por ambición estética.
 - No suponer que una captura acredita navegación, persistencia, loading o accesibilidad.
 - Eliminar retroalimentación engañosa: un botón debe indicar resultado o recuperación, no aparentar funcionar.
 - Nunca depender exclusivamente de hover, color, iconos ambiguos, drag, animación o memoria del usuario para lograr una tarea esencial.
@@ -57,7 +60,7 @@ El usuario define la intención y prioridades de negocio. El especialista cuesti
 - No cambiar el alcance productivo ni tocar main/producción sin autorización aplicable.
 
 ## Evaluación y decisión
-Usar [AUDIT_QA.md](AUDIT_QA.md) para bloqueo, severidad y evidencia. Clasificar aseveraciones como:
+Usar [AUDIT_QA.md](AUDIT_QA.md) para bloqueo, severidad y evidencia, [PATTERN_LIBRARY.md](PATTERN_LIBRARY.md) solo para patrones pertinentes y [EVALUATIONS.md](EVALUATIONS.md) para medir el criterio del agente sin inventar resultados. Clasificar aseveraciones como:
 - **NORMA**: criterio verificable de una especificación.
 - **GUÍA**: recomendación de sistema/plataforma, contextual.
 - **EVIDENCIA**: hallazgo de investigación observada, con método.
@@ -75,4 +78,4 @@ Para conflictos entre un detalle estético y un requisito esencial, buscar una c
 Leer este SKILL y archivos pertinentes; revalidar referencias sensibles al tiempo. No transportar reglas visuales exclusivas de un proyecto. Registrar decisiones del proyecto en ese proyecto, y mejoras universales en este módulo. Véase [MAINTENANCE.md](MAINTENANCE.md).
 
 ## Verdad sobre resultados
-Separar claramente **propuesto, especificado, implementado, probado automáticamente, probado manualmente y aprobado en producción**. Nunca colapsar estos estados en «terminado».
+Separar claramente **propuesto, especificado, implementado, probado automáticamente, probado manualmente, aceptado visualmente y desplegado con verificación real**. Nunca colapsar estos estados en «terminado».
