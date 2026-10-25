@@ -2,6 +2,8 @@
 
 **Base**: W3C WCAG 2.2 nivel AA como objetivo del módulo, sujeto a regulación/requisitos del proyecto. WCAG 2.2 se publicó originalmente el 5 de octubre de 2023 y tuvo actualización el 12 de diciembre de 2024. WCAG es una norma de resultados; Apple, Material, WAI APG y USWDS incluyen recomendaciones y patrones, no todos requisitos normativos. No confundir «pasó axe» con «conforme a WCAG».
 
+Para resultados cuantitativos, clasificar evidencia `MEASURED / REPORTED / CODE_INSPECTED / ESTIMATED / NOT_TESTED` según [MEASUREMENT_PROTOCOL.md](MEASUREMENT_PROTOCOL.md); no reutilizar valores comunicados por terceros como si fueran medidas propias. Una auditoría que prohíbe modificaciones se rige por [READ_ONLY_AUDIT.md](READ_ONLY_AUDIT.md).
+
 ## 1. Matriz esencial
 | Aspecto | Criterio / enfoque | Prueba |
 |---|---|---|
