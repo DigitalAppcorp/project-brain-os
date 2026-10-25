@@ -43,3 +43,6 @@ Registrar conflictos explícitos. La estética no puede dispensar fallos crític
 
 ## Evidencia y salida
 Entregar: objetivo → referencia/estado aprobado → diferencias observables → tres problemas priorizados → propuesta y trade-offs → criterios de comparación → estados probados/no probados. No inventar «pixel-perfect» ni porcentajes de fidelidad sin criterio reproducible. Para medición usar [UX_METRICS.md](UX_METRICS.md), para aceptación [QUALITY_GATES.md](QUALITY_GATES.md).
+
+## Revisión visual situada v0.3.0
+Antes de llamar «mala composición» a un título alineado a la izquierda, examinar **función textual**, jerarquía, espacio, longitud, relación con CTA y preferencias legítimas del producto. No usar centro/izquierda como dogma. Antes de agregar eyebrow o pastilla verificar su función real; para texto de interfaz usar [UX_CONTENT.md](UX_CONTENT.md). Inspiración externa: [REFERENCE_ANALYSIS.md](REFERENCE_ANALYSIS.md); creatividad pertinente: [CREATIVE_EXPLORATION.md](CREATIVE_EXPLORATION.md). En iteraciones técnicas, comparar con baseline aprobado mediante [CHANGE_INTEGRITY.md](CHANGE_INTEGRITY.md).
