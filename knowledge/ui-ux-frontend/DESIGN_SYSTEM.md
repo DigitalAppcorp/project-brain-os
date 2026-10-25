@@ -68,3 +68,5 @@ La primera evaluación es «¿entiende y completa su tarea?», luego «¿tiene c
 
 ## 6. No extrapolar estilos
 No transportar paletas, ausencia de contornos, navegación, 3D o estética de una aplicación a otra sin decisión explícita. Un sistema visual generalizable define reglas; el producto define sus tokens y personalidad.
+## Calidad visual auditable
+Aplicar [VISUAL_QUALITY.md](VISUAL_QUALITY.md) para dirección de arte, divergencia respecto al brief, comparación referencia ↔ ejecución y revisión interdisciplinaria. Los criterios de identidad son específicos del producto, y cada aceptación debe identificar viewport, estado y comportamiento realmente observados. Criterios de entrega en [QUALITY_GATES.md](QUALITY_GATES.md).
