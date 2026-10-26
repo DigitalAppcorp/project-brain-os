@@ -20,3 +20,5 @@ Plantilla; conservar por tarea fuera del OS y enlazar desde el DIR. Reglas: [pro
 | Publicación | NOT_AUTHORIZED | | |
 
 Cambios posteriores, versión sustituida, autorizaciones previas todavía aplicables y siguiente decisión pendiente:
+
+Eventos de aprendizaje derivados (IDs + ruta de ledger, si corresponde), aspectos conservados/corregidos y decisión pendiente: aplicar [ADAPTIVE_LEARNING.md](../ADAPTIVE_LEARNING.md) sin pedir información adicional al PO.

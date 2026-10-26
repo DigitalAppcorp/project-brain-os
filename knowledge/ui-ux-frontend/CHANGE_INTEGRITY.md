@@ -46,3 +46,6 @@ S3/S4: detener nuevo alcance, estabilizar, reconstruir la causa con evidencia y 
 
 ## Comparación con preview aprobada
 Antes de transferir al producto comprobar decisiones y versión en [VISUAL_APPROVAL_PROTOCOL.md](VISUAL_APPROVAL_PROTOCOL.md). Aplicar la comparación de [PREVIEW_ARCHITECTURE.md](PREVIEW_ARCHITECTURE.md) con contenido, estado y viewport equivalentes; enlazar baseline, captura implementada y diff de código. Registrar diferencias como intencionales autorizadas, deriva o no comprobadas. Si hay deriva significativa, restaurar la referencia o presentar el delta al PO; no actualizar el baseline para ocultarla.
+
+## Feedback sobre el delta
+Tras revisión del PO registrar qué aspecto se aceptó y cuál se rechazó/corrigió mediante [ADAPTIVE_LEARNING.md](ADAPTIVE_LEARNING.md). Conservar invariantes aprobadas y no tratar un comentario mixto como rechazo integral. Una sustitución posterior requiere evidencia explícita y no borra historia; una implementación corregida no gana aprobación automáticamente.

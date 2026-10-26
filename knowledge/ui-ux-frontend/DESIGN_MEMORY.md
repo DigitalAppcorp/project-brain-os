@@ -54,3 +54,6 @@ No decir «recordado para siempre» si no existe documentación recuperable.
 
 ## Aprobaciones de previews
 Enlazar desde cada DIR el [registro de aprobación visual](templates/VISUAL_APPROVAL_RECORD.md), con decisiones separadas según [VISUAL_APPROVAL_PROTOCOL.md](VISUAL_APPROVAL_PROTOCOL.md). Conservar evidencia exacta y versiones inmutables, sin inferir permisos del estado genérico `approved` del DIR. Las decisiones del producto se guardan en su registro autorizado; durante diseño aislado, conservar evidencia fuera del producto hasta permitir su transferencia.
+
+## Aprendizaje entre sesiones
+Antes de diseñar recuperar `docs/design-learning/README.md` y `feedback.jsonl` del producto si existen, junto con DIR y aprobaciones; mecánica/esquema único en [ADAPTIVE_LEARNING.md](ADAPTIVE_LEARNING.md). Después del feedback guardar aspectos y fuentes con su etapa, sin elevar una referencia elegida a runtime aceptado. Usar un registro externo autorizado mientras no se pueda escribir en el producto. El ledger complementa las decisiones canónicas y no es memoria duplicada de Token Savior.

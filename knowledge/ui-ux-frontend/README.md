@@ -1,6 +1,6 @@
 # Brain OS — UI/UX Frontend Engineering
 
-> **v0.5.0 · 2026-10-26 · documentación implementada en rama de revisión · batería comparativa pendiente de ejecución.**
+> **v0.6.0 · 2026-10-26 · documentación implementada en rama de revisión · batería comparativa pendiente de ejecución.**
 
 ## Propósito
 Sistema de decisiones reutilizable para diseñar, construir, criticar y mantener productos digitales **desde cero o existentes**: apps, webs, PWAs, dashboards, componentes, modales, rediseños, UX writing, análisis de referentes y auditorías. No define una apariencia estándar ni se limita a React; selecciona proceso proporcional al contexto.
@@ -17,6 +17,10 @@ Sistema de decisiones reutilizable para diseñar, construir, criticar y mantener
 - [VISUAL_APPROVAL_PROTOCOL.md](VISUAL_APPROVAL_PROTOCOL.md) — única política de alternativas, preview final y autorizaciones.
 - [PREVIEW_ARCHITECTURE.md](PREVIEW_ARCHITECTURE.md) — aislamiento, servidor sin dependencias, Playwright CLI y comparación.
 - [PREVIEW_VERIFICATION.md](PREVIEW_VERIFICATION.md) — evidencia de instalación y smoke local, con límites.
+
+**Aprendizaje contextual (antes de diseñar y después del feedback PO)**
+- [ADAPTIVE_LEARNING.md](ADAPTIVE_LEARNING.md) — persistencia, esquema, prioridades auditables, captura y recuperación.
+- [LEARNING_VERIFICATION.md](LEARNING_VERIFICATION.md) — pruebas pequeñas realmente ejecutadas, historial F13 y límites.
 
 **Diseño y contenido**
 3. [AUDIENCE_BOUNDARY.md](AUDIENCE_BOUNDARY.md) — clasificación de instrucciones vs UI pública.

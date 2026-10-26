@@ -85,3 +85,6 @@ Nunca declarar «accesible» porque axe arroja cero violaciones. Véase [TEST_RE
 
 ### Informe final de habilidades
 Añadir a la ficha de QA: `audiencia del copy | decisiones DIR | delta aprobado | invariantes probados | referencias y fecha | razón de composición | pruebas NO ejecutadas`. El nivel de detalle escala con el riesgo, no con el número de archivos de la habilidad.
+
+## Recuperación y feedback contextual (v0.6)
+Para diseño/implementación visual, enlazar aprendizajes pertinentes recuperados y límites; después de feedback, eventos registrados en ubicación autorizada según [ADAPTIVE_LEARNING.md](ADAPTIVE_LEARNING.md). Si no existe historial o no puede leerse, declararlo sin inventarlo. No bloquear una consulta trivial por ausencia de ledger ni elevar pesos a autorización; mantener todos los gates visuales anteriores.

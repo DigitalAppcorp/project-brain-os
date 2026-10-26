@@ -41,3 +41,6 @@ Definir **estructura y jerarquía antes de alineación**. La lectura corrida sue
 
 ## Validación
 Medir variedad respecto a proyectos realmente distintos y adecuación de sus soluciones. Para el estudio de la habilidad ver casos E13–E15 en [EVALUATIONS.md](EVALUATIONS.md). No afirmar creatividad «humana» ni originalidad protegible basándose en impresión del modelo.
+
+## Reutilizar sin fijación
+Consultar [ADAPTIVE_LEARNING.md](ADAPTIVE_LEARNING.md) para reutilizar patrones exitosos aplicables y evitar rechazos contextualizados. Un patrón nuevo parte de0 y sigue siendo candidato cuando la tarea lo justifique. Conservar alternativas del protocolo visual para briefs abiertos, sin explorar por cuota ni repetir opciones ya decididas. Una lección de Feed no dicta Perfil u otro producto; las reglas de seguridad y accesibilidad no reciben penalizaciones por preferencia estética.

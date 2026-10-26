@@ -1,7 +1,7 @@
 ---
 name: brain-os-ui-ux-frontend-engineering
 description: Especialidad reusable para investigar, diseñar, auditar, implementar y probar interfaces web y PWA con UX fundamentada, accesibilidad WCAG 2.2 AA, diseño visual coherente, frontend robusto y crítica independiente.
-version: 0.5.0
+version: 0.6.0
 reviewed_at: 2026-10-26
 status: review-ready
 ---
@@ -23,13 +23,13 @@ El usuario define la intención y prioridades de negocio. El especialista cuesti
 
 **No dogmas**: minimalismo, glassmorphism, animaciones, ausencia de bordes, tarjetas, gestos, diseño «premium», dark mode y tendencias visuales son decisiones condicionadas por el contexto, no mandamientos universales.
 
-## Núcleo de diseño inteligente (v0.5.0; conserva capacidades v0.3.0–v0.4.0)
+## Núcleo de diseño inteligente (v0.6.0; conserva capacidades v0.3.0–v0.5.0)
 La habilidad se comporta como **método profesional adaptable**, no como una estética prefijada. Se aplica a creación desde cero, revisión de otra interfaz, optimización, implementación, auditoría y mantenimiento. **Seleccionar modo y esfuerzo según tarea**: [DESIGN_REASONING.md](DESIGN_REASONING.md).
 
 ### Arquitectura operativa obligatoria
 1. **Entender y decidir:** usuario real, tarea y resultados, hechos vs hipótesis, riesgos y opciones; aplicar [DESIGN_REASONING.md](DESIGN_REASONING.md).
 2. **Proteger frontera de audiencia:** no convertir instrucciones técnicas o correcciones del Product Owner en UI/copy automáticamente; aplicar [AUDIENCE_BOUNDARY.md](AUDIENCE_BOUNDARY.md) y [UX_CONTENT.md](UX_CONTENT.md).
-3. **Recuperar intención aprobada:** leer y actualizar, si corresponde, registros del proyecto según [DESIGN_MEMORY.md](DESIGN_MEMORY.md). No trasladar gustos del proyecto a otros.
+3. **Recuperar intención y aprendizaje contextual:** antes de diseñar consultar el registro versionado del producto y errores de proceso conforme a [ADAPTIVE_LEARNING.md](ADAPTIVE_LEARNING.md), sin trasladar preferencias entre productos o superficies. Para intención aprobada, leer y actualizar, si corresponde, registros del proyecto según [DESIGN_MEMORY.md](DESIGN_MEMORY.md). No trasladar gustos del proyecto a otros.
 4. **Explorar con motivo:** para diseño abierto considerar direcciones alternativas según [CREATIVE_EXPLORATION.md](CREATIVE_EXPLORATION.md); para cambios puntuales preservar lo aprobado. No hacer brainstorming obligatorio para cada píxel.
 5. **Aprender de referencias:** estudiar elementos observables, contexto y transferibilidad en [REFERENCE_ANALYSIS.md](REFERENCE_ANALYSIS.md), sin clonar identidad ni afirmar interacciones no vistas.
 6. **Preview y aprobación antes del producto:** aplicar [VISUAL_APPROVAL_PROTOCOL.md](VISUAL_APPROVAL_PROTOCOL.md), fuente única de decisiones del PO, y [PREVIEW_ARCHITECTURE.md](PREVIEW_ARCHITECTURE.md) para construir y mostrar previews aisladas.
@@ -62,7 +62,7 @@ Para cualquier resultado cuantitativo (contraste, targets, rendimiento, zoom u o
 6. **Diseñar**: jerarquía, contenidos, tokens, componentes, layout responsive, áreas táctiles, feedback y motion; auditar dirección de arte y fidelidad con [VISUAL_QUALITY.md](VISUAL_QUALITY.md).
 7. **Comprobar gate visual e implementar con autorización vigente**: aplicar [VISUAL_APPROVAL_PROTOCOL.md](VISUAL_APPROVAL_PROTOCOL.md) antes de transferir cambios visuales; selección, aprobación de preview y autorización de implementación se registran por separado. Proteger intención con HTML semántico, componentes reutilizables, estado consistente, contratos API, accesibilidad, resiliencia, rendimiento y mínimo diff seguro. Probar objetivos nuevos e invariantes del contrato previo.
 8. **Verificar**: escoger recetas de [TEST_RECIPES.md](TEST_RECIPES.md), documentar PASS/FAIL/NOT_TESTED/INCONCLUSIVE y referencias reproducibles; usar [QUALITY_GATES.md](QUALITY_GATES.md). Para evaluación formal WCAG aplicar WCAG-EM 2.0; la auditoría rápida no es certificación.
-9. **Reportar**: evidencias y límites, qué cambió, qué se preservó, riesgos residuales, gate y necesidad de aprobación; definir métricas con denominador, origen, línea base y exclusiones según [UX_METRICS.md](UX_METRICS.md).
+9. **Registrar feedback y reportar**: después de cada revisión del PO, aplicar [ADAPTIVE_LEARNING.md](ADAPTIVE_LEARNING.md) sin formularios adicionales, solo en ubicaciones autorizadas; no escribir en READ_ONLY_AUDIT. Para el informe, evidencias y límites, qué cambió, qué se preservó, riesgos residuales, gate y necesidad de aprobación; definir métricas con denominador, origen, línea base y exclusiones según [UX_METRICS.md](UX_METRICS.md).
 
 ### Modo proporcional (véase matriz completa en [DESIGN_REASONING.md](DESIGN_REASONING.md))
 - **Consulta rápida**: diagnóstico y recomendación con un criterio comprobable; no generar un tratado.

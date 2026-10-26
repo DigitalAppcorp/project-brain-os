@@ -1,7 +1,7 @@
 # Mantenimiento y control de cambios
 
 ## Versión
-**0.5.0 — 2026-10-26**. Ampliación operativa con evaluación adversarial, casos de prueba, protocolos de calidad, WCAG-EM 2.0, métricas con denominadores, biblioteca contextual y criterios de fidelidad visual. Sigue en PR draft y **no implica ejecución real de tests, auditoría de un producto ni instalación automática en agentes externos**.
+**0.6.0 — 2026-10-26**. Ampliación operativa con evaluación adversarial, casos de prueba, protocolos de calidad, WCAG-EM 2.0, métricas con denominadores, biblioteca contextual y criterios de fidelidad visual. Sigue en PR draft y **no implica ejecución real de tests, auditoría de un producto ni instalación automática en agentes externos**.
 
 ## Actualización periódica
 Revisar la documentación en cada modificación sustantiva y, como práctica interna, cada **90 días**:
@@ -60,3 +60,5 @@ La habilidad puede citar referentes de diseño, pero no debe copiar literalmente
 - La aprobación e integración son tareas diferentes, cada una requiere autorización conforme al Brain OS raíz.
 
 - **2026-10-26 v0.5.0**: protocolo de aprobación visual, previews externas al producto, utilidad estática sin dependencias y guía de Playwright CLI. Ver [PREVIEW_VERIFICATION.md](PREVIEW_VERIFICATION.md) para pruebas realmente ejecutadas. Batería comparativa de agentes no ejecutada; no cambia Brain OS core ni integra PR #3/#7 automáticamente.
+
+- **2026-10-26 v0.6.0**: motor local de feedback contextual (JSONL/Python stdlib), sustitución granular, reversión, recuperación y errores recurrentes; integrado al protocolo de previews v0.5 sin alterar permisos. Registro histórico PAZO permanece en rama documental de ese producto. Ver [LEARNING_VERIFICATION.md](LEARNING_VERIFICATION.md): tests del motor no equivalen a evaluación del agente ni a mejora cuantificada de UX. Feedback no modifica automáticamente la política general.
