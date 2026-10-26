@@ -2,6 +2,9 @@
 
 **Estas son plantillas adaptables, NO pruebas ejecutadas ni pruebas completas listas para producción.** Sustituir rutas, identificadores y resultados por los del repositorio; verificar instalación, versiones de Playwright/axe-core y entorno antes de usarlas. Ninguna prueba de ejemplo autoriza conexiones reales de pago, uso de credenciales ni producción.
 
+## Microinteracciones motivacionales — prueba proporcional
+Consultar [MOTIVATIONAL_UX.md](MOTIVATIONAL_UX.md) cuando exista refuerzo visual. Probar confirmación posterior a éxito **real**, respuesta a error y reintento, activación una sola vez, estado con `prefers-reduced-motion: reduce`, lector de pantalla/texto informativo y ausencia de bloqueo del CTA. La captura estática solo prueba apariencia; el flujo async y la preferencia de movimiento exigen navegador/runtimes autorizados. Si no hay acceso al backend, etiquetar como NOT_TESTED la confirmación autoritativa, no falsificarla.
+
 ## 1. Árbol de decisiones: qué probar
 1. ¿Es solo texto/estilo? Captura y revisión del estado, contrastes y foco si cambia.
 2. ¿Modifica navegación o interacción? E2E de éxito, volver, teclado, viewport y scroll.
