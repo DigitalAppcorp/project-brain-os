@@ -26,6 +26,9 @@ Resultado: APPROVED / NEEDS_REVISION / BLOCKED + evidencia. No exigir investigac
 ## Gate previo de diseño visual
 Antes de IMPLEMENTATION para UI aplicar [VISUAL_APPROVAL_PROTOCOL.md](VISUAL_APPROVAL_PROTOCOL.md) y enlazar el registro de decisiones. UX-SPEC referencia ese resultado: propuesta presentada, preview final aprobada cuando sea significativa y autorización de implementación vigente. Una selección de alternativa sola mantiene bloqueada la transferencia al producto. El modo proporcional del protocolo evita pedir aprobaciones técnicas ordinarias o repetir las ya vigentes.
 
+## Gate de microinteracción motivacional (solo si se propone)
+Aplicar [MOTIVATIONAL_UX.md](MOTIVATIONAL_UX.md): verificar que el evento que desencadena el refuerzo es auténtico, que un error nunca aparece como éxito y que la presentación tiene alternativa sin movimiento. Revisar accesibilidad aplicable, teclado, foco, zoom, estado asíncrono, menor distracción y consentimiento sin presión; no inventar métricas de impacto. Conservar los gates de preview y autorización antes de modificar un producto.
+
 ## Gate ENGINEERING-READY
 - Diff del alcance, estado y contratos backend evaluados; riesgos de regresión.
 - Compilación/lint/unit y e2e **realmente ejecutados cuando aplican**, salidas verificables.
