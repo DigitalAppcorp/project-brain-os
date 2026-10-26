@@ -28,9 +28,9 @@ El filtro **no prohíbe** títulos centrados, izquierda, eyebrow, tarjetas ni nu
 | Modo | Evidencia de entrada | Decisión y resultado mínimo |
 | --- | --- | --- |
 | Producto nuevo | público, propuesta de valor, hechos disponibles; incertidumbres | UX brief/arquitectura básica, direcciones opcionales, estados, criterio de aceptación |
-| Pantalla nueva | navegación, tarea, decisiones de marca, roles | flujo y composición, copy público verificado, estados, test |
+| Pantalla nueva | navegación, tarea, decisiones de marca, roles | alternativas visuales, preview final y decisiones PO según [VISUAL_APPROVAL_PROTOCOL.md](VISUAL_APPROVAL_PROTOCOL.md); flujo, estados y test |
 | Ajuste puntual | pantalla y cambio deseado | alcance mínimo, preservación, diff y prueba focalizada |
-| Rediseño | sistema existente, métricas, problemas y aprobaciones | hallazgos, opciones, alcance, migración y anti-regresión |
+| Rediseño | sistema existente, métricas, problemas y aprobaciones | original y propuesta terminada según [VISUAL_APPROVAL_PROTOCOL.md](VISUAL_APPROVAL_PROTOCOL.md); alcance y anti-regresión |
 | Auditoría | pantallas, código, runtime, evidencia disponible | hallazgos con severidad/certeza/estado, solución y pruebas |
 | Inspiración/referencias | interfaz externa identificada | análisis de principios y límites de transferencia, sin clonación |
 | Implementación | decisión y contrato UX aprobado | código seguro, estados verificados, QA, divergencias documentadas |
