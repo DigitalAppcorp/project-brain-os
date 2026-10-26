@@ -1,28 +1,27 @@
 # Interface Quality Gate — router ligero a la especialidad UI/UX
 
-**Estado:** propuesta del [PR #3](https://github.com/DigitalAppcorp/project-brain-os/pull/3), en borrador. **No constituye una segunda autoridad normativa de diseño.**
+**Estado:** router complementario de Project Brain OS. **No constituye una segunda autoridad normativa de diseño.**
 
 ## Responsabilidad única
-Este patrón **detecta y enruta** tareas de creación, corrección, rediseño, evaluación, inspiración o auditoría de interfaces hacia **Design Intelligence OS**, cuya entrada canónica es `knowledge/ui-ux-frontend/SKILL.md` (PR #7). No reproduce límites WCAG, severidades, métricas ni recetas de pruebas; esos criterios se mantienen **exclusivamente** en la especialidad.
+Este patrón **detecta y enruta** tareas de creación, corrección, rediseño, evaluación, inspiración o auditoría de interfaces hacia **Design Intelligence OS**, cuya entrada canónica es `knowledge/ui-ux-frontend/SKILL.md` en `main`. No reproduce límites WCAG, severidades, métricas ni recetas de pruebas; esos criterios se mantienen **exclusivamente** en la especialidad.
 
 La jerarquía de gobierno permanece: seguridad, consentimiento, permisos, producción, Git y costes se rigen por Project Brain OS raíz. Las decisiones visuales de cada producto viven en el repositorio del producto, no aquí.
 
 ## Selección del modo (mínima)
 1. **AUDIT / READ_ONLY_AUDIT** cuando el usuario pida inspeccionar, revisar, evaluar o analizar **sin cambios**. No ejecutar escrituras, tests con efectos secundarios ni correcciones; consultar el contrato `READ_ONLY_AUDIT.md` del especialista.
-2. **DESIGN / REDESIGN / INSPIRE** cuando solicite una pantalla nueva, evolución amplia o análisis de referentes. Aplicar razonamiento y exploración proporcionados al alcance.
-3. **IMPLEMENTATION / FIX** solo ante autorización explícita para mutar código. Preservar diseño aprobado y gates del producto.
+2. **DESIGN / REDESIGN / INSPIRE** cuando solicite una pantalla nueva, evolución amplia o análisis de referentes. Aplicar razonamiento, alternativas y previews aisladas; exigir el gate visual del especialista antes de incorporar rediseños al producto.
+3. **IMPLEMENTATION / FIX** solo ante autorización explícita para mutar código. Preservar la preview aprobada, el diseño vigente y los gates del producto; elegir una alternativa no concede permiso de implementación.
 4. **MEASUREMENT** para afirmaciones cuantitativas (contraste, targets, performance): delegar en `MEASUREMENT_PROTOCOL.md` del especialista. Distinguir medidas propias, reportadas y estimadas.
 
 No convertir «puedes auditar» en «puedes corregir». No llamar PASS a un reporte de contraste o a una captura sin comprobar aplicabilidad y fuente. No autorizar merge/deploy desde este patrón.
 
-## Dependencia real entre PR #3 y PR #7
-- **PR #7**: [especialidad Design Intelligence OS, rama de revisión](https://github.com/DigitalAppcorp/project-brain-os/blob/feat/ui-ux-frontend-skill-20261025/knowledge/ui-ux-frontend/SKILL.md), con contratos de solo lectura y mediciones.
-- **Ruta futura en `main`**: `knowledge/ui-ux-frontend/SKILL.md`, disponible **solo tras aprobar y fusionar PR #7**.
-- **PR #3**: este router; no presupone que la especialidad ya exista en `main` ni en su propia rama. Las ramas de los PR son independientes.
+## Especialidad integrada y aprendizaje contextual
 
-**Orden de integración obligatorio:** revisar/aprobar/integrar primero PR #7, verificar el archivo canónico en `main`, después reconciliar/autorizar PR #3. Mientras ambos estén draft: mantener ambos sin merge y no proclamar autoridad integrada.
-
-Si el archivo de la especialidad no está disponible en el contexto operativo, consultar explícitamente PR #7 **en modo lectura** si está autorizado; si tampoco puede accederse, usar las reglas generales del Brain OS como orientación provisional, comunicar límite **sin certificar conformidad WCAG ni inventar umbrales**, y no actuar como si hubiera leído el módulo.
+- La fuente normativa especializada es `knowledge/ui-ux-frontend/SKILL.md` **v0.6.0**, integrada en `main` mediante PR #7 (base), #8 (previews y aprobación visual) y #9 (aprendizaje adaptativo).
+- El router no replica ni sustituye `READ_ONLY_AUDIT.md`, `MEASUREMENT_PROTOCOL.md`, `VISUAL_APPROVAL_PROTOCOL.md`, `PREVIEW_ARCHITECTURE.md` ni `ADAPTIVE_LEARNING.md`: delega en sus contratos vigentes.
+- Antes de diseñar, recuperar solo el historial pertinente del producto con `ADAPTIVE_LEARNING.md`; tras feedback del PO, registrar aciertos y rechazos en un ledger autorizado, con procedencia y alcance. No convertir decisiones exclusivas de un producto en normas generales ni escribir en auditoría de solo lectura.
+- Si no puede leerse el módulo, indicar la limitación y usar las reglas generales de Brain OS sin fingir que la especialidad o las evidencias están disponibles.
+- El enlace a PR #3 conserva el historial del router, no define una rama obligatoria para activar la especialidad.
 
 ## Salida proporcional
 - **Evaluación sin cambios:** `modo | fuente/versión | alcance | hallazgos y evidencia | incertidumbre | acciones propuestas no ejecutadas | mutaciones: 0`.
