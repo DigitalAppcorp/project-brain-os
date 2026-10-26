@@ -1,10 +1,10 @@
 # Quality gates — contratos comprobables
 
-## Modos y autoridad (v0.4.0)
+## Modos y autoridad (v0.6.0)
 - **AUDIT / READ_ONLY_AUDIT**: leer y evaluar sin modificar; contrato en [READ_ONLY_AUDIT.md](READ_ONLY_AUDIT.md). No aplicar automaticamente Implementation Ready ni VISUAL-AND-UX-ACCEPTED; informar capacidad de evaluación y cobertura.
 - **IMPLEMENTATION**: solo con autorización explícita adicional. Este modo aplica QA de cambios y el contrato del Project Brain OS raíz. El permiso de auditar **no** autoriza implementar.
 - **MEDICIONES**: usar [MEASUREMENT_PROTOCOL.md](MEASUREMENT_PROTOCOL.md) como formato único; evitar reglas numéricas duplicadas o umbrales inventados.
-- El patrón básico `patterns/INTERFACE_QUALITY_GATE.md` es **router** del Brain OS raíz, no una segunda fuente normativa. Referencia cruzada por PR #3 a este módulo v0.4.0 (PR #7); ningún PR está en `main` hasta merge aprobado.
+- El patrón `patterns/INTERFACE_QUALITY_GATE.md` integrado en `main` es **router** del Brain OS raíz, no una segunda fuente normativa. Delega en esta especialidad v0.6.0 sin duplicar sus contratos.
 
 ## Regla superior
 Estos gates **complementan** Gates 0–9 y Scope Closure Reconciliation del Project Brain OS raíz. No autorizan merge ni despliegue y no sustituyen la aprobación del Product Owner. No confundir documento aprobado, código presente, test ejecutado, aceptación visual y producción.
