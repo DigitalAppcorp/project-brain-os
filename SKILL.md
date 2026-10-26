@@ -636,13 +636,15 @@ Si es específica, permanece en los documentos de ese proyecto.
 
 ## 22.6. Calidad visual y usabilidad de interfaces
 
-Para crear, ajustar, investigar o auditar una interfaz, usar `patterns/INTERFACE_QUALITY_GATE.md` **únicamente como router** hacia la especialidad Design Intelligence OS del PR #7 (`knowledge/ui-ux-frontend/SKILL.md`). Las normas, umbrales, severidad, evidencia y pruebas se definen allí, **no** en este gate ligero.
+Para crear, ajustar, investigar o auditar una interfaz, usar `patterns/INTERFACE_QUALITY_GATE.md` **únicamente como router** hacia la especialidad Design Intelligence OS v0.6.0, disponible en `main` en `knowledge/ui-ux-frontend/SKILL.md`. Los umbrales, las métricas y las reglas de calidad viven exclusivamente en la especialidad.
 
-**Si la petición es auditar o analizar sin modificaciones:** activar `READ_ONLY_AUDIT` antes de usar herramientas capaces de escribir; no realizar mutaciones, pruebas con efectos secundarios ni implementación implícita. Cada medición cuantitativa sigue `MEASUREMENT_PROTOCOL.md` de la especialidad y debe diferenciar datos observados, reportados, inferidos y no probados.
+**Auditoría sin cambios:** activar `READ_ONLY_AUDIT` y no realizar mutaciones, pruebas con efectos secundarios ni implementación implícita. Para mediciones consultar `MEASUREMENT_PROTOCOL.md` y distinguir datos observados, reportados, inferidos y no probados.
 
-**Dependencia de PRs:** #3 y #7 son borradores en ramas diferentes. La ruta especializada NO existe aún en `main` mientras #7 no esté integrado; consultar su rama explícitamente cuando sea posible y declarar el límite si no se puede. Orden autorizado futuro: PR #7 aprobado e integrado primero, luego PR #3; ambos conservan sus gates de revisión y aprobación del Product Owner.
+**Creación y rediseño:** aplicar `VISUAL_APPROVAL_PROTOCOL.md` y `PREVIEW_ARCHITECTURE.md`. Presentar opciones y previews aisladas cuando corresponda; elección de alternativa, aceptación de preview, autorización de implementación y publicación son decisiones distintas.
 
-Conservar decisiones de diseño aprobadas, no confundir build PASS con aceptación visual, no instalar skills externos por defecto.
+**Aprendizaje:** aplicar `ADAPTIVE_LEARNING.md` antes y después de las revisiones para recuperar y registrar feedback con evidencia, en el ámbito del producto correspondiente; no reentrenar modelos ni permitir que puntuaciones heurísticas sustituyan seguridad, accesibilidad o permisos.
+
+La especialidad fue integrada sucesivamente mediante PR #7, #8 y #9; este router no replica sus contratos ni altera los permisos de Project Brain OS raíz. Conservar diseños aprobados y no confundir compilación exitosa con aceptación visual.
 
 ## 23. Activación
 
