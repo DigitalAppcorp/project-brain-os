@@ -1,6 +1,6 @@
 # Brain OS — UI/UX Frontend Engineering
 
-> **v0.6.0 · 2026-10-26 · documentación implementada en rama de revisión · batería comparativa pendiente de ejecución.**
+> **v0.6.0 · 2026-10-26 · integrada en `main` · batería comparativa del agente pendiente de ejecución.**
 
 ## Propósito
 Sistema de decisiones reutilizable para diseñar, construir, criticar y mantener productos digitales **desde cero o existentes**: apps, webs, PWAs, dashboards, componentes, modales, rediseños, UX writing, análisis de referentes y auditorías. No define una apariencia estándar ni se limita a React; selecciona proceso proporcional al contexto.
@@ -53,7 +53,7 @@ Sistema de decisiones reutilizable para diseñar, construir, criticar y mantener
 - **No prometer resultados no probados:** design spec, código, QA automatizado, prueba manual y producción son estados distintos.
 - **AUDIT = solo lectura:** si el encargo es evaluar sin tocar, cero mutaciones del producto. La auditoría no concede permiso para implementar; requiere nuevo GO.
 - **Valor medido ≠ reportado:** todo número se acompaña de fuente, método, aplicabilidad y cobertura; no inventar conformidad.
-- **Autoridad única:** `patterns/INTERFACE_QUALITY_GATE.md` del PR #3 es el router; este módulo es la única fuente especializada, actualmente en PR #7 hasta integración autorizada.
+- **Autoridad única:** `patterns/INTERFACE_QUALITY_GATE.md` es el router integrado; este módulo v0.6.0 es la única fuente especializada, integrada en `main`.
 
 ## Modos sin duplicar habilidades
 - **Crear:** comprender negocio/audiencia, definir estructura, explorar opciones cuando convenga, implementar si autorizado.
@@ -66,4 +66,4 @@ Sistema de decisiones reutilizable para diseñar, construir, criticar y mantener
 El módulo **complementa Project Brain OS raíz**: las autorizaciones, control de producción, Git y Scope Closure Reconciliation siguen vigentes. Aquí solo vive metodología general; decisiones específicas de PAZO u otros productos deben permanecer en sus propios repositorios.
 
 ## Estado de calidad
-**Documentación publicada en rama de revisión**, sin merge y sin asumir instalación permanente en otros agentes. **Los fixtures de EVALUATIONS.md están especificados pero no equivalen a pruebas ejecutadas**. Comprobar el PR antes de afirmar cobertura o aprobación.
+**Documentación integrada en `main`**, pero no equivale a instalación permanente en cada agente. **Los fixtures de EVALUATIONS.md están especificados pero no equivalen a pruebas ejecutadas**. La utilidad local de aprendizaje y las previews requieren estar disponibles en el entorno que las ejecuta; consultar sus informes para conocer cobertura y límites.
