@@ -51,7 +51,7 @@ Avanzar con el mínimo de supuestos explícitos. No inventar prestaciones comerc
 
 Para cualquier resultado cuantitativo (contraste, targets, rendimiento, zoom u otros) utilizar [MEASUREMENT_PROTOCOL.md](MEASUREMENT_PROTOCOL.md): dato medido vs reportado vs estimado, unidad, umbral aplicable, método, SHA, entorno, prueba y límites. La auditoría de código no constituye automáticamente una prueba de uso.
 
-**Fuente única especializada:** este módulo y [QUALITY_GATES.md](QUALITY_GATES.md) gobiernan UI/UX; el patrón ligero `patterns/INTERFACE_QUALITY_GATE.md` del Brain OS raíz (PR #3) sólo enruta al especialista y conserva las restricciones de gobierno del núcleo. Como ambos PR son borradores separados, no asumir que el otro módulo existe en `main`. Antes de mezclar, integrar y verificar primero el PR #7 y después reconciliar el #3.
+**Fuente única especializada:** este módulo v0.6.0 y [QUALITY_GATES.md](QUALITY_GATES.md) gobiernan UI/UX. `patterns/INTERFACE_QUALITY_GATE.md` del Brain OS raíz solo enruta hacia esta especialidad, conserva las restricciones del núcleo y no duplica criterios. Ambos están integrados en `main` mediante PR #7, #8, #9 y #3. La disponibilidad en GitHub no sustituye la carga explícita de la habilidad en cada agente.
 
 ## Procedimiento por defecto
 1. **Recuperar estado**: identificar producto, perfil de usuario, tarea, plataforma, pantalla, flujos, decisiones aprobadas y código real. Leer SKILL raíz y AGENTS/roadmap del repositorio antes de mutar.
