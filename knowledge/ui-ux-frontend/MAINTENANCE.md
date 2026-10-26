@@ -1,7 +1,7 @@
 # Mantenimiento y control de cambios
 
 ## Versión
-**0.6.0 — 2026-10-26**. Ampliación operativa con evaluación adversarial, casos de prueba, protocolos de calidad, WCAG-EM 2.0, métricas con denominadores, biblioteca contextual y criterios de fidelidad visual. Sigue en PR draft y **no implica ejecución real de tests, auditoría de un producto ni instalación automática en agentes externos**.
+**0.6.0 — 2026-10-26**. Ampliación operativa con evaluación adversarial, casos de prueba, protocolos de calidad, WCAG-EM 2.0, métricas con denominadores, biblioteca contextual y criterios de fidelidad visual. Está integrada en `main` y **no implica evaluación comparativa del agente, auditoría de un producto ni instalación automática en agentes externos**; existen verificaciones acotadas de motor y preview documentadas.
 
 ## Actualización periódica
 Revisar la documentación en cada modificación sustantiva y, como práctica interna, cada **90 días**:
@@ -53,11 +53,10 @@ Cada versión nueva debe documentar: batería de escenarios con entrada y respue
 La habilidad puede citar referentes de diseño, pero no debe copiar literalmente sus guías como si fueran reglas propias ni crear un estilo forzoso para todos los productos. Comprobar que cada decisión se fundamenta en el encargo y que el PO conserva autoridad estética dentro de accesibilidad/integridad. Las lecciones de productos concretos viven en sus repositorios, no en Project Brain OS.
 
 
-## Dependencia de PRs y autoridad
-- [PR #7](https://github.com/DigitalAppcorp/project-brain-os/pull/7) define los criterios especializados; [PR #3](https://github.com/DigitalAppcorp/project-brain-os/pull/3) funciona solo como router.
-- Mientras ambos PR están en borrador, el árbol `main` aún no contiene estas capacidades. **No** declarar integración efectiva.
-- Antes de integrar PR #3, asegurar que el módulo PR #7 esté aprobado e integrado en `main`, que las referencias resuelvan y que no existan instrucciones duplicadas o contradictorias.
-- La aprobación e integración son tareas diferentes, cada una requiere autorización conforme al Brain OS raíz.
+## Dependencias integradas y autoridad
+- [PR #7](https://github.com/DigitalAppcorp/project-brain-os/pull/7) aportó la especialidad; [PR #8](https://github.com/DigitalAppcorp/project-brain-os/pull/8) añadió previews y gates visuales; [PR #9](https://github.com/DigitalAppcorp/project-brain-os/pull/9) añadió aprendizaje contextual; [PR #3](https://github.com/DigitalAppcorp/project-brain-os/pull/3) integró el router. Todos están fusionados en `main`.
+- La autoridad normativa especializada permanece en `knowledge/ui-ux-frontend/SKILL.md`; `patterns/INTERFACE_QUALITY_GATE.md` solo enruta.
+- El motor y las herramientas no se instalan automáticamente en otros agentes. Las autorizaciones para modificar productos, fusionar o desplegar siguen independientes conforme a Brain OS raíz.
 
 - **2026-10-26 v0.5.0**: protocolo de aprobación visual, previews externas al producto, utilidad estática sin dependencias y guía de Playwright CLI. Ver [PREVIEW_VERIFICATION.md](PREVIEW_VERIFICATION.md) para pruebas realmente ejecutadas. Batería comparativa de agentes no ejecutada; no cambia Brain OS core ni integra PR #3/#7 automáticamente.
 
