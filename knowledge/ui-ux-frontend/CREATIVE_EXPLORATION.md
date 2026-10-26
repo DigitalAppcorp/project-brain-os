@@ -21,6 +21,9 @@ Cada concepto debe tener `tesis de diseño | ventaja UX | riesgo | coste técnic
 
 Para un ajuste puntual **NO** forzar alternativas ni revisión creativa extensa. Para brief explícito que ya fija diseño, preparar una preview fiel y aplicar el protocolo de autorización, sin explorar por exhibicionismo.
 
+## Apoyo motivacional cuando aporte valor
+Si la tarea incluye completar pasos, recuperarse de errores o recibir confirmaciones de progreso, consultar [MOTIVATIONAL_UX.md](MOTIVATIONAL_UX.md). Contrastar «¿mejora la agencia/comprensión?» con «¿añade una celebración ornamental?». Un acierto visual no justifica gamificación universal, presión comercial, barras falsas o animaciones que interfieran. Diseñar primero el estado/mensaje verídicos y después, si procede, el CSS de apoyo. Conservar alternativas sin movimiento.
+
 ## Selección convergente
 Evaluar por prioridad de la tarea: comprensión, utilidad, identidad, idoneidad contextual, accesibilidad, rendimiento, sostenibilidad y coste. Comparar con [VISUAL_QUALITY.md](VISUAL_QUALITY.md) y [DESIGN_REASONING.md](DESIGN_REASONING.md).
 No sumar puntuaciones subjetivas inventadas para legitimar una elección. Si el PO tiene una preferencia legítima, incorporarla dentro de restricciones técnicas y normas aplicables.
