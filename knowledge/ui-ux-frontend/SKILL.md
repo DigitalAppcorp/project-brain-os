@@ -1,8 +1,8 @@
 ---
 name: brain-os-ui-ux-frontend-engineering
 description: Especialidad reusable para investigar, diseñar, auditar, implementar y probar interfaces web y PWA con UX fundamentada, accesibilidad WCAG 2.2 AA, diseño visual coherente, frontend robusto y crítica independiente.
-version: 0.4.0
-reviewed_at: 2026-10-25
+version: 0.5.0
+reviewed_at: 2026-10-26
 status: review-ready
 ---
 
@@ -23,7 +23,7 @@ El usuario define la intención y prioridades de negocio. El especialista cuesti
 
 **No dogmas**: minimalismo, glassmorphism, animaciones, ausencia de bordes, tarjetas, gestos, diseño «premium», dark mode y tendencias visuales son decisiones condicionadas por el contexto, no mandamientos universales.
 
-## Núcleo de diseño inteligente (v0.4.0; conserva capacidades v0.3.0)
+## Núcleo de diseño inteligente (v0.5.0; conserva capacidades v0.3.0–v0.4.0)
 La habilidad se comporta como **método profesional adaptable**, no como una estética prefijada. Se aplica a creación desde cero, revisión de otra interfaz, optimización, implementación, auditoría y mantenimiento. **Seleccionar modo y esfuerzo según tarea**: [DESIGN_REASONING.md](DESIGN_REASONING.md).
 
 ### Arquitectura operativa obligatoria
@@ -32,8 +32,9 @@ La habilidad se comporta como **método profesional adaptable**, no como una est
 3. **Recuperar intención aprobada:** leer y actualizar, si corresponde, registros del proyecto según [DESIGN_MEMORY.md](DESIGN_MEMORY.md). No trasladar gustos del proyecto a otros.
 4. **Explorar con motivo:** para diseño abierto considerar direcciones alternativas según [CREATIVE_EXPLORATION.md](CREATIVE_EXPLORATION.md); para cambios puntuales preservar lo aprobado. No hacer brainstorming obligatorio para cada píxel.
 5. **Aprender de referencias:** estudiar elementos observables, contexto y transferibilidad en [REFERENCE_ANALYSIS.md](REFERENCE_ANALYSIS.md), sin clonar identidad ni afirmar interacciones no vistas.
-6. **Implementar sin deriva:** antes y después del cambio aplicar [CHANGE_INTEGRITY.md](CHANGE_INTEGRITY.md), verificando objetivo nuevo **e invariantes antiguos**.
-7. **Evaluar con evidencia:** ejecutar pruebas según riesgo y gates; usar [EVALUATIONS.md](EVALUATIONS.md) para evaluar *la habilidad misma*, sin inventar resultados.
+6. **Preview y aprobación antes del producto:** aplicar [VISUAL_APPROVAL_PROTOCOL.md](VISUAL_APPROVAL_PROTOCOL.md), fuente única de decisiones del PO, y [PREVIEW_ARCHITECTURE.md](PREVIEW_ARCHITECTURE.md) para construir y mostrar previews aisladas.
+7. **Implementar sin deriva:** antes y después del cambio aplicar [CHANGE_INTEGRITY.md](CHANGE_INTEGRITY.md), verificando objetivo nuevo **e invariantes antiguos**.
+8. **Evaluar con evidencia:** ejecutar pruebas según riesgo y gates; usar [EVALUATIONS.md](EVALUATIONS.md) para evaluar *la habilidad misma*, sin inventar resultados.
 
 ### Separación conceptual
 - **Plan de diseño y justificación al PO** ≠ **texto de interfaz para usuarios**.
@@ -59,7 +60,7 @@ Para cualquier resultado cuantitativo (contraste, targets, rendimiento, zoom u o
 4. **Generar opciones y autocrítica**: explorar según el alcance (sin opciones obligatorias para cambios minúsculos), solución mínima, alternativa razonable y riesgos. Aplicar [DECISION_PROTOCOL.md](DECISION_PROTOCOL.md) al discrepar, y ejecutar revisión adversarial: «¿qué evidencia refutaría mi solución?», «¿qué podría romper?». No reevaluar una decisión aprobada sin riesgo o evidencia nueva.
 5. **Especificar interacción**: flujo feliz, sin datos, loading, lento, error, cancelación, permiso denegado, desconexión y recuperación; navegación y foco.
 6. **Diseñar**: jerarquía, contenidos, tokens, componentes, layout responsive, áreas táctiles, feedback y motion; auditar dirección de arte y fidelidad con [VISUAL_QUALITY.md](VISUAL_QUALITY.md).
-7. **Implementar y proteger intención**: HTML semántico, componentes reutilizables, estado consistente, contratos API, accesibilidad, resiliencia, rendimiento y mínimo diff seguro. Probar objetivos nuevos e invariantes del contrato previo.
+7. **Comprobar gate visual e implementar con autorización vigente**: aplicar [VISUAL_APPROVAL_PROTOCOL.md](VISUAL_APPROVAL_PROTOCOL.md) antes de transferir cambios visuales; selección, aprobación de preview y autorización de implementación se registran por separado. Proteger intención con HTML semántico, componentes reutilizables, estado consistente, contratos API, accesibilidad, resiliencia, rendimiento y mínimo diff seguro. Probar objetivos nuevos e invariantes del contrato previo.
 8. **Verificar**: escoger recetas de [TEST_RECIPES.md](TEST_RECIPES.md), documentar PASS/FAIL/NOT_TESTED/INCONCLUSIVE y referencias reproducibles; usar [QUALITY_GATES.md](QUALITY_GATES.md). Para evaluación formal WCAG aplicar WCAG-EM 2.0; la auditoría rápida no es certificación.
 9. **Reportar**: evidencias y límites, qué cambió, qué se preservó, riesgos residuales, gate y necesidad de aprobación; definir métricas con denominador, origen, línea base y exclusiones según [UX_METRICS.md](UX_METRICS.md).
 

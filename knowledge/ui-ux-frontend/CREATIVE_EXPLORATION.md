@@ -13,13 +13,13 @@ La creatividad no se logra pidiendo «sé creativo» ni rotando estilos prefijad
 - **Datos desconocidos**: registrar como hipótesis o placeholders de edición; nunca inventar prestaciones para parecer real.
 
 ## Generación divergente (cuando el alcance lo justifique)
-Producción de **2–3 conceptos estructuralmente diferentes**, no 3 variaciones de color:
+Cantidad y presentación según [VISUAL_APPROVAL_PROTOCOL.md](VISUAL_APPROVAL_PROTOCOL.md): normalmente tres para pantallas nuevas. Conceptos estructuralmente diferentes, no variaciones de color:
 1. Diferencias en organización del contenido y recorrido.
 2. Diferencias en densidad, composición, imagen/tipografía y distribución de acciones.
 3. Diferencias en personalidad y énfasis sin sacrificar accesibilidad y tareas.
 Cada concepto debe tener `tesis de diseño | ventaja UX | riesgo | coste técnico | mejor contexto de uso`.
 
-Para un ajuste puntual **NO** forzar alternativas ni revisión creativa extensa. Para brief explícito que ya fija diseño, implementar fielmente, no explorar por exhibicionismo.
+Para un ajuste puntual **NO** forzar alternativas ni revisión creativa extensa. Para brief explícito que ya fija diseño, preparar una preview fiel y aplicar el protocolo de autorización, sin explorar por exhibicionismo.
 
 ## Selección convergente
 Evaluar por prioridad de la tarea: comprensión, utilidad, identidad, idoneidad contextual, accesibilidad, rendimiento, sostenibilidad y coste. Comparar con [VISUAL_QUALITY.md](VISUAL_QUALITY.md) y [DESIGN_REASONING.md](DESIGN_REASONING.md).

@@ -1,7 +1,7 @@
 # Mantenimiento y control de cambios
 
 ## Versión
-**0.4.0 — 2026-10-25**. Ampliación operativa con evaluación adversarial, casos de prueba, protocolos de calidad, WCAG-EM 2.0, métricas con denominadores, biblioteca contextual y criterios de fidelidad visual. Sigue en PR draft y **no implica ejecución real de tests, auditoría de un producto ni instalación automática en agentes externos**.
+**0.5.0 — 2026-10-26**. Ampliación operativa con evaluación adversarial, casos de prueba, protocolos de calidad, WCAG-EM 2.0, métricas con denominadores, biblioteca contextual y criterios de fidelidad visual. Sigue en PR draft y **no implica ejecución real de tests, auditoría de un producto ni instalación automática en agentes externos**.
 
 ## Actualización periódica
 Revisar la documentación en cada modificación sustantiva y, como práctica interna, cada **90 días**:
@@ -58,3 +58,5 @@ La habilidad puede citar referentes de diseño, pero no debe copiar literalmente
 - Mientras ambos PR están en borrador, el árbol `main` aún no contiene estas capacidades. **No** declarar integración efectiva.
 - Antes de integrar PR #3, asegurar que el módulo PR #7 esté aprobado e integrado en `main`, que las referencias resuelvan y que no existan instrucciones duplicadas o contradictorias.
 - La aprobación e integración son tareas diferentes, cada una requiere autorización conforme al Brain OS raíz.
+
+- **2026-10-26 v0.5.0**: protocolo de aprobación visual, previews externas al producto, utilidad estática sin dependencias y guía de Playwright CLI. Ver [PREVIEW_VERIFICATION.md](PREVIEW_VERIFICATION.md) para pruebas realmente ejecutadas. Batería comparativa de agentes no ejecutada; no cambia Brain OS core ni integra PR #3/#7 automáticamente.

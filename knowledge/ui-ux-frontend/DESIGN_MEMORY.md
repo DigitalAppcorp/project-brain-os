@@ -51,3 +51,6 @@ Véase [CHANGE_INTEGRITY.md](CHANGE_INTEGRITY.md).
 ## Handoff entre chats
 `producto/ref | rama/HEAD | superficie | tarea | decisiones DIR aplicables | diferencias visibles | cambios realizados | pruebas/estado | pendientes | siguiente acción | prohibiciones/autorizaciones`.
 No decir «recordado para siempre» si no existe documentación recuperable.
+
+## Aprobaciones de previews
+Enlazar desde cada DIR el [registro de aprobación visual](templates/VISUAL_APPROVAL_RECORD.md), con decisiones separadas según [VISUAL_APPROVAL_PROTOCOL.md](VISUAL_APPROVAL_PROTOCOL.md). Conservar evidencia exacta y versiones inmutables, sin inferir permisos del estado genérico `approved` del DIR. Las decisiones del producto se guardan en su registro autorizado; durante diseño aislado, conservar evidencia fuera del producto hasta permitir su transferencia.

@@ -43,3 +43,6 @@ S3/S4: detener nuevo alcance, estabilizar, reconstruir la causa con evidencia y 
 
 ## Contrato final de cambios
 `Objetivo | archivos/estados tocados | invariantes probados | nuevo copy público y razón | decisiones afectadas | pruebas PASS/FAIL/NOT_TESTED | discrepancias | autorización | siguiente gate`.
+
+## Comparación con preview aprobada
+Antes de transferir al producto comprobar decisiones y versión en [VISUAL_APPROVAL_PROTOCOL.md](VISUAL_APPROVAL_PROTOCOL.md). Aplicar la comparación de [PREVIEW_ARCHITECTURE.md](PREVIEW_ARCHITECTURE.md) con contenido, estado y viewport equivalentes; enlazar baseline, captura implementada y diff de código. Registrar diferencias como intencionales autorizadas, deriva o no comprobadas. Si hay deriva significativa, restaurar la referencia o presentar el delta al PO; no actualizar el baseline para ocultarla.

@@ -23,6 +23,9 @@ Estos estados pueden coexistir parcialmente; no son una escalera que elimine los
 Condiciones mínimas: tarea y usuario, limitaciones, flujo principal, casos vacío/espera/error/éxito, permiso y retorno; jerarquía y dirección visual aprobadas cuando proceda; métricas definidas; riesgos y requisitos accesibles identificados.
 Resultado: APPROVED / NEEDS_REVISION / BLOCKED + evidencia. No exigir investigación exhaustiva para un cambio cosmético inocuo.
 
+## Gate previo de diseño visual
+Antes de IMPLEMENTATION para UI aplicar [VISUAL_APPROVAL_PROTOCOL.md](VISUAL_APPROVAL_PROTOCOL.md) y enlazar el registro de decisiones. UX-SPEC referencia ese resultado: propuesta presentada, preview final aprobada cuando sea significativa y autorización de implementación vigente. Una selección de alternativa sola mantiene bloqueada la transferencia al producto. El modo proporcional del protocolo evita pedir aprobaciones técnicas ordinarias o repetir las ya vigentes.
+
 ## Gate ENGINEERING-READY
 - Diff del alcance, estado y contratos backend evaluados; riesgos de regresión.
 - Compilación/lint/unit y e2e **realmente ejecutados cuando aplican**, salidas verificables.
@@ -32,9 +35,9 @@ Resultado: APPROVED / NEEDS_REVISION / BLOCKED + evidencia. No exigir investigac
 - Si la herramienta o entorno no permite una prueba, anotarla como NOT_TESTED; decidir si bloquea según riesgo.
 
 ## Gate VISUAL-AND-UX-ACCEPTED
-- Comparación referencia ↔ estado aprobado ↔ ejecución actual.
+- Comparación referencia ↔ preview aprobada identificada por versión ↔ ejecución actual; procedimiento en [PREVIEW_ARCHITECTURE.md](PREVIEW_ARCHITECTURE.md).
 - Captura por viewport/tema/estado relevante; prueba manual del scroll/interacción en flujo significativo.
-- PO acepta solo lo que revisó; aceptación estética ≠ seguridad ni funcionamiento backend.
+- PO acepta solo lo que revisó; registrar aceptación de implementación separada de aprobación de preview conforme a [VISUAL_APPROVAL_PROTOCOL.md](VISUAL_APPROVAL_PROTOCOL.md). Aceptación estética ≠ seguridad ni funcionamiento backend.
 - Si se detecta S3/S4 abierto, bloquear el alcance afectado salvo mitigación documentada y autorizada donde sea seguro/legal.
 
 ## Auditoría WCAG-EM 2.0 (cuando se evalúe conformidad formal)
