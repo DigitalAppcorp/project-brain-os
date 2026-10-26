@@ -46,3 +46,6 @@ Si la intención del PO es incompatible con cumplimiento, seguridad o utilidad c
 
 ## Registro proporcional
 Para decisiones irreversibles o significativas guardar motivo, alternativas, riesgo y prueba en el repositorio del producto con [DESIGN_MEMORY.md](DESIGN_MEMORY.md). No acumular fichas para píxeles triviales.
+
+## Recuperación contextual previa
+Aplicar [ADAPTIVE_LEARNING.md](ADAPTIVE_LEARNING.md) antes de proponer: consultar solo el producto/pantalla/componente y contexto pertinentes, recuperar preferencias sustituidas y errores recurrentes para evitar repetirlos. La prioridad heurística orienta el criterio; no reemplaza investigación, restricciones o nuevas decisiones del PO.

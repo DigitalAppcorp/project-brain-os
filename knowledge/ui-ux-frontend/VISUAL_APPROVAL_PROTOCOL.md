@@ -41,3 +41,6 @@ La selección no cambia permisos de backend ni datos; una preview aprobada no de
 2. «Elijo B; ajusta [detalle]» para seguir diseñando en aislamiento.
 3. «Apruebo B v2 y autorizo implementarla en [rama/alcance]» cuando el resultado esté listo.
 4. Revisar comparación de implementación. Publicación sigue su gate independiente.
+
+## Aprender de cada revisión
+El agente recupera lecciones antes de diseñar y registra el feedback normal del PO después de revisar mediante [ADAPTIVE_LEARNING.md](ADAPTIVE_LEARNING.md), sin solicitar otro formulario. Usar ID/versión y fuente del registro visual para evitar duplicación; enlazar evento(s) de aprendizaje desde esa ficha. La etapa determina qué se aprobó: alternativa/referencia, preview o implementación. Prioridades y recompensas nunca crean autorización, y el contrato READ_ONLY_AUDIT impide escribir el ledger en ese modo.
