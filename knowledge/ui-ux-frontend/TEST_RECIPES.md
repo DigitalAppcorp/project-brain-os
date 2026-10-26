@@ -10,6 +10,26 @@
 5. ¿Depende de dispositivo (mapa/GPS/PWA)? Emulación como primer filtro + dispositivo/navegador real cuando determine aceptación.
 6. ¿Es evaluacion WCAG formal? Aplicar alcance/muestra/informe de WCAG-EM 2.0; axe solo detecta parte de los fallos.
 
+## Alineación de cajas en un bloque central
+Aplicar solo cuando el contrato visual establezca un eje central común; criterio y diagnóstico en [VISUAL_QUALITY.md](VISUAL_QUALITY.md#eje-del-bloque-y-alineación-del-texto). No es una regla WCAG ni una orden de centrar todo el producto.
+
+```ts
+// Adaptar selectores, estados, viewports y tolerancia a la composición real.
+const offsets = await page.locator('[data-central-message]').evaluate(root => {
+  const box = root.getBoundingClientRect();
+  const axis = box.x + box.width / 2;
+  return [...root.querySelectorAll('[data-align-to-center]')].map(node => {
+    const rect = node.getBoundingClientRect();
+    return rect.x + rect.width / 2 - axis;
+  });
+});
+const toleranceCssPx = 1; // Tolerancia interna de este ejemplo, no norma universal.
+for (const offset of offsets) expect(Math.abs(offset)).toBeLessThanOrEqual(toleranceCssPx);
+// Revisar además captura, wrapping, anchos de lectura y estados con feedback.
+```
+
+No marcar la receta como ejecutada por estar escrita. Guardar medición, captura y límites de las pruebas propias.
+
 ## 2. Playwright — ruta feliz + error de red
 Ejemplo conceptual TypeScript que **asume** una app propia de QA en `/formulario` y un POST a `**/api/solicitudes`. Requiere adaptar el texto visible, API y comportamiento según contrato. No enlazar contra producción.
 

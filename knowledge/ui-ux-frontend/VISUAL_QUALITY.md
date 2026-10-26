@@ -46,3 +46,14 @@ Entregar: objetivo → referencia/estado aprobado → diferencias observables �
 
 ## Revisión visual situada v0.3.0
 Antes de llamar «mala composición» a un título alineado a la izquierda, examinar **función textual**, jerarquía, espacio, longitud, relación con CTA y preferencias legítimas del producto. No usar centro/izquierda como dogma. Antes de agregar eyebrow o pastilla verificar su función real; para texto de interfaz usar [UX_CONTENT.md](UX_CONTENT.md). Inspiración externa: [REFERENCE_ANALYSIS.md](REFERENCE_ANALYSIS.md); creatividad pertinente: [CREATIVE_EXPLORATION.md](CREATIVE_EXPLORATION.md). En iteraciones técnicas, comparar con baseline aprobado mediante [CHANGE_INTEGRITY.md](CHANGE_INTEGRITY.md).
+
+### Eje del bloque y alineación del texto
+Cuando la composición pida un mensaje central, verificar **dos alineaciones distintas**: las líneas dentro de la caja de texto y la caja respecto al eje previsto del contenedor. `text-align: center` por sí solo no acredita que título o párrafo estén centrados en la tarjeta.
+
+- Contrastar título, párrafo, ilustración y CTA con el eje común previsto, a los anchos y estados afectados; comprobar también la captura. Distinguir alineación geométrica de ajustes ópticos intencionales y documentados.
+- Revisar `max-width`, ancho efectivo, márgenes computados, padding, layout del padre, elementos absolutos y cascada (`!important`, capas CSS e herencia). Una caja limitada puede seguir pegada a la izquierda aunque sus líneas estén centradas.
+- Resolver el centrado en el layout pertinente (por ejemplo, alineación de hijos en flex/grid), conservando ancho de lectura y jerarquía. No introducir offsets compensatorios por viewport para ocultar una regla conflictiva.
+- No forzar todos los textos al centro ni llevarlos a la izquierda por automatismo. Cabeceras, contenido corrido y formularios mantienen la alineación adecuada a su función; corregir solo los bloques cuyo eje acordado falla.
+- En feedback mixto conservar lo aceptado; una corrección de alineación no autoriza alterar copy, escalas o composición ajenos al delta.
+
+Comprobación adaptable: [TEST_RECIPES.md](TEST_RECIPES.md#alineación-de-cajas-en-un-bloque-central).
