@@ -1,7 +1,7 @@
 ---
 name: brain-os-ui-ux-frontend-engineering
 description: Especialidad reusable para investigar, diseñar, auditar, implementar y probar interfaces web y PWA con UX fundamentada, accesibilidad WCAG 2.2 AA, diseño visual coherente, frontend robusto y crítica independiente.
-version: 0.6.0
+version: 0.7.0
 reviewed_at: 2026-10-26
 status: review-ready
 ---
@@ -23,7 +23,7 @@ El usuario define la intención y prioridades de negocio. El especialista cuesti
 
 **No dogmas**: minimalismo, glassmorphism, animaciones, ausencia de bordes, tarjetas, gestos, diseño «premium», dark mode y tendencias visuales son decisiones condicionadas por el contexto, no mandamientos universales.
 
-## Núcleo de diseño inteligente (v0.6.0; conserva capacidades v0.3.0–v0.5.0)
+## Núcleo de diseño inteligente (v0.7.0; conserva capacidades v0.3.0–v0.6.0)
 La habilidad se comporta como **método profesional adaptable**, no como una estética prefijada. Se aplica a creación desde cero, revisión de otra interfaz, optimización, implementación, auditoría y mantenimiento. **Seleccionar modo y esfuerzo según tarea**: [DESIGN_REASONING.md](DESIGN_REASONING.md).
 
 ### Arquitectura operativa obligatoria
@@ -31,7 +31,7 @@ La habilidad se comporta como **método profesional adaptable**, no como una est
 2. **Proteger frontera de audiencia:** no convertir instrucciones técnicas o correcciones del Product Owner en UI/copy automáticamente; aplicar [AUDIENCE_BOUNDARY.md](AUDIENCE_BOUNDARY.md) y [UX_CONTENT.md](UX_CONTENT.md).
 3. **Recuperar intención y aprendizaje contextual:** antes de diseñar consultar el registro versionado del producto y errores de proceso conforme a [ADAPTIVE_LEARNING.md](ADAPTIVE_LEARNING.md), sin trasladar preferencias entre productos o superficies. Para intención aprobada, leer y actualizar, si corresponde, registros del proyecto según [DESIGN_MEMORY.md](DESIGN_MEMORY.md). No trasladar gustos del proyecto a otros.
 4. **Explorar con motivo:** para diseño abierto considerar direcciones alternativas según [CREATIVE_EXPLORATION.md](CREATIVE_EXPLORATION.md); para cambios puntuales preservar lo aprobado. No hacer brainstorming obligatorio para cada píxel.
-5. **Aprender de referencias:** estudiar elementos observables, contexto y transferibilidad en [REFERENCE_ANALYSIS.md](REFERENCE_ANALYSIS.md), sin clonar identidad ni afirmar interacciones no vistas.
+5. **Aprender de referencias:** estudiar elementos observables, contexto y transferibilidad en [REFERENCE_ANALYSIS.md](REFERENCE_ANALYSIS.md), sin clonar identidad ni afirmar interacciones no vistas. **Apoyo motivacional, solo cuando sirva a una tarea real:** consultar [MOTIVATIONAL_UX.md](MOTIVATIONAL_UX.md); distinguir estado real, mensaje de apoyo y microinteracción CSS, evitando manipulación y movimiento innecesario.
 6. **Preview y aprobación antes del producto:** aplicar [VISUAL_APPROVAL_PROTOCOL.md](VISUAL_APPROVAL_PROTOCOL.md), fuente única de decisiones del PO, y [PREVIEW_ARCHITECTURE.md](PREVIEW_ARCHITECTURE.md) para construir y mostrar previews aisladas.
 7. **Implementar sin deriva:** antes y después del cambio aplicar [CHANGE_INTEGRITY.md](CHANGE_INTEGRITY.md), verificando objetivo nuevo **e invariantes antiguos**.
 8. **Evaluar con evidencia:** ejecutar pruebas según riesgo y gates; usar [EVALUATIONS.md](EVALUATIONS.md) para evaluar *la habilidad misma*, sin inventar resultados.
