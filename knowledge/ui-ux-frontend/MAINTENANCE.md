@@ -1,6 +1,8 @@
 # Mantenimiento y control de cambios
 
 ## Versión
+**0.7.0 propuesta — 2026-10-26**. Extensión optativa de UX motivacional veraz y CSS accesible ([MOTIVATIONAL_UX.md](MOTIVATIONAL_UX.md)). La base v0.6.0 continúa integrada en `main`; esta actualización permanece sin merge. No se declara efecto medido en motivación, retención o conversión.
+
 **0.6.0 — 2026-10-26**. Ampliación operativa con evaluación adversarial, casos de prueba, protocolos de calidad, WCAG-EM 2.0, métricas con denominadores, biblioteca contextual y criterios de fidelidad visual. Está integrada en `main` y **no implica evaluación comparativa del agente, auditoría de un producto ni instalación automática en agentes externos**; existen verificaciones acotadas de motor y preview documentadas.
 
 ## Actualización periódica
@@ -32,6 +34,7 @@ Antes de merge:
 Cada versión nueva debe documentar: batería de escenarios con entrada y respuesta esperada, rúbrica, baseline anterior, observaciones, regresiones y decisión. Revisar [EVALUATIONS.md](EVALUATIONS.md). Si solo se redactó la batería, registrar estado **NOT_EVALUATED**; no declarar mejoría cuantificada. Los ejemplos de código son plantillas y no pruebas ejecutadas.
 
 ## Historial
+- **2026-10-26 v0.7.0 (propuesta):** filtro contextual de apoyo motivacional, separación de estado real/mensaje/animación CSS, salvaguardas antimanipulación, reduced motion y casos de evaluación E21–E23 (solo especificados).
 - **2026-10-25 v0.4.0**: modo READ_ONLY_AUDIT sin mutaciones, protocolo de medición verificable, plantilla corregida, router PR #3 → especialista PR #7 y nuevos fixtures E17–E20. Pruebas documentales verificables; evaluaciones del modelo siguen pendientes.
 - **2026-10-25 v0.3.0**: introduce la capa de razonamiento, fronteras de audiencia, memoria de diseño, creatividad contextual, referencias, control de cambios y UX content. Evaluación E01–E16 pendiente.
 - **2026-10-25 v0.2.0**: corrección S0 ≠ no reproducido; separación severidad/estado/confianza/prueba; incorporación de WCAG-EM 2.0; seis nuevos módulos para calidad visual, gates, métricas, patrones, recetas y evaluación de habilidad. Pendiente de ejecución independiente de la batería E01–E08.

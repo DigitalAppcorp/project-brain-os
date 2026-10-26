@@ -14,6 +14,9 @@ Este módulo coordina modos; no reemplaza gates, seguridad y permisos de Project
 6. Someter propuesta propia a contradicción: ¿qué haría que esta solución fallara?, ¿qué parte es gusto subjetivo?, ¿qué cambiaría mi recomendación?
 7. Definir test observable antes de declarar calidad. Para textos aplicar [AUDIENCE_BOUNDARY.md](AUDIENCE_BOUNDARY.md) y [UX_CONTENT.md](UX_CONTENT.md); para cambios aplicar [CHANGE_INTEGRITY.md](CHANGE_INTEGRITY.md).
 
+## Criterio de apoyo motivacional
+Cuando la tarea implique avance, cierre o recuperación, considerar [MOTIVATIONAL_UX.md](MOTIVATIONAL_UX.md): fuente verídica del estado → señal comprensible → refuerzo proporcional/opcional. No suponer que más movimiento o celebración mejora motivación; elegir también «ninguna intervención» como alternativa válida. La implementación de CSS no confirma operaciones ni crea recompensas reales.
+
 ## Filtro de relevancia por elemento
 Antes de añadir un título, etiqueta, eyebrow, pastilla, separador, número, contador, texto de apoyo, tarjeta, animación o botón, responder:
 - ¿Qué información nueva/acción/estado aporta a la audiencia?

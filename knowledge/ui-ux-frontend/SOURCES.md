@@ -56,3 +56,12 @@ Ninguna fuente certifica por sí sola la conformidad o calidad de un proyecto co
 - `Implementation-to-UI leakage` es etiqueta **operativa propuesta**, no nombre académico confirmado por estas referencias.
 - Que el modelo maximice el reconocimiento del prompt del PO sobre necesidades finales es una **hipótesis**; no afirmar optimización deliberada sin estudio controlado.
 - La homogeneización puede correlacionar con plantillas y datos de entrenamiento, pero ninguna de estas fuentes atribuye el patrón a una causa neural única de GPT o Claude.
+
+## Movimiento, microfeedback y apoyo motivacional (ampliación 2026-10-26)
+
+30. **W3C WCAG 2.2, 2.2.2 Pause, Stop, Hide (Level A)**. Para información que se mueve o actualiza automáticamente y cumple las condiciones aplicables, ofrecer mecanismo de pausa/parada/ocultación (con excepciones). https://www.w3.org/TR/WCAG22/#pause-stop-hide
+31. **W3C WCAG 2.2, 2.3.1 Three Flashes or Below Threshold (Level A)**. Limitar destellos conforme a criterios. https://www.w3.org/TR/WCAG22/#three-flashes-or-below-threshold
+32. **W3C WAI, Understanding 2.3.3 Animation from Interactions (Level AAA)**. Proteger contra efectos de movimiento no esencial disparados por interacción; NO confundir AAA con AA. https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions
+33. **MDN, CSS prefers-reduced-motion**. Media query para respetar preferencia de reducir movimiento. https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion
+
+**Límite de evidencia:** estas fuentes describen accesibilidad y comportamiento de movimiento, no demuestran que CSS aumente motivación o conversión. `MOTIVATIONAL_UX.md` define un criterio operativo de diseño contextual, no un método clínico, una norma ni un efecto causal medido.
