@@ -20,7 +20,7 @@ class VisualReviewTests(unittest.TestCase):
                 frame='full_runtime', inspected_by='synthetic reviewer')
                 for l in ['es', 'en'] for w in [320, 390, 430]
                 for s in ['pending', 'content', 'empty', 'error', 'recovery']],
-            professional_review={k:'synthetic reason' for k in ('composition','hierarchy','continuity',
+            professional_review={k:'synthetic reason' for k in ('brief_alignment','composition','hierarchy','continuity',
                 'negative_space','actions','identity','states','better_than_no_addition')},
             adversarial={k:'synthetic evidence' for k in ('reviewer_or_separate_pass','defects',
                 'corrections','recapture_comparison')}, design_decision='DESIGN_QA_PASS',
@@ -64,6 +64,10 @@ class VisualReviewTests(unittest.TestCase):
     def test_external_or_missing_capture_is_rejected(self):
         self.record['coverage'][0]['path']='../outside.png'
         self.error(self.record,'CAPTURE_UNAVAILABLE')
+
+    def test_composition_pass_without_alignment_to_explicit_brief_fails(self):
+        self.record['professional_review'].pop('brief_alignment')
+        self.error(self.record,'REASONING_MISSING:brief_alignment')
 
 
 if __name__ == '__main__':

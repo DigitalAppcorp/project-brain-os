@@ -35,7 +35,7 @@ def evaluate(record, root):
         if capture.get('frame') != 'full_runtime' or not capture.get('inspected_by'):
             errors.append('FULL_RUNTIME_NOT_INSPECTED')
     review = record.get('professional_review', {})
-    for field in ('composition', 'hierarchy', 'continuity', 'negative_space', 'actions', 'identity', 'states', 'better_than_no_addition'):
+    for field in ('brief_alignment', 'composition', 'hierarchy', 'continuity', 'negative_space', 'actions', 'identity', 'states', 'better_than_no_addition'):
         if not review.get(field):
             errors.append('REASONING_MISSING:' + field)
     adversarial = record.get('adversarial', {})

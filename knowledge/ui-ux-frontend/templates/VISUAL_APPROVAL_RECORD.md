@@ -11,6 +11,7 @@ Plantilla; conservar por tarea fuera del OS y enlazar desde el DIR. Reglas: [pro
 - Invariantes y delta solicitado:
 - Carril: UI nueva autorizada / rediseño dirigido por PO / fuera de alcance / técnico sin delta visual:
 - Autorización vigente y fuente (independiente del gate visual):
+- Alineación con el brief: requisitos expresos, interpretación de referencia, supuestos y evidencia (no inferida de targets/build):
 - Estructuras comparadas / por qué mejor que no añadir nada / dirección descartada:
 - Runtime completo pendiente/contenido/vacío/error/recuperación: capturas vistas, condiciones forzadas y límites:
 - Crítica adversarial separada: revisor/pasada, defectos, correcciones, recapturas y evidencia:

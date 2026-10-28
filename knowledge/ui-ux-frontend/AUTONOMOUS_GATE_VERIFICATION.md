@@ -12,10 +12,12 @@ Python3.14.8 local, biblioteca estándar, sin servicios ni datos de PAZO:
 python -X utf8 -B knowledge/ui-ux-frontend/scripts/test_learning.py
 Ran 13 tests — OK
 python -X utf8 -B knowledge/ui-ux-frontend/scripts/test_visual_review.py
-Ran 11 tests — OK
+Ran 12 tests — OK
 ```
 
-Once contraejemplos: UI nueva completa no requiere voto estético ni obtiene release; build/targets/overflow solos no cierran gate; faltan estados; recorte de componente; captura creada pero no vista; artefacto modificado; rediseño dirigido mantiene gate; aceptación PO sin fuente se rechaza; técnico no visual no necesita paquete artístico; falta juicio de composición; ruta de evidencia externa/ausente.
+Doce contraejemplos: UI nueva completa no requiere voto estético ni obtiene release; build/targets/overflow solos no cierran gate; faltan estados; recorte de componente; captura creada pero no vista; artefacto modificado; rediseño dirigido mantiene gate; aceptación PO sin fuente se rechaza; técnico no visual no necesita paquete artístico; falta juicio de composición; ruta de evidencia externa/ausente; PASS de composición sin alineación explícita con el encargo se rechaza.
+
+El feedback posterior del PO sobre PAZO147 mostró otra brecha: el agente sustituyó avisos independientes por contenido de página, consideró suficiente un acabado sobrio y volvió a cerrar PASS. La corrección exige contrastar el resultado con el brief antes del juicio estilístico. No impone ilustraciones o banners en todos los productos ni afirma que añadir un campo valide la calidad automáticamente.
 
 El validador [visual_review.py](scripts/visual_review.py) comprueba integridad del registro/hashes/cobertura y distingue estados. **RECORD_COMPLETE no significa que una composición sea buena ni que el revisor diga la verdad.** Las imágenes deben inspeccionarse y criticarse; el juicio y la responsabilidad del agente no se automatizan por esta utilidad. Los archivos de tests son fixtures sintéticos etiquetados. No hay puntuaciones de UX ni inferencias de rendimiento/conversión.
 
