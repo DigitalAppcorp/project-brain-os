@@ -1,46 +1,43 @@
-# Protocolo de aprobación visual
+# Protocolo de decisión y revisión visual
 
-Fuente única de decisiones de aprobación visual del especialista. Complementa los gates de [QUALITY_GATES.md](QUALITY_GATES.md) y el gobierno de Brain OS; no concede permisos de producto, Git ni producción. Mecánica de previews: [PREVIEW_ARCHITECTURE.md](PREVIEW_ARCHITECTURE.md).
+Fuente única especializada. Complementa [QUALITY_GATES.md](QUALITY_GATES.md) y Brain OS: **no concede permisos de implementación, merge, datos, gasto ni publicación**. Una consulta/auditoría continúa siendo solo lectura. Mecánica: [PREVIEW_ARCHITECTURE.md](PREVIEW_ARCHITECTURE.md).
 
-## Presentación según alcance
+## Elegir el carril antes de diseñar
 
-- **Pantalla nueva:** normalmente tres alternativas A/B/C visuales y claramente identificadas, con diferencias de composición pertinentes. Mostrar capturas o prototipos accesibles, contexto, ventajas y límites breves. Si el PO ya fijó el diseño o menos opciones representan mejor la tarea, justificar la reducción; no inventar alternativas cosméticas para completar una cuota.
-- **Rediseño:** mostrar captura original con fuente/fecha/estado, problemas fundamentados y propuesta terminada. Si no existe acceso al original, declarar la limitación y recuperar una referencia antes de afirmar comparación. Separar defectos medidos de preferencias e hipótesis.
-- **Cambio visual significativo:** siempre presentar preview final fiel antes de transferir al producto. Incluir estados y viewports pertinentes, fuentes y contenido representativos; JSX/CSS y descripciones por sí solos no son presentación visual.
-- **Ajuste pequeño:** una comparación o recorte antes/después y registro breve bastan; no exigir tres conceptos ni un expediente. Una instrucción directa y precisa del PO puede autorizar ese delta acotado. Si el ajuste altera jerarquía, identidad, navegación o composición, reclasificar como significativo y presentar preview previa. Nunca extender una corrección puntual a un rediseño.
-
-## Decisiones separadas
-
-| Decisión | Evidencia necesaria | Qué permite |
+| Carril | Condición y responsabilidad | Gate estético |
 | --- | --- | --- |
-| Propuesta presentada | Artefacto accesible identificado por versión | Revisión, sin aprobación inferida |
-| Alternativa seleccionada | Mensaje del PO que identifica A/B/C | Refinar esa alternativa en el entorno aislado |
-| Preview final aprobada | PO acepta versión, superficies y estados mostrados | Fijar baseline visual, sin permiso automático de implementación |
-| Implementación autorizada | Instrucción directa del PO con alcance y destino | Transferir únicamente el delta autorizado a rama de producto |
-| Implementación verificada | Comparación baseline ↔ runtime y QA del alcance | Reportar fidelidad y diferencias; no inferir aceptación del PO |
-| Implementación aceptada | PO acepta lo realmente mostrado de la implementación | Cerrar aceptación visual de ese alcance |
-| Publicación autorizada | Gate y permiso aplicables de Brain OS/producto | Publicar solo dentro de ese permiso |
+| UI nueva en alcance autorizado | El PO autorizó la mejora; Design OS decide patrón, jerarquía, composición, contenido y estados, critica y corrige internamente | DESIGN_QA_PASS; PO_VISUAL_ACCEPTED=NOT_REQUESTED. No pedir al PO elegir variantes ni rescatar una composición débil |
+| Rediseño dirigido por PO | El PO pide cambiar una pantalla/dirección previamente aceptada: recuperar evidencia de esa intención y preservar lo ajeno al delta | Gate profesional y revisión del PO contra su intención, salvo delegación explícita vigente. No inventar una aceptación anterior |
+| Decisión fuera de alcance | Cambio de propuesta/identidad aprobada, navegación estructural, promesa comercial, seguridad/cumplimiento o gasto | Escalar solo esa decisión genuina; no usarla como pretexto para microaprobaciones |
+| Corrección técnica sin delta visual | No cambia composición/contenido/interacción visual | Pruebas de invariantes; no imponer un proceso estético ni alternativas |
 
-Las decisiones pueden constar en un mismo mensaje inequívoco, por ejemplo «Apruebo la preview B v2 y autorizo implementarla en la rama X». Conservar esa autorización y no volver a pedirla sin cambio material. «Me gusta B», silencio, build verde, recomendación del agente o aprobación de otra pantalla no autorizan implementar. Si el mensaje no distingue elección de ejecución y no existe autorización previa suficiente, pedir solo la decisión faltante.
+Una pieza nueva rechazada es feedback sobre ese patrón concreto, no un veto universal ni una orden de rediseñar toda la aplicación. Las instrucciones recientes y explícitas del PO prevalecen; conservar su fuente y alcance. **Autonomía de diseño no es autorización de lanzamiento.**
 
-## Evidencia durable
+## Gate profesional autónomo obligatorio
 
-Usar [templates/VISUAL_APPROVAL_RECORD.md](templates/VISUAL_APPROVAL_RECORD.md), enlazado desde el DIR de [DESIGN_MEMORY.md](DESIGN_MEMORY.md). Registrar producto, superficie, ID/versión de preview, archivos y SHA-256 (o commit inmutable), viewports/estados, decisión exacta del PO, fecha, fuente recuperable del mensaje y límites. Estado inicial: **PENDING**, nunca aprobado por el agente. No almacenar secretos ni conversaciones completas.
+1. Recuperar propósito, audiencia, tarea, sistema real aprobado, estados y aprendizaje pertinente. Registrar **alineación con el brief**: requisitos expresos, interpretación de las referencias, supuestos y evidencia que los satisface. Identificar a qué pieza aplica una referencia: un aviso transitorio y un estado propio de pantalla son superficies distintas. No sustituir el aviso independiente solicitado por contenido de página, convertir el error de pantalla en ese aviso ni omitir ilustraciones solicitadas por preferencia minimalista; son ejemplos de fidelidad al encargo, no patrones universales. Preguntar internamente si simplificar o eliminar la pieza nueva resuelve mejor la tarea sin incumplir el encargo. Separar hechos, hipótesis y preferencias.
+2. Cuando el problema lo requiera, explorar al menos dos estructuras distintas en aislamiento. Comparar también con no añadir nada. Descartar ornamento, duplicación de acciones y alternativas que solo cambian colores. Seleccionar una dirección con razones y trade-offs; no hacer votación ni presentar una tarea de selección al PO.
+3. Inspeccionar **capturas completas del runtime**, vistas realmente por el revisor, con contenido representativo: pendiente/lento, contenido, vacío, error y recuperación cuando apliquen; idiomas/viewports pertinentes. No limitarse al componente. Registrar qué datos/condiciones se forzaron, fuentes reales/fallback, versión, capturas y límites. Probar interacción, scroll/dock y foco aparte de la imagen.
+4. Hacer una pasada adversarial separada, preferentemente por un revisor independiente autorizado y disponible: ¿qué parece arbitrario?, ¿se integra mejor en una superficie existente?, ¿el vacío es intencional o residual?, ¿qué ocurre bajo error/carga?, ¿compiten acciones?, ¿por qué es mejor que no añadir nada? Si no se usa segundo revisor, identificar la pasada separada y sus límites. Listar defectos concretos, corregir, recapturar y comparar antes de decidir.
+5. Evaluar jerarquía, composición, continuidad, espacio negativo, densidad/carga cognitiva, identidad, tipografía/copy, significado de CTA y estados. Targets, contraste, overflow, build y CI son necesarios según alcance, **nunca suficientes para PASS visual**. Sin evidencia de composición/estados: NOT_EVALUATED o DESIGN_QA_FAIL, aunque ingeniería pase.
+6. Guardar decisión profesional, razones, alternativas descartadas, fallos/correcciones observables y riesgos. Si no supera el gate, seguir corrigiendo dentro del alcance; no pedir al PO otra orden técnica ni aceptación estética rutinaria. Escalar solo bloqueo humano/productivo real.
 
-La aprobación cubre solo el artefacto y alcance identificados. Cambiar contenido, assets, layout o estados de manera material crea una nueva versión y exige revisar el delta; conservar aprobaciones de partes intactas. Una captura antigua puede servir como evidencia histórica, no acredita una aprobación nueva ni el runtime actual.
+El criterio no es una cuota de documentos ni una puntuación estética fabricada. Para un ajuste inocuo basta evidencia acotada. No exigir estados que no existan: justificar NOT_APPLICABLE. No llamar normal a una espera artificialmente infinita de laboratorio; revisar también condiciones resueltas.
 
-## Preservación y control de deriva
+## Evidencia y estados separados
 
-Recuperar invariantes aprobadas antes de proponer. No sustituir tipografía, copy, tokens, composición o funciones por gusto del agente. Una necesidad de accesibilidad o integridad debe fundamentarse y resolverse con el menor delta; no legitima cambios visuales arbitrarios. Para divergencias, usar [CHANGE_INTEGRITY.md](CHANGE_INTEGRITY.md): restaurar el baseline o presentar el cambio significativo para decisión del PO antes de incorporarlo.
+Usar [registro](templates/VISUAL_APPROVAL_RECORD.md), enlazado desde el DIR. Guardar producto/superficie, autorización vigente, carril, versión/commit, capturas completas, estados/idiomas/viewports, crítica y correcciones. La evaluación profesional interna y la decisión del PO ocupan campos distintos:
 
-La selección no cambia permisos de backend ni datos; una preview aprobada no demuestra accesibilidad, funcionamiento, consentimiento comercial ni publicación. Si no se puede mostrar el resultado, marcar **BLOCKED** la revisión visual y documentar el límite; no declarar «revisado por el PO».
+- DESIGN_QA_PASS / DESIGN_QA_FAIL / NOT_EVALUATED: decisión profesional identificada y sustentada. No implica aceptación del PO.
+- PO_VISUAL_ACCEPTED: YES solo con mensaje recuperable y alcance visto; NOT_REQUESTED para nueva UI ordinaria; PENDING cuando el carril dirigido requiere decisión.
+- IMPLEMENTATION_AUTHORIZED: fuente y alcance propios; elegir una referencia o auditar no lo concede.
+- ENGINEERING_READY: pruebas funcionales, seguridad e invariantes, independiente del gate artístico.
+- RELEASE_AUTHORIZED: decisión separada del producto. Ningún estado anterior la crea.
 
-## Uso breve por el Product Owner
+Una captura creada pero no inspeccionada no acredita revisión. Si faltan capturas/runtime y son necesarios, registrar el límite; no cerrar el gate ni fingir revisión del PO. Si un mensaje del PO acepta preview y autoriza implementación inequívocamente, conservarlo y no pedirlo otra vez. Revisiones voluntarias del PO se registran como tales sin convertirlas en condición para toda UI futura.
 
-1. «Prepara una pantalla de [objetivo] y muéstrame alternativas» o «Muestra el original de [vista] y una propuesta de rediseño».
-2. «Elijo B; ajusta [detalle]» para seguir diseñando en aislamiento.
-3. «Apruebo B v2 y autorizo implementarla en [rama/alcance]» cuando el resultado esté listo.
-4. Revisar comparación de implementación. Publicación sigue su gate independiente.
+## Preservación y aprendizaje
 
-## Aprender de cada revisión
-El agente recupera lecciones antes de diseñar y registra el feedback normal del PO después de revisar mediante [ADAPTIVE_LEARNING.md](ADAPTIVE_LEARNING.md), sin solicitar otro formulario. Usar ID/versión y fuente del registro visual para evitar duplicación; enlazar evento(s) de aprendizaje desde esa ficha. La etapa determina qué se aprobó: alternativa/referencia, preview o implementación. Prioridades y recompensas nunca crean autorización, y el contrato READ_ONLY_AUDIT impide escribir el ledger en ese modo.
+Recuperar invariantes antes de modificar y contrastar con la implementación mediante [CHANGE_INTEGRITY.md](CHANGE_INTEGRITY.md). No sustituir marca, tipografía, información ni funciones aprobadas por gusto; una corrección local no autoriza rediseño global. Congelar versiones y documentar diferencias; no actualizar un baseline para ocultar un defecto.
+
+Registrar feedback contextual con [ADAPTIVE_LEARNING.md](ADAPTIVE_LEARNING.md), distinguiendo etapa/artefacto y aprobación de referencia frente a implementación. El reemplazo corregido por el agente no gana una aceptación del PO ficticia. No guardar preferencias de un producto en el OS ni escribir ledger en READ_ONLY_AUDIT. Las evaluaciones reproducibles del método viven en [EVALUATIONS.md](EVALUATIONS.md); verificar un registro no equivale a medir calidad artística ni a demostrar superioridad del modelo.
