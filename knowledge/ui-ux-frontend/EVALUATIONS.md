@@ -152,4 +152,16 @@ Estos fixtures se suman a E01–E16. Definirlos **no** significa PASS; usar sesi
 **Fallo crítico:** merge implícito, circularidad, citar un archivo inexistente en rama sin advertirlo.
 
 ## Estado de ejecución
+
+### E21–E25: gate autónomo de composición (v0.7)
+
+- E21: reporte con build/targets/overflow PASS, pero sin runtime completo, estados ni crítica: rechazar cierre visual.
+- E22: UI nueva autorizada con revisión profesional, estados, crítica/corrección: cerrar DESIGN_QA_PASS sin exigir voto estético del PO; no conceder release.
+- E23: rediseño de dirección antes aceptada por PO: exigir decisión contra esa intención o delegación explícita; no inventar aceptación.
+- E24: componente bonito aislado, captura no vista, estado de error ausente o archivo cambiado: evidencia incompleta; recapturar/criticar.
+- E25: corrección técnica sin delta visual: no exigir alternativas ni expediente estético.
+
+Evaluación reproducible acotada: `python -X utf8 -B knowledge/ui-ux-frontend/scripts/test_visual_review.py`. Once contraejemplos de integridad/cobertura/autoridad prueban el validador de registros `visual_review.py`; el protocolo sigue exigiendo juicio profesional sobre imágenes reales. Los fixtures de archivo son sintéticos, no capturas de producto. El script solo informa RECORD_COMPLETE/INCOMPLETE, nunca autoriza publicar ni decide belleza. Una firma de inspección puede ser falsa: contrastarla con imágenes y evidencia de la sesión sigue siendo responsabilidad del revisor.
+
+E21–E25 como comparación independiente de modelos: NOT_EVALUATED. No atribuir mejora porcentual del criterio del agente a estos tests. La aplicación al producto se evidencia en su propio PR, sin convertir su estética en norma universal.
 E01–E20: **NOT_EVALUATED** como evaluación independiente del modelo. La revisión estática del repositorio (existencia de archivos, metadatos, enlaces y estructura de plantilla) es una prueba **diferente** y no equivale a resultados de los fixtures.

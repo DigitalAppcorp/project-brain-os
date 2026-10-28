@@ -1,6 +1,8 @@
 # Mantenimiento y control de cambios
 
 ## Versión
+
+**Candidato 0.7.0 — 2026-10-28:** sustituye la aprobación estética universal por carriles: revisión profesional autónoma para UI nueva autorizada, aceptación de intención para rediseños dirigidos y decisiones de publicación separadas. Gate central con composición/estados completos, crítica adversarial, autocorrección y evidencia; referencias/plantilla alineadas. Once evaluaciones del contrato de registros y regresiones del motor, sin afirmar benchmark de calidad del modelo. PR separado, no instalación global ni merge automático; Brain OS raíz1.4.1 intacto.
 **0.6.0 — 2026-10-26**. Ampliación operativa con evaluación adversarial, casos de prueba, protocolos de calidad, WCAG-EM 2.0, métricas con denominadores, biblioteca contextual y criterios de fidelidad visual. Está integrada en `main` y **no implica evaluación comparativa del agente, auditoría de un producto ni instalación automática en agentes externos**; existen verificaciones acotadas de motor y preview documentadas.
 
 ## Actualización periódica

@@ -32,7 +32,7 @@ Una corrección técnica puede introducir silenciosamente texto interno, composi
 **Prueba A — objetivo nuevo:** ejecutar el caso que motivó el cambio; PASS solo con evidencia real.
 **Prueba B — invariantes anteriores:** contrastar capturas/ejecución y estados contra baseline aprobado; anotar explícitamente divergencias. Si el alcance exige un cambio visual nuevo, presentarlo para aprobación y actualizar DIR.
 
-Usar snapshots visuales bajo mismo contenido, viewport y condición; agregar tests de texto público y navegación crítica sin depender solo de snapshots. Seguir [TEST_RECIPES.md](TEST_RECIPES.md).
+Usar snapshots visuales bajo mismo contenido, viewport y condición; agregar tests de texto público y navegación crítica sin depender solo de snapshots. Seguir [TEST_RECIPES.md](TEST_RECIPES.md). La decisión estética corresponde al carril del [protocolo](VISUAL_APPROVAL_PROTOCOL.md): nueva UI autorizada requiere DESIGN_QA_PASS profesional, no microaprobaciones del PO. Las referencias a aprobación/delta al PO en este documento aplican a rediseños dirigidos o decisiones fuera de alcance, sin bloquear correcciones técnicas no visuales.
 
 ## Estados de revisión
 `UNCHANGED_VERIFIED`, `CHANGED_APPROVED`, `CHANGED_UNAPPROVED`, `UNKNOWN_NOT_TESTED`.

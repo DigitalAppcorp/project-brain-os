@@ -7,14 +7,15 @@
 - El patrón `patterns/INTERFACE_QUALITY_GATE.md` integrado en `main` es **router** del Brain OS raíz, no una segunda fuente normativa. Delega en esta especialidad v0.6.0 sin duplicar sus contratos.
 
 ## Regla superior
-Estos gates **complementan** Gates 0–9 y Scope Closure Reconciliation del Project Brain OS raíz. No autorizan merge ni despliegue y no sustituyen la aprobación del Product Owner. No confundir documento aprobado, código presente, test ejecutado, aceptación visual y producción.
+Estos gates **complementan** Gates 0–9 y Scope Closure Reconciliation del Project Brain OS raíz. No autorizan merge ni despliegue ni sustituyen decisiones de producto del PO. La revisión estética del PO aplica al carril definido por el protocolo, no a toda UI nueva. No confundir documento aprobado, código presente, test ejecutado, aceptación visual y producción.
 
 ## Estados separados
 - **SPECIFIED**: alcance, comportamiento, criterios y estados documentados.
 - **IMPLEMENTED**: código presente en rama identificada, sin inferir runtime.
 - **AUTOMATED_PASS**: pruebas identificadas, salida reproducible y commit; indicar cobertura.
 - **MANUAL_PASS**: escenarios/dispositivos identificados, persona/evidencia; no generalizar cobertura.
-- **VISUAL_ACCEPTED**: superficies realmente revisadas por PO conforme al alcance.
+- **DESIGN_QA_PASS**: revisión profesional interna de composición y estados, crítica adversarial y correcciones verificadas según protocolo; no se deduce de CI.
+- **PO_VISUAL_ACCEPTED**: superficies realmente aceptadas por PO con fuente/alcance; NOT_REQUESTED para UI nueva ordinaria autorizada. El estado histórico VISUAL_ACCEPTED no se infiere de QA interna.
 - **RELEASED**: despliegue y comprobación en entorno correspondiente, con autorización si aplica.
 - **BLOCKED / NOT_TESTED / INCONCLUSIVE**: distinguir fallos, no ejecución y resultado incierto.
 Estos estados pueden coexistir parcialmente; no son una escalera que elimine los anteriores.
@@ -24,7 +25,7 @@ Condiciones mínimas: tarea y usuario, limitaciones, flujo principal, casos vac�
 Resultado: APPROVED / NEEDS_REVISION / BLOCKED + evidencia. No exigir investigación exhaustiva para un cambio cosmético inocuo.
 
 ## Gate previo de diseño visual
-Antes de IMPLEMENTATION para UI aplicar [VISUAL_APPROVAL_PROTOCOL.md](VISUAL_APPROVAL_PROTOCOL.md) y enlazar el registro de decisiones. UX-SPEC referencia ese resultado: propuesta presentada, preview final aprobada cuando sea significativa y autorización de implementación vigente. Una selección de alternativa sola mantiene bloqueada la transferencia al producto. El modo proporcional del protocolo evita pedir aprobaciones técnicas ordinarias o repetir las ya vigentes.
+Antes de cerrar UI aplicar [VISUAL_APPROVAL_PROTOCOL.md](VISUAL_APPROVAL_PROTOCOL.md) y enlazar el registro de decisiones: UI nueva autorizada exige gate profesional autónomo; rediseño dirigido por PO conserva el gate de su intención aceptada. Autorización de implementación vigente siempre separada. Una selección de alternativa o permiso de auditoría no autoriza transferir cambios. No convertir toda pieza nueva en una solicitud de aprobación estética.
 
 ## Gate ENGINEERING-READY
 - Diff del alcance, estado y contratos backend evaluados; riesgos de regresión.
@@ -34,10 +35,10 @@ Antes de IMPLEMENTATION para UI aplicar [VISUAL_APPROVAL_PROTOCOL.md](VISUAL_APP
 - Responsive, scroll, teclado/foco y accesibilidad automatizada/manual según riesgo.
 - Si la herramienta o entorno no permite una prueba, anotarla como NOT_TESTED; decidir si bloquea según riesgo.
 
-## Gate VISUAL-AND-UX-ACCEPTED
-- Comparación referencia ↔ preview aprobada identificada por versión ↔ ejecución actual; procedimiento en [PREVIEW_ARCHITECTURE.md](PREVIEW_ARCHITECTURE.md).
-- Captura por viewport/tema/estado relevante; prueba manual del scroll/interacción en flujo significativo.
-- PO acepta solo lo que revisó; registrar aceptación de implementación separada de aprobación de preview conforme a [VISUAL_APPROVAL_PROTOCOL.md](VISUAL_APPROVAL_PROTOCOL.md). Aceptación estética ≠ seguridad ni funcionamiento backend.
+## Gate visual y UX (dos decisiones separadas)
+- Comparación referencia ↔ dirección seleccionada identificada por versión ↔ ejecución actual; usar evidencia aprobada cuando corresponda al carril, conforme a [VISUAL_APPROVAL_PROTOCOL.md](VISUAL_APPROVAL_PROTOCOL.md).
+- Capturas completas realmente inspeccionadas por viewport/idioma/estado pertinente, prueba de scroll/interacción y crítica adversarial con fallos/correcciones observables; la fuente normativa de criterios es el protocolo, no otra checklist aquí.
+- DESIGN_QA_PASS es interno; PO_VISUAL_ACCEPTED solo acredita lo que el PO revisó y aceptó. Para UI nueva ordinaria, no exigir su inspección estética como gate. Ninguna decisión estética acredita seguridad, backend ni autoriza release.
 - Si se detecta S3/S4 abierto, bloquear el alcance afectado salvo mitigación documentada y autorizada donde sea seguro/legal.
 
 ## Auditoría WCAG-EM 2.0 (cuando se evalúe conformidad formal)
