@@ -4,7 +4,7 @@ Scene: dog reaches for tennis ball; cat arrives, swats ball, claims it; dog reac
 Four motivated 3D camera angles: wide setup, reach/action, cat takeover, dog's deadpan reaction.
 Original synthesized sound effects/score; pause staged for the punchline.
 Endcard uses PAZO brand reference, with no actual product interaction shown.
-File: PAZO_Acting_Test_Original_3D.mp4 / 2607767 bytes / 12.600000 seconds / 480x854 / 20 fps.
+File: PAZO_Acting_Test_Original_3D.mp4 / 407661 bytes / 12.600000 seconds / 480x854 / 20 fps.
 Rights: original procedural geometry, original synthesized soundtrack, brand supplied by product owner.
 Production: 3D animated experiment, NOT filmed humans, not automatically 'professional' or conversion-proven.
 TECHNICAL_RENDER_VERIFIED: YES. INDEPENDENT_CREATIVE_REVIEW: PENDING. AUDIENCE_RESPONSE: UNKNOWN.
