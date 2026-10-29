@@ -38,7 +38,7 @@ For a new product:
 - `knowledge/marketing/` — reusable Marketing Intelligence & Growth module (strategy, acquisition, paid media, SEO, CRO, analytics, retention, compliance, monthly source-review protocol). Start at [Marketing Brain](knowledge/marketing/README.md); its own version is 0.1.0 and it does not change core Brain OS v1.4.1.
 - `knowledge/ui-ux-frontend/` — reusable UI/UX Frontend Engineering skill: research, interface design, accessibility, responsive/PWA patterns, React-state reliability, evidence-driven critique and QA. Start at [UI/UX Frontend Engineering](knowledge/ui-ux-frontend/README.md). Module version 0.6.0 (contextual feedback learning, visual approvals, isolated previews, READ_ONLY_AUDIT and measured evidence; agent evaluation fixtures not yet independently run); core Brain OS version remains unchanged.
 
-- `knowledge/video-production/` — **Video Production OS v0.2.0**: creatividad, guiones, edición, publicidad cinematográfica, animación, contenido natural, demos, control de licencias y experimentación sin dependencia de un generador de video de pago. Activar con [Video Production OS](knowledge/video-production/README.md); el producto conserva sus propios guiones, activos y resultados.
+- `knowledge/video-production/` — **Video Production OS v0.3.0**: creatividad, guiones, edición, publicidad cinematográfica, animación, contenido natural, demos, control de licencias y experimentación sin dependencia de un generador de video de pago. Activar con [Video Production OS](knowledge/video-production/README.md); el producto conserva sus propios guiones, activos y resultados.
 
 ## Principle
 
