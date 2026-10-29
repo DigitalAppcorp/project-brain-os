@@ -14,3 +14,4 @@ jobs:
       - run: python -X utf8 -B knowledge/ui-ux-frontend/scripts/test_visual_review.py
       - run: python -X utf8 -B knowledge/video-production/scripts/test_contract.py
       - run: python -X utf8 -B knowledge/video-production/scripts/test_creative_diversity.py
+      - run: python -X utf8 -B knowledge/video-production/scripts/test_editorial_preflight.py
