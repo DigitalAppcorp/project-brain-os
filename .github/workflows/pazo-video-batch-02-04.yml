@@ -1,0 +1,44 @@
+name: PAZO 3 creative pilot videos
+on:
+  push:
+    branches: [media/pazo-video-batch-02-04-20261029]
+    paths:
+      - 'video-renders/render_pazo_batch_02_04.py'
+      - '.github/workflows/pazo-video-batch-02-04.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Set up ffmpeg and render dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-dejavu-core
+          python -m pip install --quiet Pillow numpy cairosvg
+      - name: Build actual PAZO content from licensed motion
+        run: python video-renders/render_pazo_batch_02_04.py
+      - name: Upload deliverables
+        uses: actions/upload-artifact@v4
+        with:
+          name: PAZO-Creative-Pilots-02-04
+          path: |
+            video-renders/delivery/batch_02_04/PAZO_*.mp4
+            video-renders/delivery/batch_02_04/*_PREVIEW.jpg
+            video-renders/delivery/batch_02_04/PROVENANCE_AND_QA.json
+          if-no-files-found: error
+      - name: Put finished MP4s on media branch for direct links
+        run: |
+          git config user.name 'pazo-video-production-bot'
+          git config user.email 'pazo-video-production-bot@users.noreply.github.com'
+          git add -f video-renders/delivery/batch_02_04/PAZO_*.mp4 video-renders/delivery/batch_02_04/*_PREVIEW.jpg video-renders/delivery/batch_02_04/PROVENANCE_AND_QA.json
+          git commit -m 'media(pazo): publish verified batch of social pilot videos' || true
+          git push
