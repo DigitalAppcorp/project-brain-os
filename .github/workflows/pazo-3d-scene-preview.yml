@@ -13,7 +13,6 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install Blender CPU
         run: |
-          sudo apt-get update -qq
           sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq blender
       - name: Render four actual 3D frames (no fabricated preview)
         run: blender --background --threads 4 --python video-renders/pazo_3d_acting_test.py
