@@ -31,7 +31,7 @@ Tabla por asset: ID, origen, tipo, derechos comerciales/atribución, consentimie
 Solo después de G3, shotlist, clips cortos, transiciones motivadas, música/voz con derechos, mezcla y subtítulos. Comenzar con 9:16 y duración experimental 15–30 s, **no regla universal**. Conservar masters y pistas editables o parámetros reproducibles.
 
 ### G5. QA técnico y creativo
-Gate en [QUALITY_AND_RIGHTS.md](QUALITY_AND_RIGHTS.md), revisión manual con sonido/sin sonido y en teléfono. No publicar con `TECHNICAL_SMOKE_PASS` únicamente.
+Gate en [QUALITY_AND_RIGHTS.md](QUALITY_AND_RIGHTS.md), revisión manual con sonido/sin sonido y en teléfono. No publicar con `TECHNICAL_SMOKE_PASS` únicamente. El estado `PILOT_QA_PASS` solo se concede cuando el MP4, el contenido creativo, la legibilidad, los derechos y los claims han sido comprobados.
 
 ### G6. Publicación autorizada
 Entregar archivo y copy/CTA, verificar requisitos de plataforma vigentes, avisos/etiquetado de IA y derechos. Publicación orgánica, anuncios y gasto requieren permiso específico. Registrar fecha, versión, destino y parámetros de atribución si el producto ya los soporta.
