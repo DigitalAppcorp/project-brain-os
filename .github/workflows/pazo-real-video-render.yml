@@ -1,0 +1,44 @@
+name: PAZO real-footage advertisement render
+on:
+  push:
+    branches: [media/pazo-first-real-footage-ad-20261029]
+    paths:
+      - 'video-renders/build_pazo_real_ad.py'
+      - 'video-renders/pazo-official-traced.svg'
+      - '.github/workflows/pazo-real-video-render.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install non-commercial generation dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-dejavu-core
+          python -m pip install --quiet Pillow numpy cairosvg
+      - name: Fetch authentic licensed video and render PAZO commercial
+        run: python video-renders/build_pazo_real_ad.py
+      - name: Deliver mp4 and license provenance
+        uses: actions/upload-artifact@v4
+        with:
+          name: PAZO-First-Real-Video-Commercial
+          path: |
+            video-renders/delivery/PAZO_The_Little_Things_Real_Footage.mp4
+            video-renders/delivery/SOURCES_AND_LICENSES.txt
+            video-renders/delivery/endcard.png
+          if-no-files-found: error
+      - name: Commit render to media branch for direct download
+        run: |
+          git config user.name 'pazo-video-production-bot'
+          git config user.email 'pazo-video-production-bot@users.noreply.github.com'
+          git add -f video-renders/delivery/PAZO_The_Little_Things_Real_Footage.mp4 video-renders/delivery/SOURCES_AND_LICENSES.txt video-renders/delivery/endcard.png
+          git commit -m 'media(pazo): first real-footage commercial pilot' || true
+          git push
