@@ -8,10 +8,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 MODULES = [
     'README.md', 'SKILL.md', 'PRODUCTION_PLAYBOOK.md',
-    'QUALITY_AND_RIGHTS.md', 'EXPERIMENTS_AND_MEASUREMENT.md',
+    'QUALITY_AND_RIGHTS.md', 'CREATIVE_EVIDENCE_GATE.md', 'EXPERIMENTS_AND_MEASUREMENT.md',
     'TOOLS_AND_EVIDENCE.md', 'templates/CREATIVE_BRIEF.md',
     'templates/SHOTLIST.md', 'templates/EXPERIMENT_SCORECARD.md',
-    'scripts/render_smoke.py',
+    'scripts/render_smoke.py', 'scripts/test_creative_diversity.py',
 ]
 
 
@@ -23,7 +23,7 @@ class TestVideoOS(unittest.TestCase):
 
     def test_skill_contract(self):
         s = (ROOT / 'SKILL.md').read_text(encoding='utf-8')
-        self.assertIn('version: 0.1.0', s)
+        self.assertIn('version: 0.2.0', s)
         for token in ('READ_ONLY_AUDIT', 'PILOT_PRODUCTION', 'NOT_VALIDATED',
                       'Marketing Brain', 'Design Intelligence OS', 'derechos',
                       'producción', 'publicar', 'presupuesto'):
@@ -37,6 +37,12 @@ class TestVideoOS(unittest.TestCase):
                       'PILOT_QA_PASS', 'G7.'):
             with self.subTest(token=token):
                 self.assertIn(token, content)
+
+    def test_creative_evidence_gate(self):
+        c = (ROOT / 'CREATIVE_EVIDENCE_GATE.md').read_text(encoding='utf-8')
+        for token in ('DIVERSITY_NOT_DEMONSTRATED', 'CREATIVE_FAIL', 'real product', 'ffmpeg', 'sound on', 'audience'):
+            with self.subTest(token=token):
+                self.assertIn(token, c)
 
     def test_privacy_and_experiment_guards(self):
         q = (ROOT / 'QUALITY_AND_RIGHTS.md').read_text(encoding='utf-8')
