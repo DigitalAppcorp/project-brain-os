@@ -241,7 +241,9 @@ area("rim above",(0,2.8,5.0),500,4,(1,.95,.85))
 scene.world.color=(.36,.36,.36)
 scene.render.engine="CYCLES"
 scene.cycles.samples=8
-scene.cycles.use_denoising=True
+scene.cycles.use_denoising=False
+for layer in scene.view_layers:
+    layer.cycles.use_denoising=False
 scene.render.image_settings.color_mode="RGB"
 scene.render.image_settings.color_depth="8"
 scene.render.image_settings.file_format="PNG"
