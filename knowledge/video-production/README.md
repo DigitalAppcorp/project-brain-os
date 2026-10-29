@@ -1,6 +1,6 @@
 # Video Production OS — Brain OS
 
-**v0.1.0 · 2026-10-28 · candidato para integración**
+**v0.2.0 · 2026-10-29 · gate creativo reforzado**
 
 Habilidad reutilizable de **dirección creativa, producción audiovisual, evaluación y aprendizaje**. No es una máquina de generar anuncios ni depende de una IA de video, una voz de pago o una estética concreta.
 
@@ -12,10 +12,11 @@ Habilidad reutilizable de **dirección creativa, producción audiovisual, evalua
 
 1. [SKILL.md](SKILL.md): autoridad, modos y criterios de actuación.
 2. [PRODUCTION_PLAYBOOK.md](PRODUCTION_PLAYBOOK.md): proceso, cuatro rutas y reglas de decisión.
-3. [QUALITY_AND_RIGHTS.md](QUALITY_AND_RIGHTS.md): estándares de audiencia, técnica, derechos y publicidad.
-4. [EXPERIMENTS_AND_MEASUREMENT.md](EXPERIMENTS_AND_MEASUREMENT.md): diseño experimental, métricas, sesgos, ciclos.
-5. [TOOLS_AND_EVIDENCE.md](TOOLS_AND_EVIDENCE.md): herramientas, investigación y estado real de capacidades.
-6. [templates/](templates): brief, plano a plano y evaluación de resultados.
+3. [CREATIVE_EVIDENCE_GATE.md](CREATIVE_EVIDENCE_GATE.md): **obligatorio**; calidad real demostrada, formatos materialmente distintos y límites de promesas.
+4. [QUALITY_AND_RIGHTS.md](QUALITY_AND_RIGHTS.md): estándares de audiencia, técnica, derechos y publicidad.
+5. [EXPERIMENTS_AND_MEASUREMENT.md](EXPERIMENTS_AND_MEASUREMENT.md): diseño experimental, métricas, sesgos, ciclos.
+6. [TOOLS_AND_EVIDENCE.md](TOOLS_AND_EVIDENCE.md): herramientas, investigación y estado real de capacidades.
+7. [templates/](templates): brief, plano a plano y evaluación de resultados.
 
 ## Integraciones intelectuales
 
