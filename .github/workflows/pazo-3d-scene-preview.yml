@@ -1,0 +1,26 @@
+name: PAZO 3D creative scene preview (4 real frames)
+on:
+  push:
+    branches: [media/pazo-3d-acting-preview-20261029]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Blender CPU
+        run: |
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq blender
+      - name: Render four actual 3D frames (no fabricated preview)
+        run: blender --background --threads 4 --python video-renders/pazo_3d_acting_test.py
+      - name: Save preview frames
+        run: |
+          git config user.name 'pazo-video-production-bot'
+          git config user.email 'pazo-video-production-bot@users.noreply.github.com'
+          git add -f video-renders/delivery/acting_3d/check_*.png
+          git commit -m 'media: 3D original acting keyframes for independent creative review' || true
+          git push
