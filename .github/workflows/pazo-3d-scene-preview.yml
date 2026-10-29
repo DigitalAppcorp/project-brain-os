@@ -13,9 +13,9 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install Blender CPU
         run: |
-          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq blender
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq blender libegl1 libgl1 libgl1-mesa-dri libopengl0 xvfb
       - name: Render four actual 3D frames (no fabricated preview)
-        run: blender --background --threads 4 --python video-renders/pazo_3d_acting_test.py
+        run: LIBGL_ALWAYS_SOFTWARE=1 EGL_PLATFORM=surfaceless xvfb-run -a -s '-screen 0 1280x1024x24' blender --background --threads 4 --python video-renders/pazo_3d_acting_test.py
       - name: Save preview frames
         run: |
           git config user.name 'pazo-video-production-bot'
