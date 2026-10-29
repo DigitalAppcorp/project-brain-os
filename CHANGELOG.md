@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased — 2026-10-29 (editorial craft)
+
+### Video Production OS v0.3 — editor mindset (documented, not model retraining)
+- Reviews three user-provided reference videos as cinematographic methods (story action, reactions, cut function, purposeful insert, actor continuity and sound), without reproducing assets or asserting verified views.
+- Adds `EDITORIAL_INTELLIGENCE.md`: Murch emotion/story/rhythm hierarchy, blocking/acting beats, sound design, J/L cuts, motivated picture edits, rough-cut variants, independent critical veto and evidence-first delivery.
+- Adds a fully shotlisted learning example with an unambiguous `STORYBOARD_ONLY` label; no fabricated ad or provider credit spend.
+- Adds contract-only regression tests rejecting copy-over-stock disguised as acting, static UI disguised as walkthrough and videos not reviewed with sound. Tests verify discipline, not creative performance or audience response.
+- Explicitly separates professional editorial skills from model-weight training and keeps actual public performance `UNKNOWN` until measured.
+
+
 ## Unreleased — 2026-10-29
 
 ### Video Production OS v0.2.0 — creative evidence correction
