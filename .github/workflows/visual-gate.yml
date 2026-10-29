@@ -12,3 +12,4 @@ jobs:
           python-version: '3.14'
       - run: python -X utf8 -B knowledge/ui-ux-frontend/scripts/test_learning.py
       - run: python -X utf8 -B knowledge/ui-ux-frontend/scripts/test_visual_review.py
+      - run: python -X utf8 -B knowledge/video-production/scripts/test_contract.py
