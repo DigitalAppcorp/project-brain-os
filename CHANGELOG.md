@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased — 2026-10-29
+
+### Video Production OS v0.2.0 — creative evidence correction
+- Postmortem-generalized: the production process delivered identical stock+caption templates under four creative labels despite user requesting truly different media. A technically valid MP4 did not demonstrate cinematic acting, an interactive demo, or 3D character performance.
+- Adds mandatory `CREATIVE_EVIDENCE_GATE.md` to prevent unsupported capability/quality claims, require manual review of actual motion/sound, and explicitly veto false-diverse portfolios.
+- Introduces declarative preflight regression tests that **reject** repeated primary method/editing grammar even when text or music differs, while noting tests cannot prove artistic quality.
+- Distinguishes creative PASS, technical PASS and real audience response. A documentation update is process improvement, not model retraining or proof of greater media production capability.
+
+
 ## Unreleased — 2026-10-28
 
 ### Video Production OS v0.1.0 — habilidad nueva
