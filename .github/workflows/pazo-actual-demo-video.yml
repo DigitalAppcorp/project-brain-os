@@ -1,0 +1,54 @@
+name: PAZO authentic interactive product demo video
+on:
+  push:
+    branches: [media/pazo-real-interactive-demo-20261029]
+    paths:
+      - 'video-renders/record_real_pazo_demo.mjs'
+      - 'video-renders/edit_real_pazo_demo.py'
+      - '.github/workflows/pazo-actual-demo-video.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Get actual PAZO frontend source; do not run against production
+        run: |
+          git clone --depth=1 https://github.com/DigitalAppcorp/pazo-app.git pazo-src
+          cd pazo-src
+          npm ci --ignore-scripts --no-audit --no-fund
+          npm install --no-save --package-lock=false --ignore-scripts playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Render original footage from actual local app interactions
+        env:
+          PAZO_APP_DIR: ${{ github.workspace }}/pazo-src
+          PAZO_VIDEO_OUT: ${{ github.workspace }}/video-renders/delivery/real_demo
+        run: |
+          python -m pip install --quiet Pillow numpy cairosvg
+          node video-renders/record_real_pazo_demo.mjs
+          python video-renders/edit_real_pazo_demo.py
+      - name: Deliver proven browser video
+        uses: actions/upload-artifact@v4
+        with:
+          name: PAZO-REAL-APP-INTERACTIVE-DEMO
+          path: |
+            video-renders/delivery/real_demo/PAZO_Real_Interactive_Demo_Commercial.mp4
+            video-renders/delivery/real_demo/PAZO_Real_Demo_Storyboard.jpg
+            video-renders/delivery/real_demo/RELEASE_NOTES.txt
+          if-no-files-found: error
+      - name: Save actual MP4 on media branch
+        run: |
+          git config user.name 'pazo-video-production-bot'
+          git config user.email 'pazo-video-production-bot@users.noreply.github.com'
+          git add -f video-renders/delivery/real_demo/PAZO_Real_Interactive_Demo_Commercial.mp4 video-renders/delivery/real_demo/PAZO_Real_Demo_Storyboard.jpg video-renders/delivery/real_demo/RELEASE_NOTES.txt
+          git commit -m 'media: actual PAZO demo screen walkthrough verified' || true
+          git push
