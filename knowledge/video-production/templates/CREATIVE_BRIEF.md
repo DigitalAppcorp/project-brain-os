@@ -1,0 +1,23 @@
+# Video Production OS — brief
+
+- ID / proyecto / responsable:
+- Versión / fecha / estado (CONCEPT | PILOT | QA | RELEASED):
+- Autorización del PO (producción, publicación y gasto por separado):
+- Audiencia / canal / idioma / destino:
+- Objetivo (entretenimiento | descubrimiento | consideración | activación):
+- Acción que queremos que haga la audiencia:
+- Hecho de producto demostrable / fuente y versión:
+- Hipótesis y explicación alternativa:
+- Ruta (A comercial, B 3D, C natural, D utilidad o híbrida):
+- Duración y formato **hipótesis**, no regla universal:
+- Gancho inicial:
+- Conflicto / progresión / remate:
+- Momento de aparición de marca / CTA:
+- Activos ya licenciados / faltantes / consentimiento:
+- Riesgo de calidad sintética / cómo evitarlo:
+- Método de menor coste y límite de intentos:
+- Indicador de aceptación creativa:
+- Indicador técnico, rights gate y limitación:
+- Instrumentación real disponible / qué NO medimos:
+- Estimación de costes (dinero, créditos, horas, render):
+- Reversión y siguiente acción exacta:
