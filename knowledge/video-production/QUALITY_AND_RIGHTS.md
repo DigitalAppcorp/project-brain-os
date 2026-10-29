@@ -41,6 +41,10 @@ Al producir MP4:
 - Claims de salud, protección, seguridad y resultados requieren especial sustento. La FTC exige que publicidad sea veraz, no engañosa y sustentada: https://www.ftc.gov/business-guidance/advertising-marketing .
 - Para recomendaciones/testimonios seguir guías oficiales FTC: https://www.ftc.gov/news-events/topics/truth-advertising/advertisement-endorsements .
 
+## Revisión de portafolio y límites de claims
+
+Aplicar [CREATIVE_EVIDENCE_GATE.md](CREATIVE_EVIDENCE_GATE.md): una muestra MP4 con tres clips licenciados, subtítulos y logo puede tener derechos y códec válidos sin ser una escena actuada o un spot cinematográfico. Para un lote solicitado como **estilos diferentes**, se requiere verificación comparativa de la gramática visual de todas las piezas, no solo una revisión individual. La ausencia de prueba de actuación, continuidad o interacción requerida genera `CREATIVE_FAIL` o `NOT_EVALUATED`, nunca `PILOT_QA_PASS`.
+
 ## Veredicto
 
 El revisor asigna `PASS / REVISE / BLOCKED / NOT_CHECKED` a: narrativa, calidad visual, sonido, legibilidad, veracidad, derechos, técnica y ajuste de plataforma. Si algún gate crítico está `BLOCKED`, no publicar ni afirmar que el anuncio está listo. Una revisión estética del PO no acredita por sí sola permisos de uso.
