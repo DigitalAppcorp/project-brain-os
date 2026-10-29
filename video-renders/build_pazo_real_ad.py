@@ -41,10 +41,10 @@ SOURCES=[
         "https://videos.pexels.com/video-files/5001204/5001204-hd_1920_1080_25fps.mp4",
         "https://videos.pexels.com/video-files/5001204/5001204-hd_1280_720_25fps.mp4"
     ],"https://www.pexels.com/video/dog-chilling-on-the-outdoor-5001204/","Pexels License"),
-    ("Pexels dog at home",[
-        "https://videos.pexels.com/video-files/3191251/3191251-hd_1080_1920_25fps.mp4",
-        "https://videos.pexels.com/video-files/3191251/3191251-hd_1280_720_25fps.mp4",
-    ],"https://www.pexels.com/search/videos/dog/","Pexels License"),
+    ("Pexels puppy in garden",[
+        "https://videos.pexels.com/video-files/13588355/13588355-hd_1080_1920_25fps.mp4",
+        "https://videos.pexels.com/video-files/13588355/13588355-hd_720_1280_25fps.mp4",
+    ],"https://www.pexels.com/video/close-up-of-dog-13588355/","Pexels License"),
     ("Wikimedia dog POV",[
         "https://commons.wikimedia.org/wiki/Special:Redirect/file/Dog_seen_from_a_GoPro.webm",
     ],"https://commons.wikimedia.org/wiki/File:Dog_seen_from_a_GoPro.webm","CC BY 3.0 — Pablo Fuentes"),
