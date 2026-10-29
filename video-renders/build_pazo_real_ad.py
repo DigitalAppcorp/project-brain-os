@@ -127,4 +127,15 @@ run(["ffmpeg","-hide_banner","-loglevel","error","-y","-i",OUT/"silent.mp4","-i"
      "-map","0:v","-map","1:a","-c:v","copy","-c:a","aac","-b:a","128k","-movflags","+faststart","-shortest",video])
 run(["ffmpeg","-v","error","-i",video,"-f","null","-"])
 (OUT/"SOURCES_AND_LICENSES.txt").write_text("\n".join(f"{x['name']} | {x['url']} | {x['license']}" for x in videos)+"\nStock footage transformed and edited for an original PAZO commercial pilot.\n")
+# Evidence frames extracted from the ACTUAL rendered MP4, not mocked images.
+frames=[]
+for sec in (1,5,9,14):
+    fn=OUT/f"frame_{sec:02}.jpg"
+    run(["ffmpeg","-hide_banner","-loglevel","error","-y","-ss",str(sec),"-i",video,"-frames:v","1",fn])
+    fr=Image.open(fn).convert("RGB");fr.thumbnail((360,640));frames.append(fr)
+sheet=Image.new("RGB",(360*4,680),(235,234,228))
+dt=ImageDraw.Draw(sheet)
+for i,(sec,fr) in enumerate(zip((1,5,9,14),frames)):
+    sheet.paste(fr,(i*360,0));dt.text((i*360+12,646),f"{sec:02} SEC",fill=(10,30,27))
+sheet.save(OUT/"COMERCIAL_VISTA_PREVIA.jpg",quality=88)
 print("SUCCESS",video,video.stat().st_size,flush=True)
