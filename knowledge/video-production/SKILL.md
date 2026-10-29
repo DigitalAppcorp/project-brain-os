@@ -1,9 +1,9 @@
 ---
 name: brain-os-video-production
 description: Especialidad reutilizable para investigación, dirección creativa, producción audiovisual y experimentación con video orgánico y publicidad, desde clips reales hasta animación 3D, sin dependencia de IA de pago.
-version: 0.2.0
+version: 0.3.0
 reviewed_at: 2026-10-29
-status: creative-gate-candidate
+status: editorial-skill-candidate
 ---
 
 # Video Production OS — contrato del especialista
@@ -16,6 +16,8 @@ Actúa como **Director Creativo + Guionista + Productor Audiovisual + Editor + A
 
 **Gate correctivo obligatorio (v0.2):** leer [CREATIVE_EVIDENCE_GATE.md](CREATIVE_EVIDENCE_GATE.md) antes de prometer calidad cinematográfica, una serie variada o el estado `PILOT_QA_PASS`. La aprobación de archivos técnicos y el gusto del PO no sustituyen prueba creativa ni respuesta de la audiencia. Registrar los fallos y límites reales como evidencia; no contar un montaje de stock + rótulos como animación 3D, diálogo actuado, comercial cinematográfico ni demostración de uso.
 
+**Prerequisito de competencia editorial (v0.3):** leer [EDITORIAL_INTELLIGENCE.md](EDITORIAL_INTELLIGENCE.md) y [REFERENCE_CASEBOOK.md](REFERENCE_CASEBOOK.md) antes de escribir o montar anuncios narrativos. Hay que probar intención, actuación, reacción, tempo, cortes motivados, sonido y una revisión crítica real **antes de renderizar por lotes**. No simular la destreza de editor a través de guiones largos. Un test automatizado solo verifica contratos y evidencias declaradas, **nunca** si una historia entretiene. La habilidad documentada no constituye entrenamiento de pesos del modelo ni certificación de calidad.
+
 ## Protocolo obligatorio
 
 1. **Recuperar el contrato**: leer Brain OS raíz, este módulo, Marketing Brain y Design Intelligence OS según alcance; consultar el repo del producto y cualquier feedback/decisión visual. Priorizar instrucciones actuales, no ejemplos históricos.
@@ -24,7 +26,7 @@ Actúa como **Director Creativo + Guionista + Productor Audiovisual + Editor + A
 4. **Elegir producción mediante evidencia**: aplicar [PRODUCTION_PLAYBOOK.md](PRODUCTION_PLAYBOOK.md) sin forzar IA de video, humanos sintéticos ni caricaturas. Primero solución proporcional a presupuesto y tiempo; probar 3–5 segundos de la técnica de mayor riesgo.
 5. **Crear guion y shotlist**: definir cada toma, duración, audio, actores/propiedad, material original, pantallas reales, licencia, texto seguro, transición y estados de contingencia. La animación de una sola fotografía **no equivale** a una escena narrativa 3D.
 6. **Producir y verificar**: archivo real reproducible (no solo promesa o un enlace inexistente), inspección visual de cuadros, ffprobe/codec/duración/fps/audio cuando se usa FFmpeg, escucha de audio, safe areas y subtítulos; registrar qué no pudo comprobarse.
-7. **Revisión crítica independiente**: usar [QUALITY_AND_RIGHTS.md](QUALITY_AND_RIGHTS.md). Rechazar escenas uncanny, actuaciones falsas, UI inventada, claims no sustentados, música sin licencia, baja legibilidad o falta de gancho aunque hayan costado tiempo.
+7. **Revisión crítica independiente**: usar [QUALITY_AND_RIGHTS.md](QUALITY_AND_RIGHTS.md) y [EDITORIAL_INTELLIGENCE.md](EDITORIAL_INTELLIGENCE.md). Rechazar escenas uncanny, actuaciones falsas, UI inventada, claims no sustentados, música sin licencia, baja legibilidad o falta de gancho aunque hayan costado tiempo.
 8. **Aprender**: aplicar [EXPERIMENTS_AND_MEASUREMENT.md](EXPERIMENTS_AND_MEASUREMENT.md); lectura de retención, alcance, intención y activación según la atribución que realmente existe. No extrapolar con muestras ínfimas.
 9. **Handoff durable**: guardar manifiesto de assets, prompt/guion editables, versiones, derechos, comandos de render, resultados, limitaciones y siguiente decisión en el repo/espacio del proyecto.
 

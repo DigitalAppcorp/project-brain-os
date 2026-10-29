@@ -12,6 +12,8 @@ MODULES = [
     'TOOLS_AND_EVIDENCE.md', 'templates/CREATIVE_BRIEF.md',
     'templates/SHOTLIST.md', 'templates/EXPERIMENT_SCORECARD.md',
     'scripts/render_smoke.py', 'scripts/test_creative_diversity.py',
+    'EDITORIAL_INTELLIGENCE.md', 'REFERENCE_CASEBOOK.md',
+    'templates/EDITORIAL_WORKED_EXAMPLE.md', 'scripts/test_editorial_preflight.py',
 ]
 
 
@@ -23,7 +25,7 @@ class TestVideoOS(unittest.TestCase):
 
     def test_skill_contract(self):
         s = (ROOT / 'SKILL.md').read_text(encoding='utf-8')
-        self.assertIn('version: 0.2.0', s)
+        self.assertIn('version: 0.3.0', s)
         for token in ('READ_ONLY_AUDIT', 'PILOT_PRODUCTION', 'NOT_VALIDATED',
                       'Marketing Brain', 'Design Intelligence OS', 'derechos',
                       'producción', 'publicar', 'presupuesto'):
@@ -37,6 +39,14 @@ class TestVideoOS(unittest.TestCase):
                       'PILOT_QA_PASS', 'G7.'):
             with self.subTest(token=token):
                 self.assertIn(token, content)
+
+    def test_editorial_contract(self):
+        e = (ROOT / 'EDITORIAL_INTELLIGENCE.md').read_text(encoding='utf-8')
+        case = (ROOT / 'REFERENCE_CASEBOOK.md').read_text(encoding='utf-8')
+        for token in ('Murch', 'J-cut', 'L-cut', 'payoff', 'Actuación', 'Sound', 'video'):
+            self.assertIn(token.lower(), e.lower())
+        for token in ('R1', 'R2', 'R3', 'PAZO', 'No copiar'):
+            self.assertIn(token.lower(), case.lower())
 
     def test_creative_evidence_gate(self):
         c = (ROOT / 'CREATIVE_EVIDENCE_GATE.md').read_text(encoding='utf-8')

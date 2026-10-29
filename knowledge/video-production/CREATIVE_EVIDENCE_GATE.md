@@ -2,6 +2,8 @@
 
 **Why this gate exists:** A batch can contain several technically valid MP4s with different script copy and still be **one repeated editing template**. Four concepts are not four production styles. The editor, producer and QA reviewer must inspect the **rendered media**, not infer quality from plans, successful encoding or brand compliance.
 
+**Complemento v0.3:** [EDITORIAL_INTELLIGENCE.md](EDITORIAL_INTELLIGENCE.md) añade criterio de dirección, actuación, sonido y montaje por motivación. La diversidad técnica no implica un buen guion ni calidad de montaje. Aplicar ambos gates en proyectos narrativos.
+
 ## 1. Evidence before adjectives
 
 | Claim in client communication | Minimum evidence required |
