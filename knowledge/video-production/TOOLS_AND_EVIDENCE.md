@@ -1,6 +1,6 @@
 # Herramientas, capacidad comprobada y fuentes (2026-10-28)
 
-**Principio:** gratis ≠ ilimitado, instalado ≠ apto, clip exportado ≠ publicidad de calidad. Confirmar versiones, planes, licencias y permisos en cada producción.
+**Principio:** gratis ≠ ilimitado, instalado ≠ apto, clip exportado ≠ publicidad de calidad. La capacidad real de producir cinematografía actuada, animación 3D con actuación y demostraciones de uso en movimiento **no está demostrada por el pipeline de montaje de imágenes/stock**. Auditar las afirmaciones conforme al [gate de evidencia creativa](CREATIVE_EVIDENCE_GATE.md) antes de prometerlas. Confirmar versiones, planes, licencias y permisos en cada producción.
 
 ## Stack por prioridad
 

@@ -1,5 +1,7 @@
 # Producción: cuatro rutas y gates
 
+**Gate de ejecución vigente:** [CREATIVE_EVIDENCE_GATE.md](CREATIVE_EVIDENCE_GATE.md). Antes del G4, el agente debe demostrar por separado la viabilidad real de cada técnica, y antes de presentar una tanda como «diversa», comprobar material y visualmente que **no reutiliza el mismo formato de clips stock, texto y end card**. Gate técnico ≠ gate creativo ≠ datos reales de audiencia.
+
 ## Decisión antes de producir
 
 Buscar **pregunta de marketing + historia + material disponible**, no «qué herramienta es más espectacular». Si el riesgo técnico es alto, producir un test de **3–5 segundos** antes de escribir/renderizar 30 segundos. No comprometer presupuesto para explorar.

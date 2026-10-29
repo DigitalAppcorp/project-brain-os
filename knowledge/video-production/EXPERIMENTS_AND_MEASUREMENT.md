@@ -1,5 +1,7 @@
 # Laboratorio creativo: pruebas, evidencia y aprendizaje
 
+**Precondición de interpretabilidad:** aplicar [CREATIVE_EVIDENCE_GATE.md](CREATIVE_EVIDENCE_GATE.md). Si una tanda no demuestra formatos distintos, no sacar conclusiones sobre «qué estilo funciona». Las métricas de audiencia pueden compararse como piezas individuales si están correctamente registradas, pero no como prueba de estilos contrastantes. Un lote defectuoso debe quedar marcado `DIVERSITY_NOT_DEMONSTRATED` y revisarse antes de repetir su producción.
+
 ## Fases de exploración
 
 **Ronda 0: viabilidad técnica.** Buscar rutas capaces de producir **archivos originales de calidad aceptable**; el indicador es `PILOT_QA_PASS`, no likes imaginarios. Comparar gastos reales, tiempo, correcciones, derechos y calidad. Pueden evaluarse cuatro estilos sin publicar.
