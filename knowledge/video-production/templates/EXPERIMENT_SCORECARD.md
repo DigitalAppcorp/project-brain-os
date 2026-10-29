@@ -1,0 +1,21 @@
+# Video Production OS — scorecard de experimento
+
+- Pieza / versión / URL del material publicado / fecha:
+- Plataforma y cuenta / publicación orgánica o anuncio:
+- Presupuesto y gasto **verificados**:
+- Audiencia estimada vs realmente alcanzada:
+- Hipótesis / ruta / cambio principal:
+- Métrica principal (definición propia de la plataforma):
+- Ventana / numerador / denominador / muestra:
+- Gancho y retención:
+- Finalizaciones/compartidos/guardados:
+- Clics salientes / llegadas atribuibles:
+- Conversión del producto: fuente/denominador/eligibilidad:
+- Razones para NO comparar esta pieza con otra:
+- Comentarios y señales cualitativas (no representatividad):
+- Derechos / calidad / quejas / costes:
+- Interpretación observable, no causal:
+- Hipótesis alternativa:
+- Decisión (iterar | ampliar | cambiar | pausar):
+- Próxima versión y una variable a aislar:
+- Responsable / autorización / fecha de revisión:
