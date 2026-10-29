@@ -178,8 +178,8 @@ seam.hide_render=True
 ball.location=(-.40,-.61,.20)
 # cat actually swats same ball toward itself. Dog responds to visible action.
 animate(cat,'location',[
-    (1,(2.35,.01,0)),(46,(2.35,.01,0)),(82,(.95,-.04,0)),
-    (118,(.78,-.04,0)),(161,(.78,-.04,0)),(220,(.78,-.04,0))
+    (1,(2.35,.01,0)),(46,(2.35,.01,0)),(82,(.48,-.04,0)),
+    (118,(.48,-.04,0)),(161,(.48,-.04,0)),(220,(.48,-.04,0))
 ])
 animate(catheadpivot,'rotation_euler',[
     (1,(0,0,0)),(54,(0,0,0)),(86,(.12,0,-.09)),(110,(-.04,0,.09)),
@@ -192,8 +192,8 @@ animate(leftpaw,'rotation_euler',[
 animate(cattail,'rotation_euler',[(1,(0,-.1,0)),(65,(0,.28,0)),(108,(0,-.43,0)),(146,(0,.25,0)),(220,(0,-.2,0))])
 animate(ball,'location',[
     (1,(-.40,-.61,.20)),(94,(-.40,-.61,.20)),
-    (106,(.20,-.49,.31)),(119,(.63,-.37,.20)),
-    (137,(.68,-.39,.20)),(220,(.68,-.39,.20))
+    (106,(.20,-.49,.31)),(119,(.29,-.37,.20)),
+    (137,(.38,-.39,.20)),(220,(.38,-.39,.20))
 ])
 animate(ball,'rotation_euler',[(1,(0,0,0)),(94,(0,0,0)),(137,(0,4.4,0)),(220,(0,4.4,0))])
 # dog attempts to reach then freezes; pauses are deliberate.
@@ -221,10 +221,10 @@ def camera(name,position,target,orthoscale):
     c=bpy.context.object;c.name=name;c.data.type="ORTHO";c.data.ortho_scale=orthoscale
     look(c,target)
     return c
-cam1=camera("01_WIDE_look_at_ball",(0,-8,3.7),(0,.36,1.0),5.6)
-cam2=camera("02_LOW_ACTION",(.12,-5.6,2.05),(.05,-.05,.70),4.0)
-cam3=camera("03_CAT_TAKES_BALL",(.7,-4.6,2.12),(.33,-.02,.65),3.0)
-cam4=camera("04_DOG_REACTION",(-1.1,-4.7,2.09),(-1.27,-.25,1.25),2.25)
+cam1=camera("01_WIDE_look_at_ball",(-.23,-8,3.7),(-.23,.36,1.0),7.4)
+cam2=camera("02_LOW_ACTION",(-.35,-5.6,2.05),(-.35,-.05,.70),6.1)
+cam3=camera("03_CAT_TAKES_BALL",(.67,-4.6,2.12),(.67,-.02,.65),4.5)
+cam4=camera("04_DOG_REACTION",(-1.27,-4.7,2.09),(-1.27,-.25,1.25),3.5)
 markers=[(1,cam1,"setup: dog sees ball"),(64,cam2,"dog approaches cat enters"),
          (103,cam3,"cat swats ball"),(151,cam4,"reaction pause")]
 for f,c,name in markers:
@@ -235,15 +235,13 @@ def area(name, loc, energy, size, color):
     data=bpy.data.lights.new(name,"AREA");data.energy=energy;data.shape="DISK";data.size=size;data.color=color
     o=bpy.data.objects.new(name,data);bpy.context.collection.objects.link(o)
     o.location=loc;look(o,(0,0,1))
-area("softbox upper left",(-3.5,-4.7,6.8),670,6,(1,.91,.79))
-area("fill front right",(4,-2.7,4.0),420,5,(.77,.93,1.0))
-area("rim above",(0,2.8,5.0),500,4,(1,.95,.85))
+area("softbox upper left",(-3.5,-4.7,6.8),340,6,(1,.91,.79))
+area("fill front right",(4,-2.7,4.0),230,5,(.77,.93,1.0))
+area("rim above",(0,2.8,5.0),220,4,(1,.95,.85))
 scene.world.color=(.36,.36,.36)
-scene.render.engine="CYCLES"
-scene.cycles.samples=8
-scene.cycles.use_denoising=False
-for layer in scene.view_layers:
-    layer.cycles.use_denoising=False
+scene.render.engine="BLENDER_EEVEE"
+scene.eevee.taa_render_samples=24
+scene.view_settings.exposure=-0.65
 scene.render.image_settings.color_mode="RGB"
 scene.render.image_settings.color_depth="8"
 scene.render.image_settings.file_format="PNG"
