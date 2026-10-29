@@ -34,11 +34,12 @@ jobs:
             video-renders/delivery/PAZO_The_Little_Things_Real_Footage.mp4
             video-renders/delivery/SOURCES_AND_LICENSES.txt
             video-renders/delivery/endcard.png
+            video-renders/delivery/COMERCIAL_VISTA_PREVIA.jpg
           if-no-files-found: error
       - name: Commit render to media branch for direct download
         run: |
           git config user.name 'pazo-video-production-bot'
           git config user.email 'pazo-video-production-bot@users.noreply.github.com'
-          git add -f video-renders/delivery/PAZO_The_Little_Things_Real_Footage.mp4 video-renders/delivery/SOURCES_AND_LICENSES.txt video-renders/delivery/endcard.png
+          git add -f video-renders/delivery/PAZO_The_Little_Things_Real_Footage.mp4 video-renders/delivery/SOURCES_AND_LICENSES.txt video-renders/delivery/endcard.png video-renders/delivery/COMERCIAL_VISTA_PREVIA.jpg
           git commit -m 'media(pazo): first real-footage commercial pilot' || true
           git push
