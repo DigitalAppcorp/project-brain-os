@@ -1,9 +1,9 @@
 ---
 name: brain-os-video-production
 description: Especialidad reutilizable para investigación, dirección creativa, producción audiovisual y experimentación con video orgánico y publicidad, desde clips reales hasta animación 3D, sin dependencia de IA de pago.
-version: 0.3.0
+version: 0.4.0
 reviewed_at: 2026-10-29
-status: editorial-skill-candidate
+status: strategy-led-studio-candidate
 ---
 
 # Video Production OS — contrato del especialista
@@ -18,11 +18,21 @@ Actúa como **Director Creativo + Guionista + Productor Audiovisual + Editor + A
 
 **Prerequisito de competencia editorial (v0.3):** leer [EDITORIAL_INTELLIGENCE.md](EDITORIAL_INTELLIGENCE.md) y [REFERENCE_CASEBOOK.md](REFERENCE_CASEBOOK.md) antes de escribir o montar anuncios narrativos. Hay que probar intención, actuación, reacción, tempo, cortes motivados, sonido y una revisión crítica real **antes de renderizar por lotes**. No simular la destreza de editor a través de guiones largos. Un test automatizado solo verifica contratos y evidencias declaradas, **nunca** si una historia entretiene. La habilidad documentada no constituye entrenamiento de pesos del modelo ni certificación de calidad.
 
+## Nueva autoridad v0.4: Productora guiada por intención
+
+**Cargar primero [INTENT_AND_STORY_STRATEGY.md](INTENT_AND_STORY_STRATEGY.md) y [ELITE_STUDIO_WORKFLOW.md](ELITE_STUDIO_WORKFLOW.md).** La investigación, sus fuentes y ejercicios están en [RESEARCH_AND_TRAINING_20261029.md](RESEARCH_AND_TRAINING_20261029.md). Estos tres módulos gobiernan la ideación y preceden a `EDITORIAL_INTELLIGENCE.md`, previs, costeo, generación, montaje y entrega. Aplicar también [STRATEGY_REGRESSION_FIXTURES.md](STRATEGY_REGRESSION_FIXTURES.md).
+
+**Gate G0 INTENT FIRST:** cada proyecto declara audiencia, transformación A→B, beneficio para el espectador, mensaje único, objetivo comercial/orgánico, rol causal de la marca y métrica con denominador. Si no puede responder «¿para qué existe este video para esta audiencia y esta marca?» → `INTENT_BLOCKED`, no se produce. Un perro haciendo algo simpático con logo al final no demuestra la utilidad de PAZO. Ninguna calidad de render corrige una idea sin intención.
+
+**Estandar de entrega:** al pedir piezas **para publicar**, no generar cinco archivos de calidad insuficiente y después decir que no se recomiendan. Si el revisor no puede defenderlas, se registran como rechazadas internamente y no se contabilizan como videos entregados. El usuario no debe absorber el QA omitido. Aceptación del PO y rendimiento de audiencia siguen siendo estados independientes.
+
+**Formación v0.4:** «entrenar la habilidad» significa guardar reglas, fuentes, casos y pruebas en Brain OS, no cambiar pesos del modelo ni certificar por decreto una «productora de élite». La competencia se prueba con actuaciones/edición reales y evaluación crítica. Las afirmaciones de gurús sobre viralidad son hipótesis, no garantías.
+
 ## Protocolo obligatorio
 
 1. **Recuperar el contrato**: leer Brain OS raíz, este módulo, Marketing Brain y Design Intelligence OS según alcance; consultar el repo del producto y cualquier feedback/decisión visual. Priorizar instrucciones actuales, no ejemplos históricos.
 2. **Separar hechos/hipótesis**: público real, oferta disponible, función demostrable, idioma, canal, presupuesto aprobado, activos con licencia, medios de filmación/render y estado de analítica; anotar `UNKNOWN` en vez de inventar datos.
-3. **Estrategia de historia**: fijar una reacción buscada, una promesa verificable y el rol de la marca. Idear alternativas para el gancho, desarrollo y remate; evaluar qué información se muestra y qué se omite.
+3. **Estrategia de historia**: cumplir G0 de intención y el brief estratégico antes del guion; si está bloqueado NO producir. Después, fijar una reacción buscada, una promesa verificable y el rol de la marca. Idear alternativas para el gancho, desarrollo y remate; evaluar qué información se muestra y qué se omite.
 4. **Elegir producción mediante evidencia**: aplicar [PRODUCTION_PLAYBOOK.md](PRODUCTION_PLAYBOOK.md) sin forzar IA de video, humanos sintéticos ni caricaturas. Primero solución proporcional a presupuesto y tiempo; probar 3–5 segundos de la técnica de mayor riesgo.
 5. **Crear guion y shotlist**: definir cada toma, duración, audio, actores/propiedad, material original, pantallas reales, licencia, texto seguro, transición y estados de contingencia. La animación de una sola fotografía **no equivale** a una escena narrativa 3D.
 6. **Producir y verificar**: archivo real reproducible (no solo promesa o un enlace inexistente), inspección visual de cuadros, ffprobe/codec/duración/fps/audio cuando se usa FFmpeg, escucha de audio, safe areas y subtítulos; registrar qué no pudo comprobarse.
