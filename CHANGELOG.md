@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased — 2026-10-28
+
+### Video Production OS v0.1.0 — habilidad nueva
+- Añade módulo reutilizable de dirección creativa y producción audiovisual con cuatro rutas (comercial cotidiano, animación 3D, mascotas reales y demostración auténtica).
+- Aísla validación técnica de video, juicio de calidad, autorización visual, derechos comerciales, publicación y medición real.
+- Incorpora pipeline FFmpeg sin coste de créditos con pruebas de decodificación/metadata y plantillas de brief, toma y scorecard; Blender sigue pendiente de validación real.
+- Integra Marketing Brain OS y Design Intelligence OS sin imponer estética, suscripciones ni gastos a productos.
+
 ## Unreleased — 2026-10-23
 
 ### Marketing Intelligence & Growth knowledge module
