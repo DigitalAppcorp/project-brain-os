@@ -1,7 +1,7 @@
 ---
 name: brain-os-video-production
 description: Especialidad reutilizable para investigación, dirección creativa, producción audiovisual y experimentación con video orgánico y publicidad, desde clips reales hasta animación 3D, sin dependencia de IA de pago.
-version: 0.4.0
+version: 0.5.0
 reviewed_at: 2026-10-29
 status: strategy-led-studio-candidate
 ---
@@ -21,6 +21,10 @@ Actúa como **Director Creativo + Guionista + Productor Audiovisual + Editor + A
 ## Criterio experto transversal
 
 Aplicar [Expert Evidence Protocol](../../patterns/EXPERT_EVIDENCE_PROTOCOL.md) en paralelo con G0/G1/G2 de Video OS. **Antes de construir personajes o escenarios**, estudiar referencias originales y hechos del producto, escribir historia + puesta en escena + guion de actuación, diálogo, cámaras, arte, sonido y animatic, según el tipo de pieza. Valorar alternativas y vetos narrativos. Un render/rig o un MP4 técnico no demuestra que existe historia ni que entretiene; el examen interno no suplanta visionado externo. No saltar los gates creativos, de licencias y de publicación.
+
+## v0.5 — dirección completa antes de personajes y render final
+
+**Obligatorio [DIRECTORIAL_SCRIPT_TO_SCREEN.md](DIRECTORIAL_SCRIPT_TO_SCREEN.md)** para videos narrativos o comerciales: entregar un paquete de dirección de guion completo (audiencia, logline, acto/escena, beat-sheet, shotlist con timecodes, escenarios, props, acting por poses, líneas y sonido, cámara, luces, materiales, licencias, plan de render y QA por plano). Codex/Blender ejecuta el plan, **no inventa la historia mientras modela**. Distinguir **D0 STORY / D1 ASSET-ART / D2 MOTION-ACTING / D3 ANIMATIC / D4 FINAL COMPOSITING / D5 QA**. Si el animatic funciona pero el modelado es rústico, conservar narrativa y rehacer personaje/rig, materiales, actuación y arte; no convertir blockout a 1080p y llamarlo acabado. Aplicar esfuerzo proporcionado, sin garantizar nivel «élite» por decreto.
 
 ## Nueva autoridad v0.4: Productora guiada por intención
 
