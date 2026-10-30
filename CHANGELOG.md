@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased — 2026-10-29 (Video OS v0.5 — direction-to-screen, documented)
+
+- Adds `knowledge/video-production/DIRECTORIAL_SCRIPT_TO_SCREEN.md`: screenwriting and production director's package from intent to acting, set, lens, audio, shot timecodes and rights.
+- Introduces D0 STORY, D1 ASSET/ART, D2 MOTION/ACTING, D3 ANIMATIC, D4 FINAL COMPOSITING and D5 QA; explicitly prohibits presenting an approved animatic or primitive-character render as a finished film.
+- Adds regression requirements to Video OS contract tests and fixes the progressive reading order.
+- Documents a **method**, not measured animation improvement, model-weight training, a ready-to-publish PAZO ad or authorization for expenditure/production release.
+
+
 ## v1.5.0 — 2026-10-29 · Expert Evidence Protocol (documented)
 
 - Introduce reusable `patterns/EXPERT_EVIDENCE_PROTOCOL.md` with the four expert questions: role-specific benchmark, original evidence, professional method, verifiable/falsifiable result.
