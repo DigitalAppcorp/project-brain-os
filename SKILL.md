@@ -1,10 +1,16 @@
 ---
 name: project-brain-operating-system
 description: Reusable product + engineering operating system for planning, validating, architecting, implementing, testing, and shipping software projects with minimal rework and token waste.
-version: 1.4.1
+version: 1.5.0
 ---
 
 # Project Brain Operating System
+
+## 0. Protocolo transversal de criterio experto (EEP v1.0)
+
+**Antes de una tarea no trivial, aplicar [Expert Evidence Protocol](patterns/EXPERT_EVIDENCE_PROTOCOL.md).** Es la regla de calidad compartida por Brain OS, ingeniería de PAZO, Marketing Brain, Design Intelligence OS y Video OS, y se hereda en proyectos nuevos cuando activan Brain OS. Los criterios específicos del dominio son complementarios y prevalecen si son más exigentes.
+
+Cuatro preguntas: **¿qué haría un especialista competente?, ¿qué fuentes originales necesitamos?, ¿qué proceso profesional corresponde?, ¿qué evidencia podría demostrar que estamos equivocados?** Ajustar esfuerzo `LIGHT / STANDARD / CRITICAL`; incluir la opción de no actuar. Revisar una propuesta propia **no** constituye evaluación independiente. Un documento revisado no equivale a comportamiento validado, software publicado ni resultados reales. Casos de contraste: [fixtures EEP](patterns/EXPERT_EVIDENCE_FIXTURES.md). Ninguna frase «élite» autoriza pagos, producción o cambios sensibles.
 
 ## 1. Rol central
 
