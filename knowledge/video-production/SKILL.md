@@ -18,6 +18,10 @@ Actúa como **Director Creativo + Guionista + Productor Audiovisual + Editor + A
 
 **Prerequisito de competencia editorial (v0.3):** leer [EDITORIAL_INTELLIGENCE.md](EDITORIAL_INTELLIGENCE.md) y [REFERENCE_CASEBOOK.md](REFERENCE_CASEBOOK.md) antes de escribir o montar anuncios narrativos. Hay que probar intención, actuación, reacción, tempo, cortes motivados, sonido y una revisión crítica real **antes de renderizar por lotes**. No simular la destreza de editor a través de guiones largos. Un test automatizado solo verifica contratos y evidencias declaradas, **nunca** si una historia entretiene. La habilidad documentada no constituye entrenamiento de pesos del modelo ni certificación de calidad.
 
+## Criterio experto transversal
+
+Aplicar [Expert Evidence Protocol](../../patterns/EXPERT_EVIDENCE_PROTOCOL.md) en paralelo con G0/G1/G2 de Video OS. **Antes de construir personajes o escenarios**, estudiar referencias originales y hechos del producto, escribir historia + puesta en escena + guion de actuación, diálogo, cámaras, arte, sonido y animatic, según el tipo de pieza. Valorar alternativas y vetos narrativos. Un render/rig o un MP4 técnico no demuestra que existe historia ni que entretiene; el examen interno no suplanta visionado externo. No saltar los gates creativos, de licencias y de publicación.
+
 ## Nueva autoridad v0.4: Productora guiada por intención
 
 **Cargar primero [INTENT_AND_STORY_STRATEGY.md](INTENT_AND_STORY_STRATEGY.md) y [ELITE_STUDIO_WORKFLOW.md](ELITE_STUDIO_WORKFLOW.md).** La investigación, sus fuentes y ejercicios están en [RESEARCH_AND_TRAINING_20261029.md](RESEARCH_AND_TRAINING_20261029.md). Estos tres módulos gobiernan la ideación y preceden a `EDITORIAL_INTELLIGENCE.md`, previs, costeo, generación, montaje y entrega. Aplicar también [STRATEGY_REGRESSION_FIXTURES.md](STRATEGY_REGRESSION_FIXTURES.md).
