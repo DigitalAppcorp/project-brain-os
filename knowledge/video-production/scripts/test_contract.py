@@ -60,7 +60,7 @@ class TestVideoOS(unittest.TestCase):
         d = (ROOT / 'DIRECTORIAL_SCRIPT_TO_SCREEN.md').read_text(encoding='utf-8')
         skill = (ROOT / 'SKILL.md').read_text(encoding='utf-8')
         for token in ('D0 STORY', 'D1 ASSET/ART', 'D2 MOTION/ACTING', 'D3 ANIMATIC',
-                      'D4 FINAL COMPOSITING', 'D5 QA', 'guion técnico',
+                      'D4 FINAL COMPOSITING', 'D5 QA', 'Guion técnico',
                       'escenario', 'licencias', 'NOT_TESTED'):
             with self.subTest(token=token):
                 self.assertIn(token, d)
