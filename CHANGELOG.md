@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.5.0 — 2026-10-29 · Expert Evidence Protocol (documented)
+
+- Introduce reusable `patterns/EXPERT_EVIDENCE_PROTOCOL.md` with the four expert questions: role-specific benchmark, original evidence, professional method, verifiable/falsifiable result.
+- Route Brain OS and Marketing, Design Intelligence and Video OS to this rule, using proportional LIGHT/STANDARD/CRITICAL depth and independent-review honesty.
+- Add 14 negative/regression fixtures. The fixtures are **documented, not yet executed as an agent-evaluation benchmark**; no model retraining or outcomes claimed.
+- Keep all product-specific permissions, scope closures, marketing budgets, visual approvals and production gates intact. Product repositories use thin references, not duplicated canonical rules.
+
 ## Unreleased — 2026-10-29 (editorial craft)
 
 ### Video Production OS v0.3 — editor mindset (documented, not model retraining)

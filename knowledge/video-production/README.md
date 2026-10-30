@@ -1,6 +1,6 @@
 # Video Production OS — Brain OS
 
-**v0.3.0 · 2026-10-29 · inteligencia editorial (en validación)**
+**v0.4.0 · 2026-10-29 · estrategia de historia + criterio editorial (en validación)**
 
 Habilidad reutilizable de **dirección creativa, producción audiovisual, evaluación y aprendizaje**. No es una máquina de generar anuncios ni depende de una IA de video, una voz de pago o una estética concreta.
 
@@ -11,14 +11,17 @@ Habilidad reutilizable de **dirección creativa, producción audiovisual, evalua
 ## Orden de lectura, carga progresiva
 
 1. [SKILL.md](SKILL.md): autoridad, modos y criterios de actuación.
-2. [PRODUCTION_PLAYBOOK.md](PRODUCTION_PLAYBOOK.md): proceso, cuatro rutas y reglas de decisión.
-3. [CREATIVE_EVIDENCE_GATE.md](CREATIVE_EVIDENCE_GATE.md): **obligatorio**; calidad real demostrada, formatos materialmente distintos y límites de promesas.
-4. [EDITORIAL_INTELLIGENCE.md](EDITORIAL_INTELLIGENCE.md): **obligatorio**; emoción, actuación, cortes motivados, ritmo, microdramaturgia y audio.
-5. [REFERENCE_CASEBOOK.md](REFERENCE_CASEBOOK.md): estudio crítico de tres videos suministrados como referencias, sin redistribuirlos ni inferir rendimiento.
-6. [QUALITY_AND_RIGHTS.md](QUALITY_AND_RIGHTS.md): estándares de audiencia, técnica, derechos y publicidad.
-7. [EXPERIMENTS_AND_MEASUREMENT.md](EXPERIMENTS_AND_MEASUREMENT.md): diseño experimental, métricas, sesgos, ciclos.
-8. [TOOLS_AND_EVIDENCE.md](TOOLS_AND_EVIDENCE.md): herramientas, investigación y estado real de capacidades.
-9. [templates/](templates): brief, plano a plano y evaluación de resultados.
+5. [INTENT_AND_STORY_STRATEGY.md](INTENT_AND_STORY_STRATEGY.md): intención, conflicto, función causal de la marca y G0.
+6. [ELITE_STUDIO_WORKFLOW.md](ELITE_STUDIO_WORKFLOW.md): guion, actuación, escenario, rodaje, sonido y QA por departamento.
+7. [Expert Evidence Protocol](../../patterns/EXPERT_EVIDENCE_PROTOCOL.md): cuatro preguntas de rigor transversal y verificación externa honesta.
+5. [PRODUCTION_PLAYBOOK.md](PRODUCTION_PLAYBOOK.md): proceso, cuatro rutas y reglas de decisión.
+6. [CREATIVE_EVIDENCE_GATE.md](CREATIVE_EVIDENCE_GATE.md): **obligatorio**; calidad real demostrada, formatos materialmente distintos y límites de promesas.
+7. [EDITORIAL_INTELLIGENCE.md](EDITORIAL_INTELLIGENCE.md): **obligatorio**; emoción, actuación, cortes motivados, ritmo, microdramaturgia y audio.
+8. [REFERENCE_CASEBOOK.md](REFERENCE_CASEBOOK.md): estudio crítico de tres videos suministrados como referencias, sin redistribuirlos ni inferir rendimiento.
+9. [QUALITY_AND_RIGHTS.md](QUALITY_AND_RIGHTS.md): estándares de audiencia, técnica, derechos y publicidad.
+10. [EXPERIMENTS_AND_MEASUREMENT.md](EXPERIMENTS_AND_MEASUREMENT.md): diseño experimental, métricas, sesgos, ciclos.
+11. [TOOLS_AND_EVIDENCE.md](TOOLS_AND_EVIDENCE.md): herramientas, investigación y estado real de capacidades.
+12. [templates/](templates): brief, plano a plano y evaluación de resultados.
 
 **Ejemplo didáctico:** [El sofá no es tuyo](templates/EDITORIAL_WORKED_EXAMPLE.md), un storyboard con función de cada toma y corte. Es `STORYBOARD_ONLY`, no un anuncio producido.
 
