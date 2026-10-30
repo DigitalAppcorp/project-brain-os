@@ -14,7 +14,7 @@ If a Library copy disagrees with this repository, this repository wins.
 
 ## Current version
 
-**v1.4.1**
+**v1.5.0**
 
 ## Activate in a new chat
 
@@ -25,6 +25,10 @@ Use:
 For a new product:
 
 > Activa Project Brain OS desde `DigitalAppcorp/project-brain-os`. Vamos a iniciar un proyecto nuevo.
+
+## Expert review by default
+
+All work coordinated by Project Brain OS now uses [Expert Evidence Protocol](patterns/EXPERT_EVIDENCE_PROTOCOL.md): expert benchmark, primary sources, method and falsifiable/independent verification, with LIGHT / STANDARD / CRITICAL proportionality. This is a **documented operating rule**, not evidence that AI model weights changed or that results improved. Domain specialists and their permissions remain authoritative.
 
 ## Core files
 
