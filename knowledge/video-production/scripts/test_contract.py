@@ -14,7 +14,7 @@ MODULES = [
     'scripts/render_smoke.py', 'scripts/test_creative_diversity.py',
     'EDITORIAL_INTELLIGENCE.md', 'REFERENCE_CASEBOOK.md',
     'INTENT_AND_STORY_STRATEGY.md', 'ELITE_STUDIO_WORKFLOW.md',
-    'STRATEGY_REGRESSION_FIXTURES.md',
+    'STRATEGY_REGRESSION_FIXTURES.md', 'DIRECTORIAL_SCRIPT_TO_SCREEN.md',
     'templates/EDITORIAL_WORKED_EXAMPLE.md', 'scripts/test_editorial_preflight.py',
 ]
 
@@ -27,7 +27,7 @@ class TestVideoOS(unittest.TestCase):
 
     def test_skill_contract(self):
         s = (ROOT / 'SKILL.md').read_text(encoding='utf-8')
-        self.assertIn('version: 0.4.0', s)
+        self.assertIn('version: 0.5.0', s)
         for token in ('READ_ONLY_AUDIT', 'PILOT_PRODUCTION', 'NOT_VALIDATED',
                       'Marketing Brain', 'Design Intelligence OS', 'derechos',
                       'producción', 'publicar', 'presupuesto'):
@@ -55,6 +55,16 @@ class TestVideoOS(unittest.TestCase):
         for token in ('DIVERSITY_NOT_DEMONSTRATED', 'CREATIVE_FAIL', 'real product', 'ffmpeg', 'sound on', 'audience'):
             with self.subTest(token=token):
                 self.assertIn(token, c)
+
+    def test_directorial_package_gates(self):
+        d = (ROOT / 'DIRECTORIAL_SCRIPT_TO_SCREEN.md').read_text(encoding='utf-8')
+        skill = (ROOT / 'SKILL.md').read_text(encoding='utf-8')
+        for token in ('D0 STORY', 'D1 ASSET/ART', 'D2 MOTION/ACTING', 'D3 ANIMATIC',
+                      'D4 FINAL COMPOSITING', 'D5 QA', 'guion técnico',
+                      'escenario', 'licencias', 'NOT_TESTED'):
+            with self.subTest(token=token):
+                self.assertIn(token, d)
+        self.assertIn('DIRECTORIAL_SCRIPT_TO_SCREEN.md', skill)
 
     def test_privacy_and_experiment_guards(self):
         q = (ROOT / 'QUALITY_AND_RIGHTS.md').read_text(encoding='utf-8')
