@@ -39,3 +39,12 @@ Estados: `BRIEF_ONLY`, `COMP_IN_PROGRESS`, `CREATIVE_REVISE`, `CREATIVE_REJECT`,
 - **Logo source lock (B0)**: archivo oficial o referencia maestra facilitada por el PO, sin regeneración aproximada ni símbolos sustitutos; comprobar proporciones, icono/huella, espaciado, posición y contraste. La aceptación de composición nunca subsana un logo equivocado. `BRAND_REJECT` si falta.
 - **Cold-audience outcome (C0)**: con el arte delante, la respuesta espontánea a `¿Qué es PAZO? ¿Es gratis? ¿Qué hago con él?` debe ser coherente con la función REAL que se anuncia. Una mención genérica de "free pet app" puede responder categoría/precio, pero no beneficio; por eso exigir una acción específica visible o expresada. Sin usuarios externos, `COMPREHENSION_NOT_TESTED`.
 - **Feedback granular**: aprobación estética ≠ aprobación de marca ≠ comprensión de producto. Revisar cada dimensión por separado. La nota "me encantó" con "logo equivocado" se documenta como `DESIGN_LIKED / BRAND_FAIL`, no como pieza aprobada.
+
+## v0.3 — El QA se realiza ANTES de mostrar un entregable
+- Abrir los PNG/JPEG finales **de uno en uno**. El contacto sheet y las dimensiones no son inspección visual.
+- Comprobar en el render visible que cada propuesta contiene la promesa que hace. Una pieza de QR sin QR visible o sin explicación efectiva de la acción es **CREATIVE_REJECT**, incluso si el titular es correcto.
+- Contrastar material gráfico con lotes rechazados: una foto vieja recortada/colorizada sigue siendo el mismo asset; un titular nuevo no constituye variación visual sustantiva.
+- Registrar hash del archivo revisado en visual_review.inspected_sha256; si el archivo cambia después de ese examen, revisar de nuevo.
+- Ejecutar EXECUTION_PROTOCOL.md y scripts/validate_creatives.py. Fallo del verificador, imagen rechazada o ausencia de logo maestro = no hay READY_FOR_PO_REVIEW.
+- Separar sin excepciones ART_DIRECTION, BRAND, PRODUCT_TRUTH, COLD_AUDIENCE_CLARITY, PRODUCTION_QUALITY, RIGHTS y COMPREHENSION_EXTERNAL. Resultado técnico no puede elevar el estado artístico.
+- Si no es posible inspeccionar las imágenes, declarar VISUAL_NOT_TESTED y no entregar supuestos finales.
