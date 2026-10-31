@@ -1,7 +1,7 @@
 ---
 name: graphic-design-art-direction-os
-version: 0.5.0
-status: accepted-workflow-artistic-quality-must-be-verified-per-output
+version: 0.6.0
+status: probationary-after-commercial-art-direction-regression
 description: Dirección de arte, diseño gráfico, branding y creatividad publicitaria para imágenes estáticas y campañas. Independiente de UI/UX; usa Marketing Brain, Expert Evidence Protocol y QA visual de piezas reales.
 ---
 
@@ -18,6 +18,8 @@ Actúa como **director creativo, director de arte, diseñador gráfico editorial
 **Marketing Brain OS** define audiencia, objetivo, oferta, mensaje, hipótesis, métrica, riesgos y restricciones comerciales; **Copywriting/CRO** participa en el concepto visual y en la jerarquía del texto. **Brand OS** (si existe) aporta identidad verdadera sin forzar composiciones iguales. **Video OS** no se activa por defecto para una imagen estática; sus principios de intención y calidad pueden servir como referencia narrativa, no como obligación de storyboard/producción de vídeo.
 
 **Project Brain OS y `patterns/EXPERT_EVIDENCE_PROTOCOL.md`** gobiernan fuentes originales, rigor, autocrítica, versiones y evidencia. Consultar `.agents/skills/expert-evidence-review/SKILL.md`; no presentar el protocolo como modelo reentrenado ni atribuir su autoría externa sin verificación.
+
+**ALERTA DE CALIDAD v0.6:** antes de anuncios estáticos, leer [ADVERTISING_CREATIVE_PRODUCTION.md](ADVERTISING_CREATIVE_PRODUCTION.md). La colección PAZO de 10 anuncios 2026-10-30 resultó rechazada por apariencia editorial/poster, repetición y ausencia de una idea visual por pieza. El status de esta habilidad volvió a **PROBATIONARY**: tener tests PASS y un PR fusionado no demuestra nivel publicitario profesional. No repetir 10 diseños ni declarar `trained` hasta mostrar nueva producción artística distinta y aceptada.
 
 ## Orden obligatorio (no invertir)
 1. **Brief estratégico:** categoría de producto, audiencia fría, decisión deseada, oferta verdadera, canal/placement, CTA, idioma, presupuesto, disponibilidad real de assets y licencias. Si el brief no está resuelto, no generar piezas en masa.
@@ -88,3 +90,11 @@ Feedback del PO sobre tres exploraciones: la dirección fotográfica de retrato 
 **Aprobación de ruta ≠ plantilla obligatoria:** tras aprobación del PO de cuatro rutas (comercial, emocional, demostrativa, conceptual), la habilidad queda aceptada como flujo reusable, **pero cada anuncio nuevo** debe demostrar una idea y composición distinta. Mantener identidad de marca no justifica repetir layout, fotografía ni CTA visual. La aprobación del PO del proceso no equivale a conversión real en Meta.
 
 **Orden de esta campaña:** generar diez anuncios estáticos individuales, primero en español; aplicar un filtro de comprensión independiente (app gratis + una utilidad concreta), un filtro de diferencia material entre piezas, un filtro de brand master y un filtro de rigor visual. Nunca agregar badges de App Store/Play Store ni simular pantallas funcionales de PAZO. No publicar ni gastar sin autorización de campaña.
+
+## Incidente PAZO — 10 anuncios entregados como cartel editorial
+
+La habilidad ya contenía la instrucción de diversidad y el veto al estilo editorial retro, pero la producción ignoró la prohibición y terminó en titulares gigantes, rectángulos planos verde/crema, fotos de stock recortadas y listados. Se entregó un manifesto simplificado `CREATIVE_REVIEW_CANDIDATE` que **no cumple el contrato de revisión** de `validate_creatives.py` (faltan brand_registry schema v2, evidencia de revisión individual y procedencia). Se trata de un caso de **gate no ejecutado, no de un algoritmo que no pudiera detectar el problema**.
+
+**No resolver añadiendo otro prompt de generación masiva.** Usar el método «idea → escena real/conceptual → arte → copy integrado» de [ADVERTISING_CREATIVE_PRODUCTION.md](ADVERTISING_CREATIVE_PRODUCTION.md); referencias de publicidad de apps/mascotas reales, tres mecanismos visuales sustantivamente distintos y revisión adversarial antes de invertir en una serie completa. La publicidad no puede ser simplemente una portada de revista con CTA ni adoptar siempre tipografía heroica.
+
+**Freno de salida:** después de una colección rechazada, solo 2–3 micropruebas de direcciones distintas, primero con material visual nuevo; inspección real de cada imagen y reporte de razones de rechazo. El usuario no es el QA previo; no enviar lotes que ya fallarían el gate. **La aprobación de un estilo no autoriza replicarlo en las otras nueve piezas.**
