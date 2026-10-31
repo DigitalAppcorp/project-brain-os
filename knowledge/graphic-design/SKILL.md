@@ -1,6 +1,6 @@
 ---
 name: graphic-design-art-direction-os
-version: 0.1.0
+version: 0.2.0
 status: candidate-not-a-quality-certification
 description: Dirección de arte, diseño gráfico, branding y creatividad publicitaria para imágenes estáticas y campañas. Independiente de UI/UX; usa Marketing Brain, Expert Evidence Protocol y QA visual de piezas reales.
 ---
@@ -50,3 +50,12 @@ Un diseño solo alcanza `CREATIVE_REVIEW_CANDIDATE` cuando el arte visible prueb
 - `README.md`: router y ejemplos de activación.
 
 **Herencia desde 2026-10-24:** aprovecha la rama histórica `skills/diseno-grafico` y su Director de Arte UI — Pro, pero NO la integra directamente: estaba separada de main y mezclaba UI con publicidad. Esta especialidad sustituye esa autoridad creativa para piezas gráficas; la vieja rama queda como referencia histórica.
+
+## Aprendizaje explícito — validación PAZO 30-oct-2026 (v0.2)
+Feedback del PO sobre tres exploraciones: la dirección fotográfica de retrato editorial recibió aceptación visual condicional, **pero el logotipo fue incorrecto**; la dirección de collage recibió feedback favorable sobre apariencia, **pero falló la comprensión de la oferta para audiencia fría**. No generalizar una aprobación visual a todo el anuncio. Registrar como dos ejes independientes: `ART_DIRECTION_ACCEPTED_CONDITIONALLY`, `BRAND_ASSET_FAIL`, `COLD_AUDIENCE_MESSAGE_FAIL`.
+
+**Logo lock obligatorio**: obtener el lockup oficial autorizado como asset original (no dibujarlo, generarlo por aproximación, sustituirlo por una huella genérica ni reconstruirlo desde memoria). Para PAZO, el PO entregó una imagen de referencia del wordmark oficial; recuperar y usar el vector/asset maestro cuando esté disponible, o usar la referencia exacta en composición verificando calidad. Nunca declarar `BRAND_PASS` si se genera un wordmark parecido. Si solo hay una captura pequeña, declarar el problema de resolución y no certificar el resultado final.
+
+**Comprensión externa primero**: además de afirmar "free pet app", una persona nueva debe poder nombrar una **acción real específica**, por ejemplo "crear un perfil de mascota", "preparar y compartir un pasaporte QR" o "guardar citas/cuidados". El título "peace of mind" y los iconos de QR, mapa o campana por sí solos NO describen el producto. En un anuncio de descubrimiento, ofrecer categoría + una acción concreta + gratuidad, sin abrumar de funciones. No diseñar CTA dibujado como sustituto del enlace real de Meta.
+
+**Aprendizaje sin sobreajuste**: preservar la energía tipográfica del concepto aceptado; mejorar identidad gráfica y claridad sin convertir todo el portafolio en ese layout. UI no debe dominar publicidad, pero un recurso de UI auténtica puede demostrar una acción cuando lo requiera el mensaje. Separa `VISUAL_LIKE`, `FACTUAL_PASS`, `BRAND_PASS`, `COMPREHENSION_TESTED` y `PAID_RESULT`.
