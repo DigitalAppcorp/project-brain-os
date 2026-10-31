@@ -1,0 +1,36 @@
+# Graphic Design OS — quality gate verificable
+
+La calidad visual se decide ante el **arte final real**. Un doc sin diseño o un archivo raster técnicamente válido no pueden ser `CREATIVE_PASS`.
+
+## Vetos sin ponderación (fallo automático)
+1. **Mensaje falso**: beneficio, precio, identidad, datos, disponible en tiendas, testimonios o pantallas inventadas.
+2. **Formato incumplido**: cantidad, relación de aspecto, archivos individuales, idiomas o formato solicitado incorrectos.
+3. **Falta de distintividad de la serie**: diez piezas basadas en la misma estructura y retrato con solo cambios cosméticos, cuando se solicitó exploración de conceptos.
+4. **Incomprensible en contexto**: no se entiende qué es el producto, para quién o qué ofrece en el tiempo/placement del brief.
+5. **Mala producción**: texto cortado/incorrecto, imagen borrosa, recortes defectuosos, logos alterados, licencias no resueltas, máscara o montaje falso en material presentado como realidad.
+6. **Falsa auditoría**: `PASS` declarado sin inspección de cada archivo final. No fabricar entrevistas ni revisión externa.
+
+## Evaluación de oficio (rúbrica orientativa, no un score mágico)
+- 20: **Idea visual propia**. ¿La imagen expresa un insight, tensión, gesto o metáfora, no solo una foto simpática?
+- 20: **Claridad comercial**. Categoría, promesa y rol de marca comprensibles sin contexto previo.
+- 15: **Composición y dirección de mirada**. Foco, encuadre, escala, ritmo, espacio negativo y relación sujeto/texto deliberados.
+- 15: **Tipografía y copy visual**. Titular, legibilidad, espaciado, fraseo y jerarquía elegidos para el arte.
+- 10: **Calidad y autenticidad de imagen**. Fotografía/ilustración/retocado consistente y sin detalles generativos defectuosos.
+- 10: **Identidad y singularidad**. Reconocible como marca sin convertir cada pieza en su clon.
+- 10: **Ejecución y contexto**. Crop, tamaño, accesibilidad, licencias, salida, CTA/placement correctos.
+
+Los puntos son guías para discusión; `85+` no autoriza nada si hay veto. No afirmar revisión independiente si solo hubo autocrítica de un agente.
+
+## Cinco revisiones observables
+**1. Miniatura**: abrir el final a un tamaño comparable al teléfono; lectura visual en un segundo y comprensión candidata en tres.
+**2. Arte pleno**: mirar cada pieza individualmente, no solo un contact sheet. Revisar texturas, recortes, puntuación, calidad fotográfica, logotipo y bordes.
+**3. Comparación de serie**: colocarlas juntas. Medir repetición de composición, fotografías, titulares y recursos; explicar diferencias visibles. Si parece una pantalla de dashboard repetida, `REJECT`.
+**4. Test externo a ciegas**: mostrar la imagen sin explicar la tarea. Preguntas: "¿Qué se anuncia?", "¿Es gratis?", "¿Qué puedes hacer?", "¿Dónde actuarías?". Respuestas observadas con tamaño de muestra y limitaciones; si no se realizó, `NOT_TESTED`.
+**5. Comprobación factual y de derechos**: referencia real de cada claim, revisión de los assets y reglas del placement. Sin autorización de publicación/gasto por elaborar la pieza.
+
+## Protocolo de resultado
+Por imagen: `ID | idea | archivo | formato | factual | visual | derechos | comprensión externa | veto | estado | cambios`.
+
+Estados: `BRIEF_ONLY`, `COMP_IN_PROGRESS`, `CREATIVE_REVISE`, `CREATIVE_REJECT`, `CREATIVE_REVIEW_CANDIDATE`, `RIGHTS_PENDING`, `READY_FOR_PO_REVIEW`, `APPROVED_FOR_PUBLICATION`, `PERFORMANCE_MEASURED`.
+
+**No confundir:** buena estética =/ conversión; satisfacción del Product Owner =/ respuesta de audiencia; contrato escrito =/ capacidad artística entrenada. Exigir evidencia posterior para modificar heurísticas.
