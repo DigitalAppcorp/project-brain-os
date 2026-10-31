@@ -46,3 +46,14 @@ Si el arte no muestra ninguna acción del producto, una pieza falla aunque diga 
 4. Decisión explícita de integración del PO.
 
 Mientras los tres nuevos pilotos no lo demuestren: DOCUMENTED_AND_GATED, NOT_ARTISTICALLY_VALIDATED. No crear otra serie de diez.
+
+
+## v0.4 — Identidad antes de composición
+
+**Nuevo paso obligatorio dentro de ASSET_PREFLIGHT:** cargar y validar [BRAND_ASSET_AUTHORITY.md](BRAND_ASSET_AUTHORITY.md). Cuando exista contradicción entre identidad histórica y la referencia que el propietario llamó oficial, bloquear `BRAND_PASS`, sin inferir que el logo original histórico es el vigente.
+
+Migración del manifesto: `schema_version: 2` y `brand_registry` adicional con `brand_id`, `active_version`, `status=verified_active`, `authoritative_asset_id`, `master_asset`, `master_sha256`, `approval_authority`, `approval_evidence`, `usage_variant`, `conflict_resolution=not_applicable|resolved_by_owner`, `verified_against_latest_owner_feedback=true`. Cada objeto creative.brand incorpora `brand_id`, `active_version` y `usage_variant` idénticos al registro. Un arte con otro lockup queda rechazado aunque su hash sea consistente con algún archivo antiguo.
+
+No falsificar `status`, `approval_evidence` ni la resolución del propietario para superar un gate automático. Estos campos son **declaraciones revisables**, no verificación criptográfica de autoridad.
+
+**Preservación del arte aprobado:** cuando el único fallo del anuncio sea la marca, mantener fotografía, mensaje, composición y tono aprobados; hacer composición del logo maestro auténtico como capa independiente y comparar las imágenes antes/después. No convertir un defecto puntual de branding en un rediseño editorial sin encargo.
