@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Fail-closed evidence preflight for static creative packs.
 
-Checks file existence, SHA, PNG/JPEG dimensions, declared image provenance,
+Checks file existence, SHA, PNG/JPEG dimensions, versioned brand authority and declared provenance,
 portfolio differentiation, image-by-image inspection and stage approval.
 DOES NOT automatically verify aesthetics, visible copy, exact logo shape,
 copyright permissions or actual audience comprehension.
@@ -68,8 +68,27 @@ def validate(m: dict, root: Path, target: str = "review") -> list[str]:
     add = problems.append
     if target not in {"review", "publish"}:
         return ["invalid target"]
-    if m.get("schema_version") != 1:
-        add("schema_version must be 1")
+    if m.get("schema_version") != 2:
+        add("schema_version must be 2 (explicit brand authority contract)")
+    registry = m.get("brand_registry")
+    if not isinstance(registry, dict):
+        add("brand registry required before artwork review")
+        registry = {}
+    if registry.get("status") != "verified_active":
+        add("brand registry status must be verified_active (historical is not current)")
+    if registry.get("conflict_resolution") not in {"not_applicable", "resolved_by_owner"}:
+        add("brand identity conflict unresolved: obtain owner resolution")
+    if registry.get("verified_against_latest_owner_feedback") is not True:
+        add("brand identity must be checked against latest owner feedback")
+    for required in ("brand_id", "active_version", "authoritative_asset_id",
+                     "approval_authority", "approval_evidence", "usage_variant"):
+        if not isinstance(registry.get(required), str) or len(registry[required].strip()) < 4:
+            add("brand registry missing documented " + required)
+    registry_asset = safe_file(root, registry.get("master_asset"))
+    if registry_asset is None:
+        add("brand registry missing source master_asset")
+    elif sha256(registry_asset) != registry.get("master_sha256"):
+        add("brand registry master SHA does not match source file")
     qty, arts = m.get("requested_count"), m.get("creatives")
     if not isinstance(arts, list) or not isinstance(qty, int) or qty < 1 or len(arts) != qty:
         return problems + ["requested_count must equal individual creative files (contact sheet does not count)"]
@@ -116,7 +135,15 @@ def validate(m: dict, root: Path, target: str = "review") -> list[str]:
         if art.get("fictitious_interface") is not False or art.get("unverified_claims") is not False:
             add(f"{name}: fictitious UI or claims not explicitly ruled out")
         brand = art.get("brand", {})
-        logo = safe_file(root, brand.get("master_asset")) if isinstance(brand, dict) else None
+        if not isinstance(brand, dict):
+            brand = {}
+        if (brand.get("brand_id") != registry.get("brand_id") or
+            brand.get("active_version") != registry.get("active_version") or
+            brand.get("usage_variant") != registry.get("usage_variant") or
+            brand.get("master_asset") != registry.get("master_asset") or
+            brand.get("master_sha256") != registry.get("master_sha256")):
+            add(f"{name}: creative logo differs from active brand registry")
+        logo = safe_file(root, brand.get("master_asset"))
         if not logo:
             add(f"{name}: missing official logo master asset")
         elif sha256(logo) != brand.get("master_sha256"):
