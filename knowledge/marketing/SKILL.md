@@ -54,3 +54,8 @@ Los experimentos de validación del producto respetan los Gates 1–9, seguridad
 
 ## Recuperación de otro chat
 No deducir estado de campañas ni ventas desde este repositorio. Leer handoff del negocio, rama y fuente primaria. Si no hay datos, decir "sin medición verificada". Para nuevas reglas, abrir cambio limitado en `knowledge/marketing/`, actualizar fuentes y [MAINTENANCE.md](MAINTENANCE.md).
+
+
+## Dirección creativa gráfica (enrutamiento)
+
+Para **anuncios de imagen estática**, activar [Graphic Design & Art Direction OS](../graphic-design/SKILL.md) como autoridad visual junto a este módulo como autoridad de estrategia, copy/oferta y evaluación de resultados. Planificar primero mensaje, audiencia y propuesta; construir concepto de copy+arte; auditar la imagen real con su quality gate. UI/UX asesora claridad y representación fiel de producto; no convertir el anuncio en una interfaz. Mantener distinta la aprobación artística de los resultados pagados observados y de la autorización de gasto.

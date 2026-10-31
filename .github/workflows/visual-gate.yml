@@ -15,3 +15,4 @@ jobs:
       - run: python -X utf8 -B knowledge/video-production/scripts/test_contract.py
       - run: python -X utf8 -B knowledge/video-production/scripts/test_creative_diversity.py
       - run: python -X utf8 -B knowledge/video-production/scripts/test_editorial_preflight.py
+      - run: python -X utf8 -B knowledge/graphic-design/scripts/test_validate_creatives.py

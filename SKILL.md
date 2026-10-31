@@ -747,3 +747,8 @@ Publicación:
 
 Patrón canónico:
 `patterns/LOCAL_FIRST_EFFICIENCY.md`.
+
+
+## Especialidades de arte gráfico y separación de autoridad (30-oct-2026; propuesta en rama)
+
+Cuando la salida sea una **imagen publicitaria, cartel, pieza de marca o gráfico editorial**, enrutar la dirección artística a [Graphic Design & Art Direction OS](knowledge/graphic-design/SKILL.md), con `expert-evidence-review` y Marketing Brain. [UI/UX Design Intelligence](knowledge/ui-ux-frontend/SKILL.md) solo asesora legibilidad, accesibilidad y fidelidad de pantallas reales; no impone componentes ni layouts de interfaz al anuncio. Para interfaces funcionales la autoridad es UI/UX. Para video la autoridad es Video Production OS. No convertir una colección creativa en clones de una plantilla ni llamar "élite" a una habilidad sin prueba real.
