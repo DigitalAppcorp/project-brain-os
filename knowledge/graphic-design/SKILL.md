@@ -1,6 +1,6 @@
 ---
 name: graphic-design-art-direction-os
-version: 0.2.0
+version: 0.3.0
 status: candidate-not-a-quality-certification
 description: Dirección de arte, diseño gráfico, branding y creatividad publicitaria para imágenes estáticas y campañas. Independiente de UI/UX; usa Marketing Brain, Expert Evidence Protocol y QA visual de piezas reales.
 ---
@@ -59,3 +59,13 @@ Feedback del PO sobre tres exploraciones: la dirección fotográfica de retrato 
 **Comprensión externa primero**: además de afirmar "free pet app", una persona nueva debe poder nombrar una **acción real específica**, por ejemplo "crear un perfil de mascota", "preparar y compartir un pasaporte QR" o "guardar citas/cuidados". El título "peace of mind" y los iconos de QR, mapa o campana por sí solos NO describen el producto. En un anuncio de descubrimiento, ofrecer categoría + una acción concreta + gratuidad, sin abrumar de funciones. No diseñar CTA dibujado como sustituto del enlace real de Meta.
 
 **Aprendizaje sin sobreajuste**: preservar la energía tipográfica del concepto aceptado; mejorar identidad gráfica y claridad sin convertir todo el portafolio en ese layout. UI no debe dominar publicidad, pero un recurso de UI auténtica puede demostrar una acción cuando lo requiera el mensaje. Separa `VISUAL_LIKE`, `FACTUAL_PASS`, `BRAND_PASS`, `COMPREHENSION_TESTED` y `PAID_RESULT`.
+
+## v0.3 — Bloqueo de entrega y prueba ejecutable (corrección principal)
+
+**Obligatorio: consultar y ejecutar [EXECUTION_PROTOCOL.md](EXECUTION_PROTOCOL.md) para toda producción de publicidad estática.** Los pasos de este SKILL no son una recomendación opcional: siguen la cadena ASSET_PREFLIGHT → PRODUCE → LOOK → CHALLENGE → EVIDENCE_CHECK → REVIEW_CANDIDATE. Nunca entregar una imagen que ya tenga fallo crítico conocido. El QA debe inspeccionar la imagen final, no el prompt, miniaturas de la hoja de contacto o una justificación textual.
+
+**Contradicción obligatoria:** si se generaron tres imágenes y son tres variantes de una plantilla, si dos reciclan la misma foto, si el supuesto QR no se ve, si se escaló un logo de baja calidad o si el veredicto visual es REJECT, prohibido declararlas listas aunque el formato exporte. El agente debe corregir primero o comunicar el bloqueo, no poner al PO a auditar lo que debía rechazarse antes de la entrega.
+
+**Automatización responsable:** ejecutar [scripts/validate_creatives.py](scripts/validate_creatives.py) con un manifest que incluya el SHA de cada imagen real, fuentes de fotografías, logo maestro y revisión individual vinculada a los bytes actuales. Ejecutar [scripts/test_validate_creatives.py](scripts/test_validate_creatives.py) para los casos de regresión. El script solo comprueba consistencia y evidencia declarada, no belleza, calidad de mensaje, logo incrustado ni licencia real. No transformar un PASS técnico en un Creative PASS.
+
+**No repetir producción sin diagnóstico:** ante un rechazo conservar las razones, revisar assets / dirección / método y probar el cambio mínimo; no generar otra tanda sin diferencia material. El aprendizaje de la habilidad es un cambio auditable del proceso, no modificación de pesos del modelo.
