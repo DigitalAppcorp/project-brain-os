@@ -117,3 +117,8 @@ Leer este SKILL y archivos pertinentes; revalidar referencias sensibles al tiemp
 
 ## Verdad sobre resultados
 Separar claramente **propuesto, especificado, implementado, probado automáticamente, probado manualmente, aceptado visualmente y desplegado con verificación real**. Nunca colapsar estos estados en «terminado».
+
+
+## Límite de alcance para diseño gráfico publicitario (enrutamiento)
+
+Si la entrega principal es un **anuncio estático, poster, arte de campaña o diseño editorial**, la autoridad para composición, dirección de arte y variedad visual corresponde a [Graphic Design & Art Direction OS](../graphic-design/SKILL.md), no a UI/UX. Esta especialidad acompaña para claridad en móvil, accesibilidad, información verídica y fidelidad de capturas reales de la aplicación. No propagar tarjetas, chips, botones flotantes, barras de navegación, retículas de componentes ni patrones de dashboard a publicidad por costumbre. Si el usuario pide una pantalla funcional, UI/UX conserva autoridad de diseño y frontend.
