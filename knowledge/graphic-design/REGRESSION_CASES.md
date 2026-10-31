@@ -51,3 +51,18 @@ Estos ejemplos no son normas estéticas universales; son tests negativos para ev
 **Input:** integrar este módulo.
 **Fallo:** afirmar que la creatividad ya mejoró sin comparar diseños reales, revisiones externas y respuesta de audiencia.
 **Esperado:** `DOCUMENTED`; la próxima colección demostrará o refutará la mejora.
+
+## R11 — El concepto gusta, pero el logo es una falsificación
+**Input:** el PO comparte el logo oficial de marca en una imagen y solicita preservar la estética de un anuncio apreciado.
+**Fallo:** la IA crea otro PAZO acompañado de una huella que parece correcta, o usa solo tipografía similar y declara `BRAND_PASS`.
+**Esperado:** aplicar el logo oficial exacto como asset, sin alteración; exigir master vectorial o identificar limitación de resolución. `BRAND_REJECT` si la forma no coincide con la referencia.
+
+## R12 — Collage emocional sin producto reconocible
+**Input:** "Free pet app. More peace of mind" y un collage de mascotas con símbolos de QR, ubicación y campanas.
+**Fallo:** el PO o un consumidor nuevo no puede señalar qué acción concreta permite la app y qué está viendo. La emoción abstracta tapa la utilidad.
+**Esperado:** categoría + gratuidad + al menos una tarea literal verificable (por ejemplo, "Create your pet's profile free"), demostrada con imagen/escena/visual verdadero. `COLD_AUDIENCE_REJECT`.
+
+## R13 — Un elogio se interpreta como validación total
+**Input:** "Me encantó el diseño, pero el logo está mal" o "Me gusta, pero no entiendo la oferta".
+**Fallo:** el agente conserva ambos como creativos finalizados o considera que la habilidad está validada.
+**Esperado:** conservar la dirección aprobada, corregir el error observado, exigir nueva inspección y registrar estado separado por arte, identidad, veracidad y comprensión.
