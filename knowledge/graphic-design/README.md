@@ -17,3 +17,6 @@ El 24-oct-2026 se preparó `skills/diseno-grafico` con `knowledge/diseno-grafico
 
 ## Requisito de prueba
 Antes de llamar "mejora" a la habilidad, producir y comparar 2–3 diseños con estilos materialmente distintos frente a una baseline, revisar original/alternativas a tamaño de feed, hacer prueba ciega de comprensión y registrar rechazos. Nunca repetir una tanda de 10 desde una sola plantilla.
+
+## Corrección de cierre de calidad v0.3
+Antes de entregar cualquier creatividad estática, leer [EXECUTION_PROTOCOL.md](EXECUTION_PROTOCOL.md) y ejecutar el validador de evidencia. Ejemplos de fallos: archivos reciclados, promesa visual ausente, falsificación del logo, misma plantilla y ausencia de revisión individual. La autoridad de la habilidad no sustituye la inspección artística real ni la verificación por usuarios nuevos.
