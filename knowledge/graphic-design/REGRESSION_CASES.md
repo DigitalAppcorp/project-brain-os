@@ -66,3 +66,9 @@ Estos ejemplos no son normas estéticas universales; son tests negativos para ev
 **Input:** "Me encantó el diseño, pero el logo está mal" o "Me gusta, pero no entiendo la oferta".
 **Fallo:** el agente conserva ambos como creativos finalizados o considera que la habilidad está validada.
 **Esperado:** conservar la dirección aprobada, corregir el error observado, exigir nueva inspección y registrar estado separado por arte, identidad, veracidad y comprensión.
+
+## R14 — Entregar primero y admitir el fallo después
+**Input:** se piden tres pilotos para demostrar una habilidad. El agente escribe un excelente QA, genera tres piezas, pero no abre individualmente los finales; entrega enlaces y después descubre foto reciclada, logo borroso y un QR invisible.
+**Fallo:** el usuario absorbe el costo de la revisión que correspondía al agente.
+**Esperado:** LOOK + CHALLENGE + EVIDENCE_CHECK aplicados al archivo FINAL antes de entrega. Si falla cualquier pieza, CREATIVE_REJECT con evidencia y corrección interna. El sistema no presenta un lote deficiente como revisión exitosa; si no se logra corregirlo, informa el bloqueo.
+**Prueba automática:** un hash de revisión distinto al del archivo final, recursos reutilizados, layout repetido o revisión negativa deben producir EVIDENCE_GATE_REJECT. La estética en sí se evalúa visualmente, fuera del script.
