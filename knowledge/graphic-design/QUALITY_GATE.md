@@ -34,3 +34,8 @@ Por imagen: `ID | idea | archivo | formato | factual | visual | derechos | compr
 Estados: `BRIEF_ONLY`, `COMP_IN_PROGRESS`, `CREATIVE_REVISE`, `CREATIVE_REJECT`, `CREATIVE_REVIEW_CANDIDATE`, `RIGHTS_PENDING`, `READY_FOR_PO_REVIEW`, `APPROVED_FOR_PUBLICATION`, `PERFORMANCE_MEASURED`.
 
 **No confundir:** buena estética =/ conversión; satisfacción del Product Owner =/ respuesta de audiencia; contrato escrito =/ capacidad artística entrenada. Exigir evidencia posterior para modificar heurísticas.
+
+## Gate adicional v0.2 — Identidad y comprensión
+- **Logo source lock (B0)**: archivo oficial o referencia maestra facilitada por el PO, sin regeneración aproximada ni símbolos sustitutos; comprobar proporciones, icono/huella, espaciado, posición y contraste. La aceptación de composición nunca subsana un logo equivocado. `BRAND_REJECT` si falta.
+- **Cold-audience outcome (C0)**: con el arte delante, la respuesta espontánea a `¿Qué es PAZO? ¿Es gratis? ¿Qué hago con él?` debe ser coherente con la función REAL que se anuncia. Una mención genérica de "free pet app" puede responder categoría/precio, pero no beneficio; por eso exigir una acción específica visible o expresada. Sin usuarios externos, `COMPREHENSION_NOT_TESTED`.
+- **Feedback granular**: aprobación estética ≠ aprobación de marca ≠ comprensión de producto. Revisar cada dimensión por separado. La nota "me encantó" con "logo equivocado" se documenta como `DESIGN_LIKED / BRAND_FAIL`, no como pieza aprobada.
