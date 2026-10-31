@@ -40,7 +40,7 @@ Para un lote publicable:
 Si el arte no muestra ninguna acción del producto, una pieza falla aunque diga Free Pet App, aunque tenga buen color y aunque tenga un informe de 100 puntos. La validación de calidad artística sigue siendo un examen de imagen verdadera, no un score administrativo.
 
 ## Puerta para integrar en main
-1. Pruebas de regresión técnicas (15) en GitHub CI.
+1. Pruebas de regresión técnicas (21) en GitHub CI.
 2. Tres nuevas ejecuciones que usen activos distintos y logo maestro verificable, contrastadas con el lote fallido.
 3. Inspección visual individual y prueba de comprensión externa documentada si se anuncia como apta para campaña.
 4. Decisión explícita de integración del PO.
