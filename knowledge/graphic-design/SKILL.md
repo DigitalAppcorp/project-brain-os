@@ -1,6 +1,6 @@
 ---
 name: graphic-design-art-direction-os
-version: 0.3.0
+version: 0.4.0
 status: candidate-not-a-quality-certification
 description: Dirección de arte, diseño gráfico, branding y creatividad publicitaria para imágenes estáticas y campañas. Independiente de UI/UX; usa Marketing Brain, Expert Evidence Protocol y QA visual de piezas reales.
 ---
@@ -69,3 +69,14 @@ Feedback del PO sobre tres exploraciones: la dirección fotográfica de retrato 
 **Automatización responsable:** ejecutar [scripts/validate_creatives.py](scripts/validate_creatives.py) con un manifest que incluya el SHA de cada imagen real, fuentes de fotografías, logo maestro y revisión individual vinculada a los bytes actuales. Ejecutar [scripts/test_validate_creatives.py](scripts/test_validate_creatives.py) para los casos de regresión. El script solo comprueba consistencia y evidencia declarada, no belleza, calidad de mensaje, logo incrustado ni licencia real. No transformar un PASS técnico en un Creative PASS.
 
 **No repetir producción sin diagnóstico:** ante un rechazo conservar las razones, revisar assets / dirección / método y probar el cambio mínimo; no generar otra tanda sin diferencia material. El aprendizaje de la habilidad es un cambio auditable del proceso, no modificación de pesos del modelo.
+
+
+## v0.4 — Control de identidad vigente y preservación de aciertos creativos
+
+**Leer [BRAND_ASSET_AUTHORITY.md](BRAND_ASSET_AUTHORITY.md) antes de resolver cualquier marca con logos históricos y actuales.** Un vector antiguo puede ser auténtico y estar desactualizado. La prueba de antigüedad NO es prueba de vigencia. Si el PO denomina oficial otra versión, marcar `BRAND_IDENTITY_CONFLICT` y no seleccionar una por apariencia. Cualquier marca generada de memoria queda prohibida como lockup definitivo.
+
+**Preproducción con marca verificada:** consultar el registro de identidad del cliente y comprobar aprobación/versiones. Si la autoridad está en conflicto, se pueden estudiar composiciones sin logo pero NO publicar ni certificar BRAND_PASS. Para aplicar a anuncios existentes, hacer primero una sustitución de logo aislada si el estilo fue aceptado; no rehacer fotografías, copy y jerarquía porque el defecto es únicamente de marca.
+
+**Aprendizaje del feedback PAZO:** conservar condicionalmente fotografía alegre de mascotas, verde oscuro/lima, contraste fuerte, tipografía contundente y vibra publicitaria contemporánea aprobada. Rechazado: estética editorial antigua de novela/libro, fría o impersonal; falsos mockups y explicación vaga. Estas preferencias son **contextuales PAZO**, no un estilo global predeterminado para otras marcas.
+
+**Validador v0.4:** schema_version=2 obliga `brand_registry` con evidencia de autoridad vigente y verificación de conflictos. Un logo correcto solo por SHA de un archivo del pasado NO cumple. Los tests automáticos cubren la integridad declarada, pero la revisión visual y la autoridad real siguen requiriendo verificación humana/PO.
