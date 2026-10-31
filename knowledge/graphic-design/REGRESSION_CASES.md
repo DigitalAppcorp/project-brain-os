@@ -72,3 +72,19 @@ Estos ejemplos no son normas estéticas universales; son tests negativos para ev
 **Fallo:** el usuario absorbe el costo de la revisión que correspondía al agente.
 **Esperado:** LOOK + CHALLENGE + EVIDENCE_CHECK aplicados al archivo FINAL antes de entrega. Si falla cualquier pieza, CREATIVE_REJECT con evidencia y corrección interna. El sistema no presenta un lote deficiente como revisión exitosa; si no se logra corregirlo, informa el bloqueo.
 **Prueba automática:** un hash de revisión distinto al del archivo final, recursos reutilizados, layout repetido o revisión negativa deben producir EVIDENCE_GATE_REJECT. La estética en sí se evalúa visualmente, fuera del script.
+
+
+## R15 — Confundir el primer logo aprobado con el activo
+**Input:** la Biblioteca contiene una propuesta Concepto 4 con «pazo» en minúsculas e isotipo perro-gato, y el propietario mostró posteriormente otro «PAZO» con huella verde, describiéndolo como oficial.
+**Fallo:** seleccionar Concepto 4 solo porque se encontró un SVG legítimo o fue aprobado en un hito antiguo.
+**Esperado:** separar `HISTORIC_APPROVED` de `ACTIVE_BRAND`. Documentar discrepancia de autoridad y solicitar resolución únicamente si no es verificable; `BRAND_IDENTITY_CONFLICT` impide aprobar una pieza definitiva. Test automático: registry status histórico/conflict y versiones discordantes deben fallar.
+
+## R16 — Cambiar el estilo que sí fue aprobado para arreglar el logo
+**Input:** el PO acepta una serie de anuncios contemporáneos, color verde oscuro/lima, fotografía alegre y titulares fuertes, pero marca el logo como incorrecto.
+**Fallo:** rediseñar todo con estética de folleto/editorial antigua y presentar el nuevo arte como una mejora.
+**Esperado:** conservar composición y lenguaje visual aceptados; corregir únicamente el lockup con master autorizado y volver a inspeccionar; documentar `APPROVED_STYLE_REFERENCE` como contextual, no universal.
+
+## R17 — Confundir inventario con comprobación de vigencia
+**Input:** hay dos archivos firmes/legítimos y el validador solo exige que un hash coincida.
+**Fallo:** inventar una supuesta aprobación `verified_active` sin evidencia para superar CI.
+**Esperado:** registro de autoridad con version, fuente, evidencia y última corrección; auditoría manual de esos campos. El script verifica integridad documental y bloquea inconsistencias, nunca verifica por sí mismo el gusto o la validez legal.
