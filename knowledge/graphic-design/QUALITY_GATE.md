@@ -48,3 +48,11 @@ Estados: `BRIEF_ONLY`, `COMP_IN_PROGRESS`, `CREATIVE_REVISE`, `CREATIVE_REJECT`,
 - Ejecutar EXECUTION_PROTOCOL.md y scripts/validate_creatives.py. Fallo del verificador, imagen rechazada o ausencia de logo maestro = no hay READY_FOR_PO_REVIEW.
 - Separar sin excepciones ART_DIRECTION, BRAND, PRODUCT_TRUTH, COLD_AUDIENCE_CLARITY, PRODUCTION_QUALITY, RIGHTS y COMPREHENSION_EXTERNAL. Resultado técnico no puede elevar el estado artístico.
 - Si no es posible inspeccionar las imágenes, declarar VISUAL_NOT_TESTED y no entregar supuestos finales.
+
+
+## v0.4 — Veto por identidad equivocada
+**B1 BRAND_AUTHORITY:** además de validar hash, verificar que la **versión activa autorizada** es la que se utilizará en esta campaña; una propuesta histórica o un splash existente no bastan si contradicen instrucciones recientes de identidad. Si existen dos logos con aprobaciones ambiguas, `BRAND_IDENTITY_CONFLICT` y no `BRAND_PASS`.
+
+**G1 PRESERVE_APPROVED_ART:** cuando el PO acepta una estética pero rechaza solo el logo, conservar la estética y sustituir el logo, no generar otro estilo arbitrario. Revisar fidelidad de color, tamaño, nitidez, posición y contraste del logo original.
+
+**P1 PAZO CONTEXT:** no volver a estética editorial literaria/retro como estilo base de PAZO: hay preferencia explícita por una campaña contemporánea, fuerte, alegre y clara. No confundir eso con que todas las composiciones deban ser clones.
