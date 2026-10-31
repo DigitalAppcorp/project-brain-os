@@ -45,3 +45,8 @@ Cada pieza publicitaria debe tener una **frase identificadora de categoría** co
 
 ## Roles, aprobaciones y fuentes
 Marketing decide objetivo, segmentación, presupuesto e hipótesis. Dirección de arte decide lenguaje visual. Copy y arte cocrean mensaje y jerarquía. UI/UX audita claridad/accesibilidad y fidelidad de captura cuando corresponda. Brain OS comprueba evidencia, derechos, autoridad y permiso. Ni el mismo modelo revisándose dos veces ni la aprobación emocional del PO prueban rendimiento de audiencia.
+
+## Iteración guiada por feedback del cliente (v0.2)
+Clasificar el comentario en dimensiones independientes: (1) composición/estética; (2) marca/asset exacto; (3) categoría y mensaje; (4) producto real; (5) formato/entrega; (6) resultado de audiencia. Si un anuncio gustó visualmente pero falló por logo, **conservar su composición y corregir el logo**. Si otro gustó estéticamente pero fue incomprensible, conservar la exploración formal y rehacer la propuesta y prueba visual del beneficio: no sustituirlo con otro collage igualmente abstracto.
+
+En cada nuevo piloto registrar dos pruebas: `BRAND_SOURCE_MATCH` y `SINGLE_SPECIFIC_USE_CASE`. Revisar el anuncio sin el texto externo de Meta; el usuario debe poder comprender qué se ofrece solo con lo visible. La claridad no exige que todos los anuncios repitan la misma gramática de UI. Reconocer si todavía falta la fuente oficial del logo; no inventarlo.
