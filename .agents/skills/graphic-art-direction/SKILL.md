@@ -11,3 +11,7 @@ Antes de diseñar anuncios o piezas gráficas, lee [módulo canónico](../../../
 
 ## Gate no eludible para entregas
 **Obligatorio** abrir [EXECUTION_PROTOCOL](../../../knowledge/graphic-design/EXECUTION_PROTOCOL.md), inspeccionar las imágenes finales individualmente y ejecutar [evidence gate](../../../knowledge/graphic-design/scripts/validate_creatives.py) antes de declarar READY_FOR_PO_REVIEW. Un creative FAIL bloquea la entrega como material listo. Un script PASS no valida la calidad estética.
+
+
+## Identidad verificada y aprendizaje v0.4
+Leer [BRAND_ASSET_AUTHORITY](../../../knowledge/graphic-design/BRAND_ASSET_AUTHORITY.md) antes del render final. No usar logos auténticos históricos como vigentes sin prueba; bloquea ante conflicto entre versiones aprobadas. Preservar composición visual aprobada cuando solo hay que corregir identidad. Manifest schema_version=2.
