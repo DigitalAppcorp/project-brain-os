@@ -48,7 +48,9 @@ class EvidenceGateTests(unittest.TestCase):
                 "visual_rhetoric": rhetoric, "category_in_art": True,
                 "free_claim_in_art": True, "specific_action_in_art": True,
                 "fictitious_interface": False, "unverified_claims": False,
-                "brand": {"master_asset": "logo.png", "master_sha256": logo_hash,
+                "brand": {"brand_id": "pazo", "active_version": "logo-v-current",
+                          "usage_variant": "dark-ground-white-wordmark",
+                          "master_asset": "logo.png", "master_sha256": logo_hash,
                           "exact_asset_composited": True, "visual_match_checked": True},
                 "visual_review": {
                     "inspected_sha256": digest, "result": "PASS",
@@ -59,9 +61,19 @@ class EvidenceGateTests(unittest.TestCase):
                 "blind_comprehension": {"status": "NOT_TESTED"},
                 "rights_verified": False, "owner_approved": False,
             })
-        self.m = {"schema_version": 1, "requested_count": 3,
+        self.m = {"schema_version": 2, "requested_count": 3,
                   "prior_inventory_checked": True, "prior_asset_ids": ["old-photo-1"],
-                  "creatives": arts}
+                  "brand_registry": {
+                      "brand_id": "pazo", "active_version": "logo-v-current",
+                      "status": "verified_active",
+                      "authoritative_asset_id": "verified-library-master-asset",
+                      "master_asset": "logo.png", "master_sha256": logo_hash,
+                      "approval_authority": "product-owner",
+                      "approval_evidence": "recorded-decision-from-owner",
+                      "usage_variant": "dark-ground-white-wordmark",
+                      "conflict_resolution": "resolved_by_owner",
+                      "verified_against_latest_owner_feedback": True,
+                  }, "creatives": arts}
 
     def problems(self, target="review"):
         return mod.validate(self.m, self.root, target)
@@ -130,6 +142,30 @@ class EvidenceGateTests(unittest.TestCase):
     def test_no_prior_inventory_rejected(self):
         self.m["prior_inventory_checked"] = False
         self.expect("prior asset inventory")
+
+    def test_historical_logo_is_not_active_brand(self):
+        self.m["brand_registry"]["status"] = "historical"
+        self.expect("historical is not current")
+
+    def test_unresolved_brand_identity_conflict_blocks_all(self):
+        self.m["brand_registry"]["conflict_resolution"] = "unresolved"
+        self.expect("brand identity conflict unresolved")
+
+    def test_newer_owner_feedback_not_verified(self):
+        self.m["brand_registry"]["verified_against_latest_owner_feedback"] = False
+        self.expect("latest owner feedback")
+
+    def test_creative_points_to_historical_logo_version(self):
+        self.m["creatives"][0]["brand"]["active_version"] = "concept-4-legacy"
+        self.expect("creative logo differs from active brand registry")
+
+    def test_creative_uses_unapproved_logo_variant(self):
+        self.m["creatives"][0]["brand"]["usage_variant"] = "unknown-colorway"
+        self.expect("creative logo differs from active brand registry")
+
+    def test_missing_brand_provenance_source(self):
+        self.m["brand_registry"]["approval_evidence"] = ""
+        self.expect("brand registry missing documented approval_evidence")
 
     def test_publish_needs_separate_human_approvals(self):
         for a in self.m["creatives"]:
