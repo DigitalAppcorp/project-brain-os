@@ -1,7 +1,7 @@
 ---
 name: graphic-design-art-direction-os
-version: 0.4.0
-status: candidate-not-a-quality-certification
+version: 0.5.0
+status: accepted-workflow-artistic-quality-must-be-verified-per-output
 description: Dirección de arte, diseño gráfico, branding y creatividad publicitaria para imágenes estáticas y campañas. Independiente de UI/UX; usa Marketing Brain, Expert Evidence Protocol y QA visual de piezas reales.
 ---
 
@@ -80,3 +80,11 @@ Feedback del PO sobre tres exploraciones: la dirección fotográfica de retrato 
 **Aprendizaje del feedback PAZO:** conservar condicionalmente fotografía alegre de mascotas, verde oscuro/lima, contraste fuerte, tipografía contundente y vibra publicitaria contemporánea aprobada. Rechazado: estética editorial antigua de novela/libro, fría o impersonal; falsos mockups y explicación vaga. Estas preferencias son **contextuales PAZO**, no un estilo global predeterminado para otras marcas.
 
 **Validador v0.4:** schema_version=2 obliga `brand_registry` con evidencia de autoridad vigente y verificación de conflictos. Un logo correcto solo por SHA de un archivo del pasado NO cumple. Los tests automáticos cubren la integridad declarada, pero la revisión visual y la autoridad real siguen requiriendo verificación humana/PO.
+
+## v0.5 — Diversidad estratégica y localización del arte
+
+**Localización obligatoria:** leer [LOCALIZATION_POLICY.md](LOCALIZATION_POLICY.md): PAZO se revisa en español y solo se convierte al inglés cuando lo pida el PO, conservando concepto, fotografía, disposición y logo. No inventar nuevas capacidades al traducir.
+
+**Aprobación de ruta ≠ plantilla obligatoria:** tras aprobación del PO de cuatro rutas (comercial, emocional, demostrativa, conceptual), la habilidad queda aceptada como flujo reusable, **pero cada anuncio nuevo** debe demostrar una idea y composición distinta. Mantener identidad de marca no justifica repetir layout, fotografía ni CTA visual. La aprobación del PO del proceso no equivale a conversión real en Meta.
+
+**Orden de esta campaña:** generar diez anuncios estáticos individuales, primero en español; aplicar un filtro de comprensión independiente (app gratis + una utilidad concreta), un filtro de diferencia material entre piezas, un filtro de brand master y un filtro de rigor visual. Nunca agregar badges de App Store/Play Store ni simular pantallas funcionales de PAZO. No publicar ni gastar sin autorización de campaña.
