@@ -20,3 +20,7 @@ Antes de llamar "mejora" a la habilidad, producir y comparar 2–3 diseños con 
 
 ## Corrección de cierre de calidad v0.3
 Antes de entregar cualquier creatividad estática, leer [EXECUTION_PROTOCOL.md](EXECUTION_PROTOCOL.md) y ejecutar el validador de evidencia. Ejemplos de fallos: archivos reciclados, promesa visual ausente, falsificación del logo, misma plantilla y ausencia de revisión individual. La autoridad de la habilidad no sustituye la inspección artística real ni la verificación por usuarios nuevos.
+
+
+## v0.4 — Identidad vigente, no solo logo original
+Antes de producir, cargar [BRAND_ASSET_AUTHORITY.md](BRAND_ASSET_AUTHORITY.md). El validador exige `schema_version=2` con un registro de autoridad de marca actual. Si una versión histórica y una aprobación más reciente discrepan, `BRAND_IDENTITY_CONFLICT`: no deducir la identidad vigente por antigüedad. Conservar el estilo que el propietario sí aprobó y limitar correcciones a los defectos observados.
