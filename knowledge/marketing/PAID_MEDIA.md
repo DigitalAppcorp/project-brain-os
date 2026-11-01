@@ -32,7 +32,6 @@ La plataforma optimiza hacia el **evento que recibe**: si aprende con clics o fo
 - En 2025 TikTok recomendó formato vertical 9:16, música/diseño nativo, pruebas creativas continuas. Confirmar requisitos técnicos/políticas vigentes.
 - No inferir compras de views, follows o guardados.
 
-
 ## Actualizaciones de plataformas verificadas (2026-11-01)
 
 ### Google Ads API v26.1 — 2026-10-28
