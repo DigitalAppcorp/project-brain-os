@@ -15,7 +15,6 @@
 - El hashing no elimina necesariamente el carácter personal de datos; aplicar reglas de consentimiento/proveedor a Pixel/CAPI/enhanced conversions.
 - Respetar políticas de campañas especiales, atributos protegidos, menores, salud, empleo, vivienda, finanzas y otras categorías cuando sean aplicables.
 
-
 ## California — cambio legal a vigilar para 2027
 
 **SB 923 / Expanding Privacy Rights Act**: [anuncio oficial de CalPrivacy, 2026-09-27](https://privacy.ca.gov/2026/09/california-expands-privacy-protections-by-strengthening-deletion-rights/). Entra en vigor **2027-01-01**. Para negocios sujetos a la CCPA, amplía la supresión de información personal de terceros y requiere un método online para solicitudes de privacidad en negocios que operan solo online; el anuncio contempla listas de supresión para evitar reintroducción de datos. **Antes:** este módulo remitía genéricamente a CCPA/CPRA 2026. **Ahora:** añadir una comprobación de aplicabilidad y preparación de flujos de borrado/solicitudes antes de 2027. No inferir cobertura legal por estar en California ni ordenar cambios de producto, datos o contratos sin análisis jurídico y autorización específica.
