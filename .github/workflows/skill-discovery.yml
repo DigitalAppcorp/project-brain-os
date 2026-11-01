@@ -1,0 +1,33 @@
+name: Brain OS agent skill discovery
+on:
+  pull_request:
+    paths:
+      - '.agents/skills/**'
+      - '.claude/skills/**'
+      - 'scripts/install-user-skills.ps1'
+      - 'scripts/check_skill-discovery.py'
+      - '.github/workflows/skill-discovery.yml'
+      - 'README.md'
+      - 'docs/AGENT_SKILLS_SETUP.md'
+  push:
+    branches: [main]
+    paths:
+      - '.agents/skills/**'
+      - '.claude/skills/**'
+      - 'scripts/install-user-skills.ps1'
+      - 'scripts/check_skill-discovery.py'
+      - '.github/workflows/skill-discovery.yml'
+permissions:
+  contents: read
+jobs:
+  discovery:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/check_skill-discovery.py
+      - name: Windows PowerShell-compatible installer smoke test
+        shell: bash
+        run: |
+          pwsh -NoProfile -File scripts/install-user-skills.ps1 -HomePath "$RUNNER_TEMP/brain-os-skills-test"
+          python3 scripts/check_skill-discovery.py --installed "$RUNNER_TEMP/brain-os-skills-test"
