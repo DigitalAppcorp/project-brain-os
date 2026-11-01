@@ -7,7 +7,6 @@ Contenido para personas: preguntas reales, evidencia propia, experiencia, compar
 ## SEO técnico
 Cobertura/indexabilidad, canonicals, redirecciones, status codes, sitemap, robots, hreflang si existe multidioma, datos estructurados elegibles y validación, imágenes, Core Web Vitals y móvil. Inspeccionar Search Console para problemas reales, no aplicar checklists sin diagnóstico.
 
-
 ## Novedades oficiales de Search (revisión 2026-11-01)
 
 - **2026-10-26 — contenido generado por usuarios y páginas compartidas.** [Google Search Central](https://developers.google.com/search/docs/monitor-debug/prevent-abuse) recomienda decidir si una URL de contenido compartido debe descubrirse en buscadores o solo abrirse por enlace; aplicar `noindex` o bloqueo de rastreo según el caso, moderación y señales antispam, y vigilar anomalías de indexación en Search Console. En plataformas con perfiles, publicaciones o páginas compartibles, auditar la intención de indexación **antes de implementar cambios**. Evitar bloquear el rastreo de páginas donde se necesite que Google vea un `noindex`; elegir la técnica correcta por URL.
