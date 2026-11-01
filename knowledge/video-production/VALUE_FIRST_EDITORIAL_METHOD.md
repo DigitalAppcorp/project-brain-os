@@ -2,7 +2,7 @@
 
 **Decisión documentada:** 2026-11-01. **Origen:** conversaciones de dirección y feedback del Product Owner de PAZO.
 **Alcance:** norma editorial reutilizable, sujeta a validación de audiencia; no certifica calidad de producción ni resultados de mercado.
-**Estado:** \`EDITORIAL_DIRECTION_ACCEPTED / AUDIENCE_PERFORMANCE_NOT_VALIDATED\`.
+**Estado:** `EDITORIAL_DIRECTION_ACCEPTED / AUDIENCE_PERFORMANCE_NOT_VALIDATED`.
 
 ## Descubrimiento central
 
@@ -56,7 +56,7 @@ Estas líneas son **categorías de planificación**, no una obligación de produ
 
 **Product Owner:** fija objetivos y permisos, revisa cambios sustantivos de historia/estética y determina publicación o gasto. Una aceptación creativa no es validación de rendimiento ante audiencia.
 
-**Entrega eficiente:** preparar el paquete directorial completo **antes** de delegar. Por defecto, una orden integral y una entrega final con control de calidad interno, sin dividir artificialmente la producción en microtareas redundantes. Conservar los gates D0–D5 y Creative Evidence Gate: una prueba **técnica de alto riesgo** (por ejemplo rig/acting 3D o material con derechos inciertos) puede ser necesaria para no malgastar un render completo; no es un encargo de tres hooks ni una licencia para repetir producción. Si el productor no puede conseguir la calidad requerida, debe informar \`BLOCKED\` y la alternativa, no reducir silenciosamente el estándar.
+**Entrega eficiente:** preparar el paquete directorial completo **antes** de delegar. Por defecto, una orden integral y una entrega final con control de calidad interno, sin dividir artificialmente la producción en microtareas redundantes. Conservar los gates D0–D5 y Creative Evidence Gate: una prueba **técnica de alto riesgo** (por ejemplo rig/acting 3D o material con derechos inciertos) puede ser necesaria para no malgastar un render completo; no es un encargo de tres hooks ni una licencia para repetir producción. Si el productor no puede conseguir la calidad requerida, debe informar `BLOCKED` y la alternativa, no reducir silenciosamente el estándar.
 
 ## Filtro de aprobación editorial — antes de producir
 
@@ -79,11 +79,11 @@ Un guion técnicamente detallado puede seguir siendo **creativamente débil**; s
 ## Método de aprendizaje
 
 Separar siempre:
-- \`PO_FEEDBACK\`: gusto, rechazo, comentarios sobre humor/claridad.
-- \`CREATIVE_QA\`: revisión del guion o material visible, calidad de actuación, montaje, derechos y legibilidad.
-- \`PRODUCT_EVIDENCE\`: función real confirmada y entorno/fecha.
-- \`AUDIENCE_EVIDENCE\`: datos reales de reproducción, retención, finalizaciones, guardados, compartidos, clics o activaciones, con denominadores/ventana.
-- \`HYPOTHESIS\`: afirmación a ensayar; jamás «estilo ganador» sin evidencia.
+- `PO_FEEDBACK`: gusto, rechazo, comentarios sobre humor/claridad.
+- `CREATIVE_QA`: revisión del guion o material visible, calidad de actuación, montaje, derechos y legibilidad.
+- `PRODUCT_EVIDENCE`: función real confirmada y entorno/fecha.
+- `AUDIENCE_EVIDENCE`: datos reales de reproducción, retención, finalizaciones, guardados, compartidos, clics o activaciones, con denominadores/ventana.
+- `HYPOTHESIS`: afirmación a ensayar; jamás «estilo ganador» sin evidencia.
 
 Comparar una pieza con su objetivo. No juzgar una explicación educativa solo como comedia ni un sketch solo por clics. Si varias variables cambian a la vez, no atribuir causalidad al hook. El contexto local específico no sustituye utilidad amplia; es segmentación, no obligación temática para todo el contenido.
 
@@ -91,6 +91,6 @@ Comparar una pieza con su objetivo. No juzgar una explicación educativa solo co
 
 ## Continuidad y referencias
 
-Antes de tomar un proyecto: leer \`SKILL.md\`, \`INTENT_AND_STORY_STRATEGY.md\`, \`DIRECTORIAL_SCRIPT_TO_SCREEN.md\`, \`CREATIVE_EVIDENCE_GATE.md\`, \`EXPERIMENTS_AND_MEASUREMENT.md\` y este método. El proyecto específico debe proporcionar su handoff, objetivos, ideas aceptadas/rechazadas, verdad del producto, audiencia, derechos, herramientas, restricciones y último gate. No inferir autorización para producir, pagar, publicar o alterar el producto por leer esta guía.
+Antes de tomar un proyecto: leer `SKILL.md`, `INTENT_AND_STORY_STRATEGY.md`, `DIRECTORIAL_SCRIPT_TO_SCREEN.md`, `CREATIVE_EVIDENCE_GATE.md`, `EXPERIMENTS_AND_MEASUREMENT.md` y este método. El proyecto específico debe proporcionar su handoff, objetivos, ideas aceptadas/rechazadas, verdad del producto, audiencia, derechos, herramientas, restricciones y último gate. No inferir autorización para producir, pagar, publicar o alterar el producto por leer esta guía.
 
 Este documento complementa y **no anula** los gates técnicos de producción. Los ejemplos de un producto y sus guiones, copies, métricas y creativos deben permanecer en el espacio autorizado para ese producto, no en la habilidad reusable.
