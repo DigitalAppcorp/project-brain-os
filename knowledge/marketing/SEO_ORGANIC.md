@@ -7,6 +7,12 @@ Contenido para personas: preguntas reales, evidencia propia, experiencia, compar
 ## SEO técnico
 Cobertura/indexabilidad, canonicals, redirecciones, status codes, sitemap, robots, hreflang si existe multidioma, datos estructurados elegibles y validación, imágenes, Core Web Vitals y móvil. Inspeccionar Search Console para problemas reales, no aplicar checklists sin diagnóstico.
 
+
+## Novedades oficiales de Search (revisión 2026-11-01)
+
+- **2026-10-26 — contenido generado por usuarios y páginas compartidas.** [Google Search Central](https://developers.google.com/search/docs/monitor-debug/prevent-abuse) recomienda decidir si una URL de contenido compartido debe descubrirse en buscadores o solo abrirse por enlace; aplicar `noindex` o bloqueo de rastreo según el caso, moderación y señales antispam, y vigilar anomalías de indexación en Search Console. En plataformas con perfiles, publicaciones o páginas compartibles, auditar la intención de indexación **antes de implementar cambios**. Evitar bloquear el rastreo de páginas donde se necesite que Google vea un `noindex`; elegir la técnica correcta por URL.
+- **2026-10-30 — control compartido para entrenamiento IA.** [Google](https://developers.google.com/search/blog/2026/10/ai-training-control) anunció una propuesta de señal interoperable en `robots.txt` para preferencias de entrenamiento de IA, con soporte **previsto para 2027**. **No está desplegada como requisito actual**. El control `Google-Extended` continúa; una autorización explícita de Google-Extended puede afectar elegibilidad de aparición mediante grounding en Gemini Apps. Distinguir preferencias de entrenamiento, rastreo de búsqueda y visibilidad en respuestas de IA. No modificar robots.txt sin política editorial y revisión de estado de implementación.
+
 ## SEO comercial
 Mapear búsqueda → intención → página → prueba → CTA. Agrupar por tema, no saturar términos. Aclarar ciudad/área de servicio real. Cada página debe responder y convertir sin prometer ubicaciones inexistentes.
 
