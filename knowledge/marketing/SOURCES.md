@@ -35,7 +35,6 @@
 5. FTC prohíbe publicidad engañosa y regula reseñas/testimonios falsos; California tiene reglas de privacidad con cambios efectivos en 2026.
 6. Meta Advantage+ y CAPI son capacidades del proveedor; el diseño detallado se verifica al implementar, no se da por confirmado desde enlaces del catálogo.
 
-
 ## Revisión de novedades materiales — 2026-11-01
 
 Comparación contra el baseline de 2026-10-23. Las fuentes de Meta (2026-10-06) y California (2026-09-27) son **omisiones relevantes del baseline**, no anuncios nuevos posteriores a ese día. Las novedades posteriores verificadas son Google Search (2026-10-26 y 2026-10-30) y Google Ads API v26.1 (2026-10-28). Los documentos de TikTok solo muestran el mes de actualización (octubre 2026): **no se infiere día ni lanzamiento universal**.
