@@ -93,3 +93,22 @@ Para evidencia sensible, guardar solo identificadores inocuos y no adjuntar toke
 - Verificar invariantes visuales con capturas comparables y observación manual; no comparar screenshots como única evidencia funcional.
 - Registrar `PASS / FAIL / NOT_TESTED / INCONCLUSIVE` por caso y en qué rama, viewport, configuración de datos y fecha.
 **La habilidad no puede afirmar que estos tests pasaron por estar aquí redactados.**
+
+
+## Alineación de cajas en un bloque central (receta adaptable)
+
+Solo cuando la composición establezca un eje central común; ver [VISUAL_QUALITY.md](VISUAL_QUALITY.md#eje-del-bloque-y-alineación-del-texto-guía-contextual). Medir la caja del texto respecto al centro esperado, no solo `text-align`. Verificar en navegador real y ajustar selectores y tolerancias al diseño. Este ejemplo no es una prueba ejecutada ni una regla universal.
+
+```ts
+const offsets = await page.locator('[data-central-message]').evaluate(root => {
+  const box = root.getBoundingClientRect();
+  const axis = box.x + box.width / 2;
+  return [...root.querySelectorAll('[data-align-to-center]')].map(node => {
+    const rect = node.getBoundingClientRect();
+    return rect.x + rect.width / 2 - axis;
+  });
+});
+for (const offset of offsets) expect(Math.abs(offset)).toBeLessThanOrEqual(1);
+```
+
+Conservar wrapping, lectura, foco y alineación óptica deliberada; no reclamar PASS sin inspección de la pantalla concreta.

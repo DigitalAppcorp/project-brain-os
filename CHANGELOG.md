@@ -1,3 +1,9 @@
+## Brain OS activation completeness — 31-oct-2026
+
+- Added global discovery for optional `find-skills`, local-first token efficiency and verifiable handoffs, retaining the canonical references (no duplicate methodology).
+- Reconciled selected nonconflicting motivational UX and centered layout guidance from historical draft PRs #11/#12 into current Design OS without merging outdated branches.
+- Added a readable capability inventory; CI validates both repository discovery and user-level installer pointers. This is structural verification, not measured token savings or visual product QA.
+
 # Changelog
 
 ## Unreleased — 2026-10-29 (Video OS v0.5 — direction-to-screen, documented)

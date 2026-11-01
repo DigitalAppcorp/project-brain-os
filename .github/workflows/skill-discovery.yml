@@ -9,6 +9,8 @@ on:
       - '.github/workflows/skill-discovery.yml'
       - 'README.md'
       - 'docs/AGENT_SKILLS_SETUP.md'
+      - 'docs/BRAIN_OS_CAPABILITY_INVENTORY.md'
+      - 'knowledge/ui-ux-frontend/MOTIVATIONAL_UX.md'
   push:
     branches: [main]
     paths:

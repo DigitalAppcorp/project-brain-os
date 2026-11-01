@@ -25,7 +25,10 @@ $specs = @(
   @{ Name='design-intelligence'; Target='knowledge/ui-ux-frontend/SKILL.md'; Description='UI UX Design OS for real web PWA design, accessibility, frontend and verified visual QA.' },
   @{ Name='video-production'; Target='knowledge/video-production/SKILL.md'; Description='Video Production OS for screenwriting, directing, editing, animation and audiovisual QA.' },
   @{ Name='graphic-art-direction'; Target='knowledge/graphic-design/SKILL.md'; Description='Art direction for advertising images, branding and graphic design; independent from UI UX.' },
-  @{ Name='expert-evidence-review'; Target='patterns/EXPERT_EVIDENCE_PROTOCOL.md'; Description='Expert evidence protocol for primary sources, falsifiable tests and independent review.' }
+  @{ Name='expert-evidence-review'; Target='patterns/EXPERT_EVIDENCE_PROTOCOL.md'; Description='Expert evidence protocol for primary sources, falsifiable tests and independent review.' },
+  @{ Name='token-efficiency'; Target='patterns/LOCAL_FIRST_EFFICIENCY.md'; Description='Token saving, local-first workflow, batched tests, less rework and fewer needless remote calls.' },
+  @{ Name='verifiable-handoff'; Target='patterns/VERIFIABLE_HANDOFF.md'; Description='Concise verifiable context transfer between chats and agents, with branches, CI and safety gates.' },
+  @{ Name='find-skills'; Target='.agents/skills/find-skills/SKILL.md'; Description='Find, compare and verify existing agent skills; do not install external skills without approval.' }
 )
 $marker = '<!-- managed-by: project-brain-os-install-user-skills -->'
 $utf8 = New-Object System.Text.UTF8Encoding($false)

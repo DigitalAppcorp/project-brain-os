@@ -65,5 +65,9 @@ Sistema de decisiones reutilizable para diseñar, construir, criticar y mantener
 
 El módulo **complementa Project Brain OS raíz**: las autorizaciones, control de producción, Git y Scope Closure Reconciliation siguen vigentes. Aquí solo vive metodología general; decisiones específicas de PAZO u otros productos deben permanecer en sus propios repositorios.
 
+## Apoyo motivacional contextual
+
+[UX motivacional y microinteracciones CSS](MOTIVATIONAL_UX.md) — apoyo opcional al progreso verdadero, estados asíncronos, accesibilidad y reduced-motion. No es una receta para animar todo, ni prueba de mejora causal. Recuperado selectivamente del antiguo PR #11 para conservar Design OS actual.
+
 ## Estado de calidad
 **Documentación integrada en `main`**, pero no equivale a instalación permanente en cada agente. **Los fixtures de EVALUATIONS.md están especificados pero no equivalen a pruebas ejecutadas**. La utilidad local de aprendizaje y las previews requieren estar disponibles en el entorno que las ejecuta; consultar sus informes para conocer cobertura y límites.
