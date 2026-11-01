@@ -23,7 +23,6 @@ Creado: **2026-10-23**. Estado: `v0.1.0 / baseline`. Owner de decisiones: Produc
 | 2026-10-23 | Baseline | Primer módulo transversal; material verificado en fuentes oficiales, ejemplos y checklists, sin campañas ni datos de negocios | `SOURCES.md`, todos los documentos del módulo |
 | 2026-11-01 | MATERIAL (revisión oficial) | Google Ads v26.1, Google Search UGC, propuesta AI training 2027, Meta lifecycle/creativos, TikTok Smart+ y creatividades, California SB 923; sin cambios materiales verificables nuevos en GA4/CAPI/FTC | `SOURCES.md`, `PAID_MEDIA.md`, `SEO_ORGANIC.md`, `COMPLIANCE.md`; fuentes detalladas abajo |
 
-
 ## Acta de revisión oficial — 2026-11-01
 
 **Comparación:** `SOURCES.md` y `MAINTENANCE.md` de main, baseline 2026-10-23, más `PAID_MEDIA.md`, `SEO_ORGANIC.md` y `COMPLIANCE.md`. Se inspeccionaron todos los PRs abiertos del repositorio antes de crear esta rama: ninguno trata el módulo de marketing; no se duplicó trabajo. La revisión solo actualiza documentación.
