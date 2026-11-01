@@ -19,8 +19,6 @@
 | FTC reseñas | [FTC Reviews and Testimonials Rule](https://www.ftc.gov/business-guidance/resources/consumer-reviews-testimonials-rule-questions-answers) | Reseñas falsas, compensaciones y testimonios | medio |
 | FTC endorsements | [FTC Endorsements](https://www.ftc.gov/business-guidance/advertising-marketing/endorsements-influencers-reviews) | Influencers y relaciones materiales | medio |
 | California privacidad | [CPPA Regulations](https://cppa.ca.gov/regulations/) | CCPA/CPRA, vigencia y reformas | **alto** |
-
-
 | Google Ads API / presupuestos | [Release notes v26.1](https://developers.google.com/google-ads/api/docs/release-notes) | 2026-10-28: priorización de canales y límites de presupuesto por red, sujetos a elegibilidad; versión menor sin breaking changes | alto |
 | Google Search / UGC | [Prevent user-generated spam](https://developers.google.com/search/docs/monitor-debug/prevent-abuse) | 2026-10-26: indexación selectiva de páginas compartidas, moderación y vigilancia de abuso en Search Console | alto |
 | AI Search / control de entrenamiento | [Google: shared AI training control](https://developers.google.com/search/blog/2026/10/ai-training-control) | 2026-10-30: propuesta de señal compartida en robots.txt, soporte previsto para 2027; no vigente todavía | medio |
