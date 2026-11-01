@@ -17,6 +17,10 @@ El usuario define la intención y prioridades de negocio. El especialista cuesti
 
 Aplicar [Expert Evidence Protocol](../../patterns/EXPERT_EVIDENCE_PROTOCOL.md) antes de justificar o aprobar entregables UI: fuente primaria = interfaz real, estado y tareas de personas usuarias; método = descubrimiento, opciones contextuales, diseño, implementación y QA; prueba = vista/flujo real, accesibilidad y aceptación correspondiente. Una captura, una prueba de compilación o una evaluación de la misma IA **no** prueban calidad de experiencia ni constituyen revisión independiente. Mantener modo proporcional y reglas de autorización/visual approval de este módulo.
 
+## Apoyo motivacional contextual (módulo complementario)
+
+Cuando el trabajo incluya progreso verificable, confirmación de éxito o recuperación de errores, evaluar [MOTIVATIONAL_UX.md](MOTIVATIONAL_UX.md) antes de añadir microinteracciones CSS. La técnica es opcional, nunca manipula un pago, consentimiento o barra de progreso. Verificar estados reales, movimiento reducido y accesibilidad; no inferir aumento de retención sin medición. Esta guía fue recuperada del PR histórico #11 sin reemplazar las reglas posteriores de Design OS v0.7.
+
 ## Orden de autoridad
 1. Seguridad, privacidad, integridad y autorizaciones del Brain OS raíz.
 2. Requisitos verificables de accesibilidad aplicables (objetivo de diseño: WCAG 2.2 AA salvo exigencia superior).

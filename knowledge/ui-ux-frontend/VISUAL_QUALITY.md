@@ -46,3 +46,10 @@ Entregar: objetivo → referencia/estado aprobado → diferencias observables �
 
 ## Revisión visual situada v0.3.0
 Antes de llamar «mala composición» a un título alineado a la izquierda, examinar **función textual**, jerarquía, espacio, longitud, relación con CTA y preferencias legítimas del producto. No usar centro/izquierda como dogma. Antes de agregar eyebrow o pastilla verificar su función real; para texto de interfaz usar [UX_CONTENT.md](UX_CONTENT.md). Inspiración externa: [REFERENCE_ANALYSIS.md](REFERENCE_ANALYSIS.md); creatividad pertinente: [CREATIVE_EXPLORATION.md](CREATIVE_EXPLORATION.md). En iteraciones técnicas, comparar con baseline aprobado mediante [CHANGE_INTEGRITY.md](CHANGE_INTEGRITY.md).
+
+
+### Eje del bloque y alineación del texto (guía contextual)
+
+Cuando una composición acordada use un mensaje central, verificar separadamente la alineación de **la caja** respecto al eje del contenedor y las **líneas dentro** de esa caja. `text-align: center` no centra necesariamente la caja. Inspeccionar `max-width`, márgenes, padding, flex/grid y reglas contradictorias; conservar ancho de lectura y ajustes ópticos deliberados.
+
+No imponer centrado a toda la interfaz: aplicar solo donde la composición lo exija. Comparar captura y DOM en los tamaños/estados relevantes, sin modificar copy y jerarquía aprobados. Adaptación aislada del PR histórico #12.

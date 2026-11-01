@@ -6,7 +6,8 @@ El código **canónico** está en `DigitalAppcorp/project-brain-os` rama `main`.
 - Codex lee `.agents/skills/<nombre>/SKILL.md`.
 - Claude Code lee `.claude/skills/<nombre>/SKILL.md`.
 - Estos adaptadores referencian los módulos canónicos, evitando copiar y mantener dos versiones.
-- El `find-skills` de terceros es opcional y no forma parte de las seis habilidades propias instaladas globalmente.
+- El instalador registra nueve puntos de entrada: seis habilidades principales, `token-efficiency`, `verifiable-handoff` y `find-skills`. Este último es un módulo opcional de descubrimiento; no instala paquetes externos sin autorización.
+- Los patrones siguen siendo canónicos en `patterns/`; los adaptadores nunca duplican su contenido.
 
 ## Disponibilidad desde PAZO o cualquier otro proyecto Windows
 1. Haz checkout del repositorio canónico en tu PC (**no** uses un snapshot histórico de otra rama):
@@ -23,7 +24,7 @@ El código **canónico** está en `DigitalAppcorp/project-brain-os` rama `main`.
    ```
    En PowerShell 7 también: `pwsh -NoProfile -File ./scripts/install-user-skills.ps1`.
 3. El script escribe únicamente **adaptadores personales** en `~/.agents/skills` (Codex) y `~/.claude/skills` (Claude Code). No toca `pazo-app`, ni `main`, ni Supabase, ni producción. No requiere copiar todo Brain OS al repositorio de la aplicación.
-4. Reinicia sesiones de Codex/Claude Code y prueba desde el directorio de `pazo-app`: pide listar `project-brain-os`, `marketing-brain`, `design-intelligence`, `video-production`, `graphic-art-direction`, `expert-evidence-review`. En Codex usa `/skills`; en Claude Code comprueba las habilidades de proyecto/usuario y llama `/project-brain-os` si corresponde. **Ver en el selector no garantiza uso**: solicita al agente que abra el archivo canónico y cite su versión.
+4. Reinicia sesiones de Codex/Claude Code y prueba desde el directorio de `pazo-app`: pide listar `project-brain-os`, `marketing-brain`, `design-intelligence`, `video-production`, `graphic-art-direction`, `expert-evidence-review`, `token-efficiency`, `verifiable-handoff` y `find-skills`. En Codex usa `/skills`; en Claude Code comprueba las habilidades de proyecto/usuario y llama `/project-brain-os` si corresponde. **Ver en el selector no garantiza uso**: solicita al agente que abra el archivo canónico y cite su versión.
 
 ## Sin sobrescrituras ni dependencia de una sesión
 - Si existe una habilidad del usuario no gestionada por este instalador con el mismo nombre, no se sobrescribe. Revisar el aviso de salida.
@@ -38,3 +39,7 @@ python scripts/check_skill-discovery.py
 ```
 
 Referencias: [Codex skills](https://learn.chatgpt.com/docs/build-skills) y [Claude Code skills](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview).
+
+## Inventario de capacidades y borradores
+
+[Inventario de Brain OS](BRAIN_OS_CAPABILITY_INVENTORY.md) muestra módulos, rutas de verdad, estado publicado y borradores. El módulo complementario de UX motivacional fue transferido de manera selectiva desde el PR #11, sin fusionar su antigua versión de Design OS. La guía de alineación textual de #12 también quedó integrada selectivamente; ambos PR históricos continúan en borrador hasta su reconciliación formal.

@@ -46,11 +46,13 @@ All work coordinated by Project Brain OS now uses [Expert Evidence Protocol](pat
 
 ## Codex and Claude Code — automatic skill discovery
 
-All six first-party Brain OS skills are exposed through `.agents/skills/` for Codex and `.claude/skills/` for Claude Code, with canonical content retained in `SKILL.md`, `patterns/` and `knowledge/`. This repository's `main` contains the source material; working in a separate product repository does **not** automatically discover it.
+The six first-party Brain OS specialties, plus reusable token efficiency, verifiable handoff and optional find-skills discovery, are exposed through `.agents/skills/` for Codex and `.claude/skills/` for Claude Code, with canonical content retained in `SKILL.md`, `patterns/` and `knowledge/`. This repository's `main` contains the source material; working in a separate product repository does **not** automatically discover it.
 
 For Windows/Powershell and cross-repository use, follow [Agent Skills setup](docs/AGENT_SKILLS_SETUP.md) and `scripts/install-user-skills.ps1`. The installer creates user-level discovery pointers, never deploys PAZO and does not merge draft PRs.
 
-Graphic art direction: [Graphic Design OS](knowledge/graphic-design/SKILL.md) (v0.6.0, probationary quality gate). Design OS draft PR #11 and #12 are not treated as published source without review.
+Other capabilities: [canonical capability inventory](docs/BRAIN_OS_CAPABILITY_INVENTORY.md). The Windows installer registers nine user-level entry points; no additional model training or token-reduction guarantee is implied. The motivational CSS guidance is a contextual, optional module inside Design OS, not a new global style rule.
+
+Graphic art direction: [Graphic Design OS](knowledge/graphic-design/SKILL.md) (v0.6.0, probationary quality gate). Selected additive guidance from draft PRs #11/#12 was reconciled into the current Design OS without merging their outdated branch states; remaining historical branch diffs are not automatically published.
 
 ## Principle
 
