@@ -26,6 +26,8 @@ Habilidad reutilizable de **dirección creativa, producción audiovisual, evalua
 
 **Ejemplo didáctico:** [El sofá no es tuyo](templates/EDITORIAL_WORKED_EXAMPLE.md), un storyboard con función de cada toma y corte. Es `STORYBOARD_ONLY`, no un anuncio producido.
 
+**Actualización editorial 2026-11-01:** [valor primero y una sola línea principal por video](VALUE_FIRST_EDITORIAL_METHOD.md). Diferenciar valor, formato narrativo y técnica; director define guion completo antes de delegar; una orden integral sin renders redundantes de hooks, preservando controles de factibilidad/QA. No confundir feedback del PO con evidencia de audiencia.
+
 ## Integraciones intelectuales
 
 - **Marketing Brain OS**: `../marketing/SKILL.md` para audiencia, promesa, creatividades, experimentos, atribución y regulación.
